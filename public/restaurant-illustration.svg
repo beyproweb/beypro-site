@@ -1,0 +1,11 @@
+<!-- /public/restaurant-illustration.svg -->
+<svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="80" width="180" height="40" rx="12" fill="#0EA5E9"/>
+  <rect x="50" y="40" width="120" height="50" rx="15" fill="#fff" stroke="#A21CAF" stroke-width="3"/>
+  <rect x="65" y="55" width="25" height="18" rx="5" fill="#F472B6"/>
+  <rect x="110" y="55" width="30" height="18" rx="5" fill="#818CF8"/>
+  <ellipse cx="110" cy="40" rx="22" ry="12" fill="#A21CAF" opacity="0.18"/>
+  <circle cx="140" cy="90" r="8" fill="#F472B6"/>
+  <circle cx="60" cy="90" r="8" fill="#818CF8"/>
+  <rect x="102" y="100" width="16" height="10" rx="4" fill="#fff"/>
+</svg>

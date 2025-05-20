@@ -1,0 +1,12 @@
+<!-- /public/ai-bot.svg -->
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="85" cy="85" r="80" fill="#2DD4BF"/>
+  <ellipse cx="85" cy="110" rx="50" ry="35" fill="#fff" opacity="0.8"/>
+  <rect x="50" y="50" width="70" height="50" rx="25" fill="#fff" />
+  <ellipse cx="68" cy="75" rx="9" ry="8" fill="#0EA5E9"/>
+  <ellipse cx="102" cy="75" rx="9" ry="8" fill="#A21CAF"/>
+  <rect x="75" y="90" width="20" height="8" rx="4" fill="#F472B6"/>
+  <circle cx="85" cy="140" r="7" fill="#0EA5E9"/>
+  <circle cx="115" cy="140" r="7" fill="#A21CAF"/>
+  <circle cx="55" cy="140" r="7" fill="#2DD4BF"/>
+</svg>
