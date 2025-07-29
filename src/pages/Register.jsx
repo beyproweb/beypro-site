@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function Register() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
@@ -50,7 +50,7 @@ export default function Register() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/register", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

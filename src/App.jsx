@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Carousel from "./components/Carousel";
 const logoUrl = "/Beylogo.svg";
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function App() {
   const { t, i18n } = useTranslation();
   const [formData, setFormData] = React.useState({ name: "", email: "", message: "" });
@@ -111,7 +111,7 @@ return (
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
-            <a href="#features" className="hover:text-fuchsia-400 transition">{t("features Shai")}</a>
+            <a href="#features" className="hover:text-fuchsia-400 transition">{t("features")}</a>
             <a href="#about" className="hover:text-fuchsia-400 transition">{t("about")}</a>
             <a href="#contact" className="hover:text-fuchsia-400 transition">{t("contact")}</a>
             <a href="#pricing" className="hover:text-fuchsia-400 transition">{t("pricing_title")}</a>
