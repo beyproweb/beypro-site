@@ -6,142 +6,162 @@ import { Helmet } from "react-helmet";
 import Carousel from "./components/Carousel";
 const logoUrl = "/Beylogo.svg";
 const API_URL = import.meta.env.VITE_API_URL;
+
 export default function App() {
   const { t, i18n } = useTranslation();
   const [formData, setFormData] = React.useState({ name: "", email: "", message: "" });
   const [formMessage, setFormMessage] = React.useState("");
   const [newsletterMsg, setNewsletterMsg] = React.useState("");
-
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleNewsletterSubmit = async (e) => {
-  e.preventDefault();
-  const email = e.target.email.value;
-
-  try {
-    const res = await fetch("http://localhost:5000/api/newsletter", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      setNewsletterMsg(t("newsletter_success"));
-      e.target.reset();
-    } else {
-      setNewsletterMsg("❌ " + (data.error || "Subscription failed"));
+    e.preventDefault();
+    const email = e.target.email.value;
+    try {
+      const res = await fetch("http://localhost:5000/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setNewsletterMsg(t("newsletter_success"));
+        e.target.reset();
+      } else {
+        setNewsletterMsg("❌ " + (data.error || "Subscription failed"));
+      }
+    } catch (err) {
+      console.error("Newsletter error:", err);
+      setNewsletterMsg("❌ An error occurred.");
     }
-  } catch (err) {
-    console.error("Newsletter error:", err);
-    setNewsletterMsg("❌ An error occurred.");
-  }
-};
-
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  React.useEffect(() => {
-  if (!menuOpen) return;
-
-  const handleScroll = () => setMenuOpen(false);
-  window.addEventListener("scroll", handleScroll);
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [menuOpen]);
-
-
- const handleContactSubmit = async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const payload = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value,
   };
 
-  try {
-    const res = await fetch("http://localhost:5000/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+  React.useEffect(() => {
+    if (!menuOpen) return;
+    const handleScroll = () => setMenuOpen(false);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [menuOpen]);
 
-    const data = await res.json();
-    if (data.success) {
-      alert(t("contact_success"));
-      form.reset();
-    } else {
-      alert(t("contact_error"));
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const payload = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (data.success) {
+        alert(t("contact_success"));
+        form.reset();
+      } else {
+        alert(t("contact_error"));
+      }
+    } catch (err) {
+      console.error("❌ Contact form error:", err);
+      alert("❌ An error occurred.");
     }
-  } catch (err) {
-    console.error("❌ Contact form error:", err);
-    alert("❌ An error occurred.");
-  }
-};
+  };
 
+  return (
+    <>
+      {/* --- SEO Helmet --- */}
+      <Helmet>
+        <title>{t("meta_title")}</title>
+        <meta name="description" content={t("meta_desc")} />
+        <meta property="og:title" content={t("meta_title")} />
+        <meta property="og:description" content={t("meta_desc")} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://beypro.com/beypro-preview.png" />
+        <meta property="og:url" content="https://beypro.com" />
+      </Helmet>
 
+      {/* --- BG --- */}
+      <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
 
-return (
-  <>
-    {/* --- SEO Helmet --- */}
-    <Helmet>
-      <title>{t("meta_title")}</title>
-      <meta name="description" content={t("meta_desc")} />
-      <meta property="og:title" content={t("meta_title")} />
-      <meta property="og:description" content={t("meta_desc")} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://beypro.com/beypro-preview.png" />
-      <meta property="og:url" content="https://beypro.com" />
-    </Helmet>
+        {/* --- NAVIGATION --- */}
+        <nav className="h-20 md:h-20 bg-white/10 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-white/10">
+          <div className="flex items-center justify-between px-4 md:px-8 h-full max-w-8xl mx-auto w-full">
 
-    {/* --- BG --- */}
-    <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
+            {/* Logo */}
+            <div className="flex-1 flex md:justify-start justify-center items-center">
+              <img
+                src={logoUrl}
+                alt="Beypro Logo"
+                className="h-14 w-auto mt-[12px] ml-[-24px]"
+              />
+            </div>
 
-      {/* --- NAVIGATION --- */}
-      <nav className="h-20 md:h-20 bg-white/10 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-white/10">
-        <div className="flex items-center justify-between px-4 md:px-8 h-full max-w-8xl mx-auto w-full">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
+              <a href="#features" className="hover:text-fuchsia-400 transition">{t("features")}</a>
+              <a href="#about" className="hover:text-fuchsia-400 transition">{t("about")}</a>
+              <a href="#contact" className="hover:text-fuchsia-400 transition">{t("contact")}</a>
+              <a href="#pricing" className="hover:text-fuchsia-400 transition">{t("pricing_title")}</a>
+              <LanguageSwitcher />
 
-          {/* Logo: left on desktop, centered on mobile, size fixed */}
-          <div className="flex-1 flex md:justify-start justify-center items-center">
-           <img
-  src={logoUrl}
-  alt="Beypro Logo"
-  className="h-14 w-auto mt-[12px] ml-[-24px]"
-/>
+              {/* --- LOGIN and REGISTER BUTTONS --- */}
+              <Link
+                to="/login"
+                className="ml-4 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:scale-105 transition"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white font-semibold shadow hover:scale-105 transition"
+              >
+                Register
+              </Link>
+            </div>
 
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
-            <a href="#features" className="hover:text-fuchsia-400 transition">{t("features")}</a>
-            <a href="#about" className="hover:text-fuchsia-400 transition">{t("about")}</a>
-            <a href="#contact" className="hover:text-fuchsia-400 transition">{t("contact")}</a>
-            <a href="#pricing" className="hover:text-fuchsia-400 transition">{t("pricing_title")}</a>
-            <LanguageSwitcher />
-          </div>
-
-          {/* Mobile Toggle */}
-          <div className="ml-auto md:hidden flex-1 flex justify-end">
-            <button
-              className="text-white text-2xl focus:outline-none"
-              onClick={() => setMenuOpen((prev) => !prev)}
-            >
-              ☰
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-white text-black py-8 px-6 border-t border-white/20 shadow-xl">
-            <div className="flex flex-col items-center justify-center gap-4 text-sm font-semibold text-center">
-              <a href="#features" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 text-white shadow hover:scale-105 transition">{t("features")}</a>
-              <a href="#about" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white shadow hover:scale-105 transition">{t("about")}</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow hover:scale-105 transition">{t("contact")}</a>
-              <a href="#pricing" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow hover:scale-105 transition">{t("pricing_title")}</a>
-              <div className="pt-4"><LanguageSwitcher /></div>
+            {/* Mobile Toggle */}
+            <div className="ml-auto md:hidden flex-1 flex justify-end">
+              <button
+                className="text-white text-2xl focus:outline-none"
+                onClick={() => setMenuOpen((prev) => !prev)}
+              >
+                ☰
+              </button>
             </div>
           </div>
-        )}
-      </nav>
+
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <div className="md:hidden bg-white text-black py-8 px-6 border-t border-white/20 shadow-xl">
+              <div className="flex flex-col items-center justify-center gap-4 text-sm font-semibold text-center">
+                <a href="#features" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 text-white shadow hover:scale-105 transition">Features</a>
+                <a href="#about" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white shadow hover:scale-105 transition">About</a>
+                <a href="#contact" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow hover:scale-105 transition">Contact</a>
+                <a href="#pricing" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow hover:scale-105 transition">Pricing</a>
+                <div className="pt-4"><LanguageSwitcher /></div>
+
+                {/* --- LOGIN and REGISTER BUTTONS (Mobile) --- */}
+                <Link
+                  to="/login"
+                  className="w-full py-2 px-4 mt-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:scale-105 transition text-center"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white font-semibold shadow hover:scale-105 transition text-center"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Register
+                </Link>
+              </div>
+            </div>
+          )}
+        </nav>
 
       {/* --- CAROUSEL HERO --- */}
       <Carousel />
