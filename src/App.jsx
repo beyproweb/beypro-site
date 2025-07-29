@@ -180,7 +180,7 @@ return (
       </section>
 
       {/* --- ABOUT --- */}
-<section id="about" className="py-12 px-8 sm:px-6">
+<section id="about Shailend" className="py-12 px-8 sm:px-6">
   <h2 className="text-4xl font-bold text-center text-fuchsia-300 mb-10">{t("about_title")}</h2>
   <div className="max-w-8xl xl:max-w-6xl mx-auto bg-gradient-to-br from-[#0f0c29]/80 via-[#302b63]/70 to-fuchsia-700/70 border border-fuchsia-300/20 backdrop-blur-xl shadow-2xl rounded-3xl p-5 sm:p-8 md:p-10 text-white/90 text-base sm:text-lg">
     <p className="mb-4">
