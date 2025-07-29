@@ -1,0 +1,20 @@
+<!-- /public/ai-bot-future.svg -->
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="85" cy="85" r="78" fill="url(#bg-gradient)" />
+  <ellipse cx="85" cy="120" rx="54" ry="27" fill="#fff" opacity="0.10"/>
+  <rect x="48" y="56" width="75" height="52" rx="26" fill="#232347" stroke="#A21CAF" stroke-width="2.5"/>
+  <ellipse cx="70" cy="83" rx="11" ry="10" fill="#3EDBF0"/>
+  <ellipse cx="100" cy="83" rx="11" ry="10" fill="#A21CAF"/>
+  <rect x="78" y="97" width="16" height="8" rx="4" fill="#F472B6"/>
+  <circle cx="85" cy="146" r="9" fill="#3EDBF0"/>
+  <circle cx="122" cy="146" r="7" fill="#A21CAF"/>
+  <circle cx="48" cy="146" r="7" fill="#F472B6"/>
+  <rect x="70" y="65" width="12" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+  <rect x="98" y="65" width="12" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+  <defs>
+    <radialGradient id="bg-gradient" cx="0" cy="0" r="1" gradientTransform="translate(85 85) scale(80)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18143a"/>
+      <stop offset="1" stop-color="#302b63"/>
+    </radialGradient>
+  </defs>
+</svg>

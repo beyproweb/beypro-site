@@ -1,0 +1,13 @@
+<!-- /public/restaurant-cloud.svg -->
+<svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="110" cy="110" rx="78" ry="22" fill="#232347" opacity="0.2"/>
+  <rect x="40" y="50" width="140" height="48" rx="14" fill="#fff"/>
+  <rect x="56" y="68" width="36" height="15" rx="5" fill="#3EDBF0" opacity="0.85"/>
+  <rect x="128" y="68" width="36" height="15" rx="5" fill="#A21CAF" opacity="0.85"/>
+  <rect x="82" y="85" width="56" height="8" rx="4" fill="#F472B6" opacity="0.8"/>
+  <ellipse cx="100" cy="48" rx="22" ry="10" fill="#A21CAF" opacity="0.12"/>
+  <circle cx="110" cy="44" r="18" fill="#3EDBF0" opacity="0.11"/>
+  <rect x="106" y="60" width="8" height="12" rx="4" fill="#0EA5E9"/>
+  <path d="M70 94 Q95 120 150 94" stroke="#3EDBF0" stroke-width="3" fill="none"/>
+  <ellipse cx="140" cy="100" rx="10" ry="4" fill="#0EA5E9" opacity="0.15"/>
+</svg>

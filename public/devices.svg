@@ -1,0 +1,12 @@
+<!-- /public/pos-future.svg -->
+<svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="30" y="40" width="160" height="70" rx="18" fill="#232347" stroke="#3EDBF0" stroke-width="3"/>
+  <rect x="55" y="63" width="40" height="15" rx="5" fill="#3EDBF0" opacity="0.8"/>
+  <rect x="110" y="63" width="40" height="15" rx="5" fill="#A21CAF" opacity="0.8"/>
+  <rect x="65" y="88" width="90" height="9" rx="4.5" fill="#fff" opacity="0.85"/>
+  <circle cx="200" cy="110" r="10" fill="#A21CAF" opacity="0.24"/>
+  <circle cx="30" cy="44" r="6" fill="#3EDBF0" opacity="0.14"/>
+  <rect x="100" y="32" width="24" height="6" rx="3" fill="#F472B6" opacity="0.8"/>
+  <rect x="90" y="112" width="40" height="6" rx="3" fill="#0EA5E9" opacity="0.6"/>
+  <ellipse cx="110" cy="40" rx="22" ry="8" fill="#A21CAF" opacity="0.16"/>
+</svg>
