@@ -59,7 +59,7 @@ export default function Register() {
       const data = await res.json();
       if (data.success) {
         alert("🎉 Welcome! Redirecting to your Beypro dashboard...");
-        window.location.href = "http://localhost:3000/"; // 👈 redirect to live POS dashboard
+        window.location.href = "https://pos.beypro.com"; // 👈 redirect to live POS dashboard
       } else {
         alert("❌ " + (data.error || "Registration failed."));
       }
