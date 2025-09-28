@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const API_URL = import.meta.env.VITE_API_URL;
+const POS_URL = import.meta.env.VITE_POS_URL || "http://localhost:3000"; // 👈 add POS domain here in .env
+
 export default function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
@@ -48,7 +50,7 @@ export default function Login() {
               password: form.password.value,
             };
             try {
-              const res = await fetch("http://localhost:5000/api/login", {
+              const res = await fetch(`${API_URL}/api/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload),
@@ -56,7 +58,7 @@ export default function Login() {
               const data = await res.json();
               if (data.success) {
                 alert("🎉 Login successful! Redirecting...");
-                window.location.href = "http://localhost:3000/dashboard"; // Update to your real dashboard route
+                window.location.href = `${POS_URL}/dashboard`; // 👈 redirect based on env
               } else {
                 alert("❌ " + (data.error || "Login failed."));
               }
