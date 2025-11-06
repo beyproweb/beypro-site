@@ -1,342 +1,229 @@
+// src/App.jsx
 import React from "react";
-import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./components/LanguageSwitcher";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Carousel from "./components/Carousel";
-const logoUrl = "/Beylogo.svg";
-const API_URL = import.meta.env.VITE_API_URL;
+import { useTranslation } from "react-i18next";
+import {
+  ClipboardList,
+  BarChart,
+  Bot,
+  Users,
+  Factory,
+  CreditCard,
+  Settings,
+  ChevronRight,
+} from "lucide-react";
 
 export default function App() {
-  const { t, i18n } = useTranslation();
-  const [formData, setFormData] = React.useState({ name: "", email: "", message: "" });
-  const [formMessage, setFormMessage] = React.useState("");
-  const [newsletterMsg, setNewsletterMsg] = React.useState("");
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const { t } = useTranslation();
 
-  const handleNewsletterSubmit = async (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    try {
-      const res = await fetch("http://localhost:5000/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setNewsletterMsg(t("newsletter_success"));
-        e.target.reset();
-      } else {
-        setNewsletterMsg("❌ " + (data.error || "Subscription failed"));
-      }
-    } catch (err) {
-      console.error("Newsletter error:", err);
-      setNewsletterMsg("❌ An error occurred.");
-    }
-  };
-
-  React.useEffect(() => {
-    if (!menuOpen) return;
-    const handleScroll = () => setMenuOpen(false);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [menuOpen]);
-
-  const handleContactSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const payload = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-    try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json();
-      if (data.success) {
-        alert(t("contact_success"));
-        form.reset();
-      } else {
-        alert(t("contact_error"));
-      }
-    } catch (err) {
-      console.error("❌ Contact form error:", err);
-      alert("❌ An error occurred.");
-    }
-  };
+  const features = [
+    {
+      icon: <ClipboardList className="w-8 h-8 text-fuchsia-400" />,
+      title: "Smart Order Handling",
+      desc: "Tables, take-away, delivery — everything synced live across kitchen and staff.",
+      color: "from-fuchsia-500 to-pink-600",
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-blue-400" />,
+      title: "Real-Time Reports",
+      desc: "Live analytics, profit/loss, and sales trends — powered by Beypro dashboards.",
+      color: "from-blue-500 to-indigo-500",
+    },
+    {
+      icon: <Bot className="w-8 h-8 text-emerald-400" />,
+      title: "AI-Bey Assistant",
+      desc: "Voice-driven task manager that reminds, assigns, and reports in seconds.",
+      color: "from-emerald-500 to-teal-500",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      title: "Staff Automation",
+      desc: "Check-in/out, payroll, schedules — automated for every staff member.",
+      color: "from-purple-500 to-violet-600",
+    },
+    {
+      icon: <Factory className="w-8 h-8 text-orange-400" />,
+      title: "Production Control",
+      desc: "Monitor ingredient flow, supplier links, and manufacturing in real time.",
+      color: "from-amber-500 to-orange-600",
+    },
+    {
+      icon: <CreditCard className="w-8 h-8 text-cyan-400" />,
+      title: "Payments Simplified",
+      desc: "Multi-method POS with instant sync — cash, card, QR, Papara & more.",
+      color: "from-cyan-500 to-sky-600",
+    },
+  ];
 
   return (
     <>
-      {/* --- SEO Helmet --- */}
       <Helmet>
-        <title>{t("meta_title")}</title>
-        <meta name="description" content={t("meta_desc")} />
-        <meta property="og:title" content={t("meta_title")} />
-        <meta property="og:description" content={t("meta_desc")} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://beypro.com/beypro-preview.png" />
-        <meta property="og:url" content="https://beypro.com" />
+        <title>Beypro — Level Up Your Business</title>
+        <meta
+          name="description"
+          content="Beypro is the next-gen POS platform that unifies orders, staff, stock and AI automation — all in one dashboard."
+        />
       </Helmet>
 
-      {/* --- BG --- */}
-      <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
+      {/* --- HERO --- */}
+      <section className="relative min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6">
+        <img
+          src="/Beylogo.svg"
+          alt="Beypro Logo"
+          className="w-24 sm:w-28 mb-6 animate-fade-in"
+        />
+        <h1 className="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+          Level Up Your Business
+        </h1>
+        <p className="max-w-xl text-lg text-white/80 mb-8">
+          Manage orders, staff, stock and payments in one powerful platform —
+          built by restaurants, for restaurants.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            to="/register"
+            className="px-8 py-3 rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-600 font-semibold shadow-lg hover:scale-105 transition"
+          >
+            Start Free Trial
+          </Link>
+          <Link
+            to="/login"
+            className="px-8 py-3 rounded-full bg-white text-slate-900 font-semibold shadow-lg hover:scale-105 transition"
+          >
+            Login
+          </Link>
+        </div>
 
-        {/* --- NAVIGATION --- */}
-        <nav className="h-20 md:h-20 bg-white/10 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-white/10">
-          <div className="flex items-center justify-between px-4 md:px-8 h-full max-w-8xl mx-auto w-full">
-
-            {/* Logo */}
-            <div className="flex-1 flex md:justify-start justify-center items-center">
-              <img
-                src={logoUrl}
-                alt="Beypro Logo"
-                className="h-14 w-auto mt-[12px] ml-[-24px]"
-              />
-            </div>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
-              <a href="#features" className="hover:text-fuchsia-400 transition">{t("features")}</a>
-              <a href="#about" className="hover:text-fuchsia-400 transition">{t("about")}</a>
-              <a href="#contact" className="hover:text-fuchsia-400 transition">{t("contact")}</a>
-              <a href="#pricing" className="hover:text-fuchsia-400 transition">{t("pricing_title")}</a>
-              
-
-              {/* --- LOGIN and REGISTER BUTTONS --- */}
-              <Link
-                to="/login"
-                className="ml-4 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:scale-105 transition"
-              >
-                Login
-              </Link>
-              <Link
-                to="/register"
-                className="ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white font-semibold shadow hover:scale-105 transition"
-              >
-                Register
-              </Link>
-            </div>
-            <LanguageSwitcher />
-            {/* Mobile Toggle */}
-            <div className="ml-auto md:hidden flex-1 flex justify-end">
-              <button
-                className="text-white text-2xl focus:outline-none"
-                onClick={() => setMenuOpen((prev) => !prev)}
-              >
-                ☰
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          {menuOpen && (
-            <div className="md:hidden bg-white text-black py-8 px-6 border-t border-white/20 shadow-xl">
-              <div className="flex flex-col items-center justify-center gap-4 text-sm font-semibold text-center">
-                <a href="#features" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 text-white shadow hover:scale-105 transition">Features</a>
-                <a href="#about" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white shadow hover:scale-105 transition">About</a>
-                <a href="#contact" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow hover:scale-105 transition">Contact</a>
-                <a href="#pricing" onClick={() => setMenuOpen(false)} className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow hover:scale-105 transition">Pricing</a>
-                <div className="pt-4"><LanguageSwitcher /></div>
-
-                {/* --- LOGIN and REGISTER BUTTONS (Mobile) --- */}
-                <Link
-                  to="/login"
-                  className="w-full py-2 px-4 mt-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:scale-105 transition text-center"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Login
-                </Link>
-                <Link
-                  to="/register"
-                  className="w-full py-2 px-4 rounded-full bg-gradient-to-r from-fuchsia-500 to-orange-500 text-white font-semibold shadow hover:scale-105 transition text-center"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Register
-                </Link>
-              </div>
-            </div>
-          )}
-        </nav>
-
-      {/* --- CAROUSEL HERO --- */}
-      <Carousel />
-
+        <div className="absolute bottom-6 text-white/60 text-sm">
+          © {new Date().getFullYear()} Beypro — Level Up
+        </div>
+      </section>
 
       {/* --- FEATURES --- */}
-<section id="features" className="pt-4 pb-4 px-4 sm:px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-300">Features</h2>
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {/* Loop through more detailed features from your folder */}
-          {[
-            { icon: "🧾", color: "text-fuchsia-400", title: "Smart Order Handling", desc: "Table, takeaway & delivery — orders flow live to kitchen & drivers." },
-            { icon: "📦", color: "text-blue-400", title: "Live Stock & Supplier AI", desc: "Track ingredients, automate reorders, connect suppliers, avoid shortages." },
-            { icon: "👥", color: "text-purple-400", title: "Staff & Payroll Automation", desc: "Check-in/out, shift scheduling, auto salary for any model." },
-            { icon: "🤖", color: "text-emerald-400", title: "AI Bey Assistant", desc: "Voice-powered staff task automation: reminders, reports, alerts." },
-            { icon: "📊", color: "text-yellow-300", title: "Real-Time Reports", desc: "Profit/loss, sales trends, cost, category, live KPI dashboard." },
-            { icon: "🔗", color: "text-cyan-400", title: "Integrations & API", desc: "WhatsApp, Getir, Papara & more. Connect all your systems." },
-            { icon: "🍳", color: "text-pink-300", title: "Kitchen Display", desc: "Digital kitchen tickets, real-time status, auto-assign to stations." },
-            { icon: "🚗", color: "text-green-400", title: "Driver App", desc: "Live route, order tracking, performance stats for your couriers." },
-            { icon: "💸", color: "text-purple-200", title: "Supplier Payments", desc: "Send, track and auto-confirm supplier payments with 1 click." },
-            { icon: "💳", color: "text-fuchsia-300", title: "Advanced POS Payments", desc: "Multi-method: credit, cash, QR, Papara, IBAN auto-detect." },
-            { icon: "📱", color: "text-blue-300", title: "Mobile First", desc: "Fully responsive, lightning fast — works on any device." },
-            { icon: "🔒", color: "text-orange-400", title: "Enterprise Security", desc: "Roles, PINs, multi-location, audit logs, GDPR ready." },
-            { icon: "⚙️", color: "text-emerald-200", title: "Ingredient Price Tracking", desc: "Auto-track ingredient price changes, get cost alerts." },
-            { icon: "📈", color: "text-blue-200", title: "Profit/Loss Analyzer", desc: "Visualize net profit, best-sellers, real-time margin insights." },
-            { icon: "📦", color: "text-yellow-200", title: "Inventory Links", desc: "See live inventory per product, connect sales to stock instantly." },
-            { icon: "🧑‍🍳", color: "text-pink-200", title: "Staff Roles & Permissions", desc: "Custom permissions for every staff member and role." },
-          ].map((f, i) => (
-            <div key={i} className="p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-md hover:shadow-lg transition-all flex flex-col items-center text-center">
-              <div className={`text-4xl mb-2 ${f.color}`}>{f.icon}</div>
-              <h3 className="text-lg font-bold mb-1">{f.title}</h3>
-              <p className="text-white/80 text-sm">{f.desc}</p>
+      <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50 text-gray-900">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12">
+          Powerful Features Built for Growth
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {features.map((f, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl border border-slate-200 bg-white shadow-lg hover:shadow-xl transition p-6 flex flex-col items-start gap-3`}
+            >
+              <div
+                className={`p-3 rounded-xl bg-gradient-to-r ${f.color} bg-opacity-20`}
+              >
+                {f.icon}
+              </div>
+              <h3 className="text-xl font-bold">{f.title}</h3>
+              <p className="text-gray-600 text-sm flex-1">{f.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* --- ABOUT --- */}
-<section id="about" className="py-12 px-8 sm:px-6">
-  <h2 className="text-4xl font-bold text-center text-fuchsia-300 mb-10">{t("about_title")}</h2>
-  <div className="max-w-8xl xl:max-w-6xl mx-auto bg-gradient-to-br from-[#0f0c29]/80 via-[#302b63]/70 to-fuchsia-700/70 border border-fuchsia-300/20 backdrop-blur-xl shadow-2xl rounded-3xl p-5 sm:p-8 md:p-10 text-white/90 text-base sm:text-lg">
-    <p className="mb-4">
-      <span className="font-bold text-fuchsia-200">Beypro</span> isn’t just a POS — it’s your restaurant’s complete command center, unifying everything from orders to payments in one seamless system.
-    </p>
-    <p className="mb-4">
-      Every feature is <span className="font-semibold text-cyan-300">built, tested, and perfected</span> in a real restaurant. No theory — every screen and button is shaped by daily service and true business needs.
-    </p>
-    <p className="mb-4">
-      From chaotic rush hours to slow days, Beypro is designed to handle real-world restaurant challenges so you can focus on your guests.
-    </p>
-    <p className="mb-4">
-      Staff, kitchen, delivery, inventory, reporting, integrations — everything you need, zero mess, zero spreadsheets.
-    </p>
-    <p className="mb-4">
-      Built for Turkey’s unique market, Beypro comes with local integrations and full multi-language support.
-    </p>
-    <p className="italic text-cyan-200 mt-6 flex items-center gap-2">
-      <span>🍽️</span>
-      <span>Built, tested & perfected in a real restaurant. Proven by daily use — not just theory.</span>
-    </p>
-  </div>
-</section>
-
-
-
-
-
       {/* --- PRICING --- */}
-      <section id="pricing" className="py-16 px-4 sm:px-6 bg-gradient-to-r from-white/5 via-white/10 to-white/5 rounded-3xl mx-2 sm:mx-6 mb-12 border border-white/10 shadow-xl backdrop-blur-lg">
-        <h2 className="text-4xl font-bold text-center text-blue-300 mb-14">{t("pricing_title")}</h2>
+      <section className="py-20 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-500 text-white">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-14">
+          Choose Your Plan
+        </h2>
+
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Starter */}
-          <div className="rounded-2xl bg-white/10 border border-white/20 p-8 text-center shadow-lg hover:scale-[1.02] transition flex flex-col">
-            <h3 className="text-2xl font-bold text-cyan-300 mb-2">Starter</h3>
-            <p className="text-sm text-white/70 mb-4">Perfect for new, small or single-location restaurants.</p>
-            <div className="text-4xl font-extrabold text-white mb-6">₺850<span className="text-sm text-white/60">/mo</span></div>
-            <ul className="space-y-2 text-sm text-white/80 mb-8 text-left mx-auto max-w-xs">
-              <li>✔️ POS, table & kitchen system</li>
-              <li>✔️ 1 location & unlimited staff</li>
-              <li>✔️ Basic reports & analytics</li>
-              <li>✔️ Staff management</li>
-              <li>✔️ Basic integrations (QR menu, WhatsApp)</li>
-            </ul>
-            <button className="w-full py-2 rounded-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold shadow">
-              {t("choose_plan")}
+          {/* Trial */}
+          <div className="rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-8 text-center shadow-lg flex flex-col">
+            <h3 className="text-2xl font-bold mb-2">Trial</h3>
+            <p className="text-sm text-white/80 mb-4">
+              30-day free access — explore all core features.
+            </p>
+            <div className="text-4xl font-extrabold mb-6">
+              ₺0<span className="text-sm text-white/60">/30 days</span>
+            </div>
+            <button className="w-full py-2 rounded-full bg-white text-indigo-600 font-bold shadow hover:scale-[1.02] transition">
+              Start Now
             </button>
           </div>
 
           {/* Pro */}
-          <div className="rounded-2xl bg-gradient-to-tr from-purple-700/20 to-blue-700/20 border border-fuchsia-400 p-8 text-center shadow-2xl scale-105 relative z-10 flex flex-col">
-            <div className="absolute top-0 right-0 bg-fuchsia-600 text-white text-xs px-3 py-1 rounded-bl-xl font-bold tracking-wide shadow-lg">{t("most_popular")}</div>
-            <h3 className="text-2xl font-bold text-fuchsia-300 mb-2">Pro</h3>
-            <p className="text-sm text-white/70 mb-4">For fast-growing, multi-service restaurants and takeaways.</p>
-            <div className="text-4xl font-extrabold text-white mb-6">₺1200<span className="text-sm text-white/60">/mo</span></div>
-            <ul className="space-y-2 text-sm text-white/80 mb-8 text-left mx-auto max-w-xs">
-              <li>✔️ All Starter features</li>
-              <li>✔️ Live stock & supplier AI</li>
-              <li>✔️ Full analytics, advanced reports</li>
-              <li>✔️ Kitchen display & driver app</li>
-              <li>✔️ Ingredient price tracking</li>
-              <li>✔️ Papara & Getir integrations</li>
-              <li>✔️ Advanced permissions</li>
-            </ul>
-            <button className="w-full py-2 rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 hover:brightness-110 text-white font-bold shadow">
-              {t("choose_plan")}
+          <div className="rounded-2xl bg-gradient-to-br from-fuchsia-500 to-purple-600 border-2 border-white/30 p-8 text-center shadow-2xl scale-105 relative">
+            <div className="absolute top-0 right-0 bg-white/20 text-white text-xs px-3 py-1 rounded-bl-xl font-bold tracking-wide shadow">
+              Most Popular
+            </div>
+            <h3 className="text-2xl font-bold mb-2">Pro</h3>
+            <p className="text-sm text-white/80 mb-4">
+              Full-featured POS for fast-growing restaurants.
+            </p>
+            <div className="text-4xl font-extrabold mb-6">
+              ₺1200<span className="text-sm text-white/70">/mo</span>
+            </div>
+            <button className="w-full py-2 rounded-full bg-white text-fuchsia-700 font-bold shadow hover:scale-[1.02] transition">
+              Upgrade to Pro
             </button>
           </div>
 
           {/* Enterprise */}
-          <div className="rounded-2xl bg-white/10 border border-white/20 p-8 text-center shadow-lg hover:scale-[1.02] transition flex flex-col">
-            <h3 className="text-2xl font-bold text-purple-300 mb-2">Enterprise</h3>
-            <p className="text-sm text-white/70 mb-4">Full power for chains, franchises, and custom projects.</p>
-            <div className="text-4xl font-extrabold text-white mb-6">₺2500<span className="text-sm text-white/60">/mo</span></div>
-            <ul className="space-y-2 text-sm text-white/80 mb-8 text-left mx-auto max-w-xs">
-              <li>✔️ All Pro features</li>
-              <li>✔️ Multi-branch support</li>
-              <li>✔️ Priority onboarding</li>
-              <li>✔️ Dedicated account manager</li>
-              <li>✔️ Custom integrations & API access</li>
-            </ul>
-            <button className="w-full py-2 rounded-full bg-purple-500 hover:bg-purple-600 text-white font-bold shadow">
-              {t("request_quote")}
+          <div className="rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-8 text-center shadow-lg flex flex-col">
+            <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+            <p className="text-sm text-white/80 mb-4">
+              For chains & multi-branch operations needing custom setup.
+            </p>
+            <div className="text-4xl font-extrabold mb-6">
+              ₺2500<span className="text-sm text-white/60">/mo</span>
+            </div>
+            <button className="w-full py-2 rounded-full bg-white text-indigo-600 font-bold shadow hover:scale-[1.02] transition">
+              Contact Sales
             </button>
           </div>
         </div>
       </section>
 
       {/* --- CONTACT --- */}
-      <section id="contact" className="py-24 px-4 sm:px-6 text-center bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl mx-2 sm:mx-6 shadow-inner">
-        <h2 className="text-3xl md:text-4xl font-bold text-cyan-300 mb-4">{t("contact_title")}</h2>
-        <p className="mb-8 text-white/80">{t("contact_desc")}</p>
-        <form
-          onSubmit={handleContactSubmit}
-          className="max-w-md mx-auto space-y-4 text-left"
+      <section className="py-20 px-6 bg-gray-50 text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 text-slate-800">
+          Let’s Talk
+        </h2>
+        <p className="text-gray-500 mb-8 max-w-md mx-auto">
+          Questions or need help setting up Beypro? Our team is ready to assist
+          you anytime.
+        </p>
+        <a
+          href="mailto:contact@beypro.com"
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:scale-105 transition"
         >
-          <input type="text" name="name" placeholder="Your Name" className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50" required />
-          <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50" required />
-          <textarea name="message" placeholder="Your Message" className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50 h-32 resize-none" required />
-          <button type="submit" className="w-full py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold shadow hover:scale-105 transition">
-            {t("email_us")}
-          </button>
-        </form>
-        {formMessage && <p className="text-sm mt-4 text-white/80">{formMessage}</p>}
-      </section>
-
-      {/* --- NEWSLETTER --- */}
-      <section id="newsletter" className="mt-14 py-12 px-8 bg-gradient-to-br from-white/5 via-white/10 to-white/5 rounded-3xl mx-2 sm:mx-6 shadow-inner border border-white/10 backdrop-blur">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 mb-4">{t("newsletter_title")}</h2>
-          <p className="text-white/80 mb-8">{t("newsletter_desc")}</p>
-          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <input type="email" name="email" required placeholder={t("newsletter_placeholder")} className="w-full sm:w-2/3 px-4 py-2 rounded-full bg-white/20 text-white placeholder-white/50" />
-            <button type="submit" className="px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-fuchsia-600 text-white font-bold shadow hover:scale-105 transition">
-              {t("newsletter_button")}
-            </button>
-          </form>
-          {newsletterMsg && (<p className="mt-4 text-sm text-white/70">{newsletterMsg}</p>)}
-        </div>
+          Contact Us <ChevronRight className="w-4 h-4" />
+        </a>
       </section>
 
       {/* --- FOOTER --- */}
-      <footer className="bg-white/5 backdrop-blur text-white/70 text-sm py-10 px-6 mt-20 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="bg-slate-900 text-white/70 text-sm py-10 px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
-            <span className="font-bold text-white">Beypro</span> &copy; {new Date().getFullYear()} — {t("footer_rights")}
+            <span className="font-bold text-white">Beypro</span> © 
+            {new Date().getFullYear()} — Level Up Your Business
           </div>
-          <div className="flex items-center space-x-4">
-            <a href="#features" className="hover:text-fuchsia-300 transition">{t("features")}</a>
-            <a href="#about" className="hover:text-fuchsia-300 transition">{t("about")}</a>
-            <a href="#contact" className="hover:text-fuchsia-300 transition">{t("contact")}</a>
-            <a href="#pricing" className="hover:text-fuchsia-300 transition">{t("pricing_title")}</a>
+          <div className="flex items-center space-x-4 text-white/60">
+            <a href="#features" className="hover:text-white transition">
+              Features
+            </a>
+            <a href="#pricing" className="hover:text-white transition">
+              Pricing
+            </a>
+            <Link to="/login" className="hover:text-white transition">
+              Login
+            </Link>
+            <Link to="/register" className="hover:text-white transition">
+              Register
+            </Link>
           </div>
         </div>
       </footer>
-    </div>
-  </>
-);
+
+      {/* --- Animations --- */}
+      <style>{`
+        @keyframes fade-in {from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+        .animate-fade-in {animation: fade-in .8s ease-out forwards;}
+      `}</style>
+    </>
+  );
 }
