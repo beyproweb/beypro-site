@@ -49,7 +49,7 @@ export default function Register() {
     }
 
     try {
-      const registerRes = await fetch(`${API_BASE}/subscription/register`, {
+      const registerRes = await fetch(`${API_BASE}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -63,7 +63,7 @@ export default function Register() {
       const regData = await registerRes.json();
       if (!regData.success) throw new Error(regData.error || "Registration failed");
 
-      const loginRes = await fetch(`${API_BASE}/subscription/login`, {
+      const loginRes = await fetch(`${API_BASE}/login`,  {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: form.email, password: form.password }),
