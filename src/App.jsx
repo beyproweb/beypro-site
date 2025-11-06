@@ -100,7 +100,14 @@ export default function App() {
             </div>
 
             {/* Desktop Menu */}
-               {/* --- LOGIN and REGISTER BUTTONS --- */}
+            <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
+              <a href="#features" className="hover:text-fuchsia-400 transition">{t("features")}</a>
+              <a href="#about" className="hover:text-fuchsia-400 transition">{t("about")}</a>
+              <a href="#contact" className="hover:text-fuchsia-400 transition">{t("contact")}</a>
+              <a href="#pricing" className="hover:text-fuchsia-400 transition">{t("pricing_title")}</a>
+              
+
+              {/* --- LOGIN and REGISTER BUTTONS --- */}
               <Link
                 to="/login"
                 className="ml-4 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:scale-105 transition"
@@ -114,15 +121,7 @@ export default function App() {
                 Register
               </Link>
             </div>
-            <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
-              <a href="#features" className="hover:text-fuchsia-400 transition">{t("features")}</a>
-              <a href="#about" className="hover:text-fuchsia-400 transition">{t("about")}</a>
-              <a href="#contact" className="hover:text-fuchsia-400 transition">{t("contact")}</a>
-              <a href="#pricing" className="hover:text-fuchsia-400 transition">{t("pricing_title")}</a>
-              <LanguageSwitcher />
-
-           
-
+            <LanguageSwitcher />
             {/* Mobile Toggle */}
             <div className="ml-auto md:hidden flex-1 flex justify-end">
               <button

@@ -1,7 +1,7 @@
 // src/pages/Pricing.jsx
 import React from "react";
 import { useTranslation } from "react-i18next";
-
+const API_URL = import.meta.env.VITE_API_URL;
 export default function Pricing() {
   const { t } = useTranslation();
 
