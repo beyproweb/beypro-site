@@ -26,11 +26,16 @@ export default function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const API_BASE =
-    import.meta.env.VITE_API_URL ||
-    (import.meta.env.MODE === "development"
-      ? "http://localhost:5000/api"
-      : "https://hurrypos-backend.onrender.com/api");
+const RAW_BASE =
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.MODE === "development"
+    ? "http://localhost:5000/api"
+    : "https://hurrypos-backend.onrender.com/api");
+
+const API_BASE = String(RAW_BASE)
+  .replace(/\/api\/?$/, "")
+  .replace(/\/+$/, "") + "/api";
+
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -89,7 +94,9 @@ export default function Register() {
   return (
     <div className="min-h-screen w-full flex flex-col lg:flex-row bg-gray-50">
       {/* ===== LEFT (Brand section — shows top on mobile) ===== */}
-      <div className="flex flex-col items-center justify-center w-full lg:w-1/2 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white p-10 lg:p-0 relative overflow-hidden">
+      <div className="hidden lg:flex flex-col items-center justify-center w-1/2 
+  bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white 
+  p-10 relative overflow-hidden sticky top-0 h-screen">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.1),_transparent_70%)]"></div>
 
         <div className="relative z-10 text-center space-y-4 md:space-y-6 max-w-md mx-auto">
