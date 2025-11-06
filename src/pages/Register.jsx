@@ -49,7 +49,6 @@ export default function Register() {
     }
 
     try {
-      // Register
       const registerRes = await fetch(`${API_BASE}/subscription/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -64,14 +63,10 @@ export default function Register() {
       const regData = await registerRes.json();
       if (!regData.success) throw new Error(regData.error || "Registration failed");
 
-      // Auto login
       const loginRes = await fetch(`${API_BASE}/subscription/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: form.email,
-          password: form.password,
-        }),
+        body: JSON.stringify({ email: form.email, password: form.password }),
       });
       const loginData = await loginRes.json();
       if (!loginData.success || !loginData.token)
@@ -92,45 +87,48 @@ export default function Register() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen w-screen bg-gray-50">
-      {/* LEFT - Brand Gradient */}
-      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen w-full flex flex-col lg:flex-row bg-gray-50">
+      {/* ===== LEFT (Brand section — shows top on mobile) ===== */}
+      <div className="flex flex-col items-center justify-center w-full lg:w-1/2 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white p-10 lg:p-0 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.1),_transparent_70%)]"></div>
-        <div className="relative z-10 text-center px-10">
-          <h1 className="text-6xl font-extrabold tracking-tight mb-4 drop-shadow-md">
+
+        <div className="relative z-10 text-center space-y-4 md:space-y-6 max-w-md mx-auto">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-md">
             Beypro
           </h1>
-          <p className="text-lg font-light opacity-90">
+          <p className="text-base md:text-lg font-light opacity-90">
             Level up your business — start your 30-day trial now.
           </p>
           <img
             src="https://res.cloudinary.com/ds8xkm0ue/image/upload/v1727714974/beypro-gradient-illustration.png"
             alt="Beypro illustration"
-            className="w-80 mx-auto mt-10 opacity-95"
+            className="w-48 md:w-80 mx-auto mt-6 md:mt-10 opacity-95"
           />
-          <footer className="mt-16 text-sm opacity-80">
+          <footer className="mt-6 md:mt-12 text-sm opacity-80">
             © {new Date().getFullYear()} Beypro — Level Up
           </footer>
         </div>
       </div>
 
-      {/* RIGHT - Registration Form */}
-      <div className="flex w-full lg:w-1/2 items-center justify-center p-6 sm:p-10 bg-white overflow-y-auto">
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 mb-10">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-extrabold text-gray-900">
+      {/* ===== RIGHT (Form section) ===== */}
+      <div className="flex flex-col items-center justify-center w-full lg:w-1/2 bg-white px-4 sm:px-6 md:px-10 py-10 overflow-y-auto">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
               Create Your Account 🚀
             </h2>
-            <p className="text-gray-500 mt-1">Start your free trial today</p>
+            <p className="text-gray-500 mt-1 text-sm md:text-base">
+              Start your free trial today
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
             <input
               name="fullName"
               value={form.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
               required
             />
             <input
@@ -139,7 +137,7 @@ export default function Register() {
               value={form.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
               required
             />
             <input
@@ -148,7 +146,7 @@ export default function Register() {
               value={form.password}
               onChange={handleChange}
               placeholder="Password"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
               required
             />
             <input
@@ -157,7 +155,7 @@ export default function Register() {
               value={form.confirmPassword}
               onChange={handleChange}
               placeholder="Confirm Password"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
               required
             />
             <input
@@ -165,7 +163,7 @@ export default function Register() {
               value={form.businessName}
               onChange={handleChange}
               placeholder="Business Name"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
               required
             />
             <input
@@ -173,20 +171,20 @@ export default function Register() {
               value={form.phone}
               onChange={handleChange}
               placeholder="Phone Number"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
             />
             <input
               name="posLocation"
               value={form.posLocation}
               onChange={handleChange}
               placeholder="POS Location / City"
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
             />
             <select
               name="usageType"
               value={form.usageType}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
             >
               <option value="">Select POS Usage Type</option>
               <option value="restaurant">Restaurant</option>
@@ -195,7 +193,7 @@ export default function Register() {
             </select>
 
             {/* e-Fatura */}
-            <label className="flex items-center gap-3 mt-3">
+            <label className="flex items-center gap-2 mt-3">
               <input
                 type="checkbox"
                 name="efatura"
@@ -203,7 +201,7 @@ export default function Register() {
                 onChange={handleChange}
                 className="w-5 h-5 text-indigo-600 border-gray-300 rounded"
               />
-              <span className="text-gray-700 font-medium">
+              <span className="text-gray-700 text-sm md:text-base font-medium">
                 Enable e-Fatura / e-Arşiv
               </span>
             </label>
@@ -215,20 +213,20 @@ export default function Register() {
                   value={form.invoiceTitle}
                   onChange={handleChange}
                   placeholder="Invoice Title"
-                  className="w-full p-3 border border-gray-300 rounded-xl"
+                  className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
                 />
                 <input
                   name="taxOffice"
                   value={form.taxOffice}
                   onChange={handleChange}
                   placeholder="Tax Office"
-                  className="w-full p-3 border border-gray-300 rounded-xl"
+                  className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
                 />
                 <select
                   name="invoiceType"
                   value={form.invoiceType}
                   onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-xl"
+                  className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
                 >
                   <option value="">Select Invoice Type</option>
                   <option value="bireysel">Individual</option>
@@ -238,28 +236,30 @@ export default function Register() {
             )}
 
             {/* Credit Card */}
-            <h3 className="font-semibold text-gray-800 mt-6">Payment Info</h3>
+            <h3 className="font-semibold text-gray-800 mt-6 text-base md:text-lg">
+              Payment Info
+            </h3>
             <input
               name="cardNumber"
               value={form.cardNumber}
               onChange={handleChange}
               placeholder="Card Number"
-              className="w-full p-3 border border-gray-300 rounded-xl"
+              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
             />
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
                 name="expiry"
                 value={form.expiry}
                 onChange={handleChange}
                 placeholder="MM/YY"
-                className="w-1/2 p-3 border border-gray-300 rounded-xl"
+                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
               />
               <input
                 name="cvv"
                 value={form.cvv}
                 onChange={handleChange}
                 placeholder="CVV"
-                className="w-1/2 p-3 border border-gray-300 rounded-xl"
+                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
               />
             </div>
 
@@ -269,7 +269,7 @@ export default function Register() {
                 name="plan"
                 value={form.plan}
                 onChange={handleChange}
-                className="flex-1 p-3 border border-gray-300 rounded-xl"
+                className="flex-1 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
               >
                 <option value="trial">Trial — 30 Days Free</option>
                 <option value="basic">Basic — ₺600/mo</option>
@@ -280,7 +280,7 @@ export default function Register() {
                 name="billingCycle"
                 value={form.billingCycle}
                 onChange={handleChange}
-                className="flex-1 p-3 border border-gray-300 rounded-xl"
+                className="flex-1 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
               >
                 <option value="monthly">Monthly Billing</option>
                 <option value="yearly">Yearly Billing</option>
