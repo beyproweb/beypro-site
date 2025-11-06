@@ -1,7 +1,27 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { Rocket } from "lucide-react";
 
-export default function SubscriptionRegister() {
+export default function Register() {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    businessName: "",
+    phone: "",
+    posLocation: "",
+    usageType: "",
+    efatura: false,
+    invoiceTitle: "",
+    taxOffice: "",
+    invoiceType: "",
+    cardNumber: "",
+    expiry: "",
+    cvv: "",
+    billingCycle: "monthly",
+    plan: "trial",
+  });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -12,152 +32,287 @@ export default function SubscriptionRegister() {
       ? "http://localhost:5000/api"
       : "https://hurrypos-backend.onrender.com/api");
 
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setError("");
+    setLoading(true);
 
-    const form = e.target;
-    const payload = {
-      full_name: form.fullName.value,
-      email: form.email.value,
-      password: form.password.value,
-      business_name: form.businessName.value,
-      subscription_plan: form.plan.value,
-    };
+    if (form.password !== form.confirmPassword) {
+      setError("Passwords do not match");
+      setLoading(false);
+      return;
+    }
 
     try {
-      // 1️⃣ Register user
+      // Register
       const registerRes = await fetch(`${API_BASE}/subscription/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          full_name: form.fullName,
+          email: form.email,
+          password: form.password,
+          business_name: form.businessName,
+          subscription_plan: form.plan,
+        }),
       });
       const regData = await registerRes.json();
+      if (!regData.success) throw new Error(regData.error || "Registration failed");
 
-      if (!regData.success) {
-        throw new Error(regData.error || "Registration failed");
-      }
-
-      // 2️⃣ Auto-login after successful register
+      // Auto login
       const loginRes = await fetch(`${API_BASE}/subscription/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: payload.email,
-          password: payload.password,
+          email: form.email,
+          password: form.password,
         }),
       });
       const loginData = await loginRes.json();
-
-      if (!loginData.success || !loginData.token) {
+      if (!loginData.success || !loginData.token)
         throw new Error("Login failed after registration");
-      }
 
-      // 3️⃣ Save token & user
       localStorage.setItem("token", loginData.token);
       localStorage.setItem("beyproUser", JSON.stringify(loginData.user));
       localStorage.setItem("restaurant_id", loginData.user.restaurant_id);
 
-      // 4️⃣ Redirect
       alert("🎉 Welcome to Beypro! Redirecting...");
       window.location.href = "https://pos.beypro.com/dashboard";
     } catch (err) {
-      console.error("❌ Subscription error:", err);
-      setError(err.message || "Subscription failed");
+      console.error("❌ Registration error:", err);
+      setError(err.message || "Registration failed");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
-      {/* --- HEADER --- */}
-      <nav className="h-20 bg-white/10 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-white/10">
-        <div className="flex items-center justify-between px-4 md:px-8 h-full max-w-7xl mx-auto">
-          <Link to="/" className="flex items-center">
-            <img src="/Beylogo.svg" alt="Beypro Logo" className="h-12 w-auto" />
-          </Link>
-          <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-white/80">
-            <a href="/#features" className="hover:text-fuchsia-400">Features</a>
-            <a href="/#pricing" className="hover:text-fuchsia-400">Pricing</a>
-            <a href="/#contact" className="hover:text-fuchsia-400">Contact</a>
-          </div>
+    <div className="flex flex-col lg:flex-row h-screen w-screen bg-gray-50">
+      {/* LEFT - Brand Gradient */}
+      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.1),_transparent_70%)]"></div>
+        <div className="relative z-10 text-center px-10">
+          <h1 className="text-6xl font-extrabold tracking-tight mb-4 drop-shadow-md">
+            Beypro
+          </h1>
+          <p className="text-lg font-light opacity-90">
+            Level up your business — start your 30-day trial now.
+          </p>
+          <img
+            src="https://res.cloudinary.com/ds8xkm0ue/image/upload/v1727714974/beypro-gradient-illustration.png"
+            alt="Beypro illustration"
+            className="w-80 mx-auto mt-10 opacity-95"
+          />
+          <footer className="mt-16 text-sm opacity-80">
+            © {new Date().getFullYear()} Beypro — Level Up
+          </footer>
         </div>
-      </nav>
+      </div>
 
-      {/* --- FORM --- */}
-      <div className="flex flex-col items-center justify-center py-12 px-4">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-cyan-300">
-          Start Your Beypro Subscription
-        </h1>
-        <p className="mb-6 max-w-xl text-center text-white/80">
-          Subscribe and get instant access to Beypro POS — manage your business smarter.
-        </p>
+      {/* RIGHT - Registration Form */}
+      <div className="flex w-full lg:w-1/2 items-center justify-center p-6 sm:p-10 bg-white overflow-y-auto">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 mb-10">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-extrabold text-gray-900">
+              Create Your Account 🚀
+            </h2>
+            <p className="text-gray-500 mt-1">Start your free trial today</p>
+          </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="w-full max-w-md bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/20 shadow space-y-4"
-        >
-          <input
-            type="text"
-            name="fullName"
-            placeholder="Your Full Name"
-            className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50"
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Create Password"
-            className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50"
-            required
-          />
-          <input
-            type="text"
-            name="businessName"
-            placeholder="Business Name"
-            className="w-full px-4 py-2 rounded bg-white/20 text-white placeholder-white/50"
-            required
-          />
-          <select
-            name="plan"
-            className="w-full px-4 py-2 rounded bg-white/20 text-white"
-            required
-          >
-            <option value="" disabled>
-              Choose Your Plan
-            </option>
-            <option value="starter">Starter — ₺850/mo</option>
-            <option value="pro">Pro — ₺1200/mo</option>
-            <option value="enterprise">Enterprise — ₺2500/mo</option>
-          </select>
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <input
+              name="fullName"
+              value={form.fullName}
+              onChange={handleChange}
+              placeholder="Full Name"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              required
+            />
+            <input
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              required
+            />
+            <input
+              name="password"
+              type="password"
+              value={form.password}
+              onChange={handleChange}
+              placeholder="Password"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              required
+            />
+            <input
+              name="confirmPassword"
+              type="password"
+              value={form.confirmPassword}
+              onChange={handleChange}
+              placeholder="Confirm Password"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              required
+            />
+            <input
+              name="businessName"
+              value={form.businessName}
+              onChange={handleChange}
+              placeholder="Business Name"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              required
+            />
+            <input
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="Phone Number"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            />
+            <input
+              name="posLocation"
+              value={form.posLocation}
+              onChange={handleChange}
+              placeholder="POS Location / City"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            />
+            <select
+              name="usageType"
+              value={form.usageType}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            >
+              <option value="">Select POS Usage Type</option>
+              <option value="restaurant">Restaurant</option>
+              <option value="cafe">Cafe</option>
+              <option value="retail">Retail</option>
+            </select>
 
-          {error && (
-            <p className="text-red-400 bg-red-900/40 px-3 py-2 rounded-md text-sm">
-              {error}
-            </p>
-          )}
+            {/* e-Fatura */}
+            <label className="flex items-center gap-3 mt-3">
+              <input
+                type="checkbox"
+                name="efatura"
+                checked={form.efatura}
+                onChange={handleChange}
+                className="w-5 h-5 text-indigo-600 border-gray-300 rounded"
+              />
+              <span className="text-gray-700 font-medium">
+                Enable e-Fatura / e-Arşiv
+              </span>
+            </label>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-bold hover:scale-105 transition disabled:opacity-50"
-          >
-            {loading ? "Processing..." : "🚀 Subscribe & Login"}
-          </button>
-        </form>
+            {form.efatura && (
+              <>
+                <input
+                  name="invoiceTitle"
+                  value={form.invoiceTitle}
+                  onChange={handleChange}
+                  placeholder="Invoice Title"
+                  className="w-full p-3 border border-gray-300 rounded-xl"
+                />
+                <input
+                  name="taxOffice"
+                  value={form.taxOffice}
+                  onChange={handleChange}
+                  placeholder="Tax Office"
+                  className="w-full p-3 border border-gray-300 rounded-xl"
+                />
+                <select
+                  name="invoiceType"
+                  value={form.invoiceType}
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-300 rounded-xl"
+                >
+                  <option value="">Select Invoice Type</option>
+                  <option value="bireysel">Individual</option>
+                  <option value="kurumsal">Corporate</option>
+                </select>
+              </>
+            )}
 
-        <p className="mt-6 text-sm text-white/60 text-center max-w-sm">
-          You’ll be automatically logged in after subscribing.
-        </p>
+            {/* Credit Card */}
+            <h3 className="font-semibold text-gray-800 mt-6">Payment Info</h3>
+            <input
+              name="cardNumber"
+              value={form.cardNumber}
+              onChange={handleChange}
+              placeholder="Card Number"
+              className="w-full p-3 border border-gray-300 rounded-xl"
+            />
+            <div className="flex gap-4">
+              <input
+                name="expiry"
+                value={form.expiry}
+                onChange={handleChange}
+                placeholder="MM/YY"
+                className="w-1/2 p-3 border border-gray-300 rounded-xl"
+              />
+              <input
+                name="cvv"
+                value={form.cvv}
+                onChange={handleChange}
+                placeholder="CVV"
+                className="w-1/2 p-3 border border-gray-300 rounded-xl"
+              />
+            </div>
+
+            {/* Plan + Billing */}
+            <div className="flex flex-col sm:flex-row justify-between gap-3 mt-6">
+              <select
+                name="plan"
+                value={form.plan}
+                onChange={handleChange}
+                className="flex-1 p-3 border border-gray-300 rounded-xl"
+              >
+                <option value="trial">Trial — 30 Days Free</option>
+                <option value="basic">Basic — ₺600/mo</option>
+                <option value="pro">Pro — ₺1200/mo</option>
+                <option value="enterprise">Enterprise — ₺2200/mo</option>
+              </select>
+              <select
+                name="billingCycle"
+                value={form.billingCycle}
+                onChange={handleChange}
+                className="flex-1 p-3 border border-gray-300 rounded-xl"
+              >
+                <option value="monthly">Monthly Billing</option>
+                <option value="yearly">Yearly Billing</option>
+              </select>
+            </div>
+
+            {error && (
+              <p className="text-red-500 text-sm font-medium bg-red-50 px-3 py-2 rounded-lg">
+                {error}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 mt-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold rounded-xl shadow hover:scale-[1.02] transition-all disabled:opacity-60"
+            >
+              <Rocket size={18} />
+              {loading ? "Creating Account..." : "Subscribe & Start Now"}
+            </button>
+          </form>
+
+          <p className="text-center text-xs text-gray-400 mt-10">
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="text-indigo-600 hover:text-indigo-800 font-medium"
+            >
+              Login
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
