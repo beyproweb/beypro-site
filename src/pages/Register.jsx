@@ -26,15 +26,18 @@ export default function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-const RAW_BASE =
-  import.meta.env.VITE_API_URL ||
-  (import.meta.env.MODE === "development"
-    ? "http://localhost:5000/api"
-    : "https://hurrypos-backend.onrender.com/api");
+  const RAW_BASE =
+    import.meta.env.VITE_API_URL ||
+    (import.meta.env.MODE === "development"
+      ? "http://localhost:5000/api"
+      : "https://hurrypos-backend.onrender.com/api");
 
-const API_BASE = String(RAW_BASE)
-  .replace(/\/api\/?$/, "")
-  .replace(/\/+$/, "") + "/api";
+  const API_BASE =
+    String(RAW_BASE)
+      .replace(/\/api\/?$/, "")
+      .replace(/\/+$/, "") + "/api";
+
+  console.log("🌐 Beypro site API base:", API_BASE);
 
 
   const handleChange = (e) => {
@@ -52,9 +55,11 @@ const API_BASE = String(RAW_BASE)
       setLoading(false);
       return;
     }
-
     try {
-      const registerRes = await fetch(`${API_BASE}/register`, {
+      const registerUrl = `${API_BASE}/register`;
+      console.log("📡 Sending registration request to:", registerUrl);
+
+      const registerRes = await fetch(registerUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -65,17 +70,50 @@ const API_BASE = String(RAW_BASE)
           subscription_plan: form.plan,
         }),
       });
-      const regData = await registerRes.json();
-      if (!regData.success) throw new Error(regData.error || "Registration failed");
+      const regText = await registerRes.text();
+      let regData;
+      try {
+        regData = regText ? JSON.parse(regText) : null;
+      } catch {
+        regData = null;
+      }
 
-      const loginRes = await fetch(`${API_BASE}/login`,  {
+      if (!registerRes.ok || !regData?.success) {
+        console.error("❌ /register failed", {
+          url: registerUrl,
+          status: registerRes.status,
+          body: regText?.slice(0, 300),
+        });
+        throw new Error(regData?.error || `Registration failed [${registerRes.status}]`);
+      }
+
+      const loginUrl = `${API_BASE}/login`;
+      console.log("📡 Auto-login after registration:", loginUrl);
+
+      const loginRes = await fetch(loginUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: form.email, password: form.password }),
       });
-      const loginData = await loginRes.json();
-      if (!loginData.success || !loginData.token)
-        throw new Error("Login failed after registration");
+      const loginText = await loginRes.text();
+      let loginData;
+      try {
+        loginData = loginText ? JSON.parse(loginText) : null;
+      } catch {
+        loginData = null;
+      }
+
+      if (!loginRes.ok || !loginData?.success || !loginData?.token) {
+        console.error("❌ /login after register failed", {
+          url: loginUrl,
+          status: loginRes.status,
+          body: loginText?.slice(0, 300),
+        });
+        throw new Error(
+          loginData?.error ||
+            "Login failed after registration"
+        );
+      }
 
       localStorage.setItem("token", loginData.token);
       localStorage.setItem("beyproUser", JSON.stringify(loginData.user));
