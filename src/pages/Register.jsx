@@ -56,6 +56,13 @@ export default function Register() {
     setError("");
     setLoading(true);
 
+    const normalizedEmail = String(form.email || "").trim().toLowerCase();
+    if (!normalizedEmail) {
+      setError("Email is required");
+      setLoading(false);
+      return;
+    }
+
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match");
       setLoading(false);
@@ -70,7 +77,7 @@ export default function Register() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           full_name: form.fullName,
-          email: form.email,
+          email: normalizedEmail,
           password: form.password,
           business_name: form.businessName,
           subscription_plan: form.plan,
@@ -99,7 +106,7 @@ export default function Register() {
       const loginRes = await fetch(loginUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: form.email, password: form.password }),
+        body: JSON.stringify({ email: normalizedEmail, password: form.password }),
       });
       const loginText = await loginRes.text();
       let loginData;
