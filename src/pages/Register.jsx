@@ -30,12 +30,18 @@ export default function Register() {
     import.meta.env.VITE_API_URL ||
     (import.meta.env.MODE === "development"
       ? "http://localhost:5000/api"
-      : "https://hurrypos-backend.onrender.com/api");
+      : "https://api.beypro.com/api");
 
   const API_BASE =
     String(RAW_BASE)
       .replace(/\/api\/?$/, "")
       .replace(/\/+$/, "") + "/api";
+
+  if (import.meta.env.MODE === "development" && !import.meta.env.VITE_API_URL) {
+    console.warn(
+      "VITE_API_URL is not set. Check that your env file is named exactly `.env` (no trailing spaces), or set VITE_API_URL to your backend base URL."
+    );
+  }
 
   console.log("🌐 Beypro site API base:", API_BASE);
 
