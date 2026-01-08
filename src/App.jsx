@@ -3,15 +3,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import MainNav from "./components/MainNav.jsx";
 import {
   ClipboardList,
   BarChart,
   Bot,
   Users,
-  Factory,
   CreditCard,
-  Settings,
   ChevronRight,
+  ChefHat,
+  QrCode,
+  Package,
+  Puzzle,
 } from "lucide-react";
 
 export default function App() {
@@ -20,39 +23,57 @@ export default function App() {
   const features = [
     {
       icon: <ClipboardList className="w-8 h-8 text-fuchsia-400" />,
-      title: "Smart Order Handling",
-      desc: "Tables, take-away, delivery — everything synced live across kitchen and staff.",
+      title: "Smart Orders & POS",
+      desc: "Run dine‑in tables, takeaway, phone and delivery orders in one fast, mistake‑proof flow.",
       color: "from-fuchsia-500 to-pink-600",
     },
     {
-      icon: <BarChart className="w-8 h-8 text-blue-400" />,
-      title: "Real-Time Reports",
-      desc: "Live analytics, profit/loss, and sales trends — powered by Beypro dashboards.",
+      icon: <ChefHat className="w-8 h-8 text-blue-400" />,
+      title: "Real‑Time Kitchen Control",
+      desc: "Live kitchen screen with prep timers, item status updates, and driver assignment alerts.",
       color: "from-blue-500 to-indigo-500",
     },
     {
-      icon: <Bot className="w-8 h-8 text-emerald-400" />,
-      title: "AI-Bey Assistant",
-      desc: "Voice-driven task manager that reminds, assigns, and reports in seconds.",
+      icon: <QrCode className="w-8 h-8 text-emerald-400" />,
+      title: "Centralized QR Menu & Online Ordering",
+      desc: "Branded digital menu with table QR codes, delivery toggle, loyalty tools, and customization.",
       color: "from-emerald-500 to-teal-500",
     },
     {
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      title: "Staff Automation",
-      desc: "Check-in/out, payroll, schedules — automated for every staff member.",
+      icon: <Package className="w-8 h-8 text-purple-400" />,
+      title: "Automated Stock & Suppliers",
+      desc: "Track inventory, flag critical items, and manage supplier carts to protect profit margins.",
       color: "from-purple-500 to-violet-600",
     },
     {
-      icon: <Factory className="w-8 h-8 text-orange-400" />,
-      title: "Production Control",
-      desc: "Monitor ingredient flow, supplier links, and manufacturing in real time.",
+      icon: <BarChart className="w-8 h-8 text-orange-400" />,
+      title: "Real‑Time Profit Reports",
+      desc: "See sales, expenses, cash history, category trends, and staff performance in one dashboard.",
       color: "from-amber-500 to-orange-600",
     },
     {
       icon: <CreditCard className="w-8 h-8 text-cyan-400" />,
-      title: "Payments Simplified",
-      desc: "Multi-method POS with instant sync — cash, card, QR, Papara & more.",
+      title: "Fast Payments & Cash Control",
+      desc: "Multi‑method payments with receipt printing, cash drawer control, and register compliance.",
       color: "from-cyan-500 to-sky-600",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-slate-700" />,
+      title: "Staff, Shifts & Payroll",
+      desc: "Check‑in/out, scheduling, payroll and role‑based permissions to reduce mistakes and save time.",
+      color: "from-slate-600 to-slate-900",
+    },
+    {
+      icon: <Puzzle className="w-8 h-8 text-indigo-700" />,
+      title: "Integrations & Hardware Ready",
+      desc: "Configure delivery platforms, printers and live camera feeds from one centralized system.",
+      color: "from-indigo-600 to-purple-700",
+    },
+    {
+      icon: <Bot className="w-8 h-8 text-green-700" />,
+      title: "AI‑Ready Automation",
+      desc: "Voice‑powered task creation and smart alerts that keep service fast and operations consistent.",
+      color: "from-green-600 to-emerald-700",
     },
   ];
 
@@ -66,13 +87,12 @@ export default function App() {
         />
       </Helmet>
 
+      <div className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+        <MainNav tone="dark" />
+      </div>
+
       {/* --- HERO --- */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6">
-        <img
-          src="/Beylogo.svg"
-          alt="Beypro Logo"
-          className="w-24 sm:w-28 mb-6 animate-fade-in"
-        />
+      <section className="relative min-h-[calc(100vh-72px)] flex flex-col justify-center items-center text-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6">
         <h1 className="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
           Level Up Your Business
         </h1>
@@ -101,10 +121,14 @@ export default function App() {
       </section>
 
       {/* --- FEATURES --- */}
-      <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50 text-gray-900">
+      <section id="features" className="py-20 px-6 bg-gradient-to-b from-white to-gray-50 text-gray-900">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12">
-          Powerful Features Built for Growth
+          Powerful Features Built for Restaurant Growth
         </h2>
+        <p className="max-w-3xl mx-auto text-center text-gray-600 mb-12">
+          Smart, real‑time and automated tools that help restaurants serve faster, reduce mistakes, and grow profit —
+          without the limits of traditional POS systems.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((f, i) => (
@@ -125,7 +149,7 @@ export default function App() {
       </section>
 
       {/* --- PRICING --- */}
-      <section className="py-20 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-500 text-white">
+      <section id="pricing" className="py-20 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-500 text-white">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-14">
           Choose Your Plan
         </h2>
@@ -209,6 +233,12 @@ export default function App() {
             <a href="#pricing" className="hover:text-white transition">
               Pricing
             </a>
+            <Link to="/driver-register" className="hover:text-white transition">
+              Become a Driver
+            </Link>
+            <Link to="/restaurant-register" className="hover:text-white transition">
+              Register Your Restaurant
+            </Link>
             <Link to="/login" className="hover:text-white transition">
               Login
             </Link>

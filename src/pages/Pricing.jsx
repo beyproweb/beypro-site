@@ -1,12 +1,17 @@
 // src/pages/Pricing.jsx
 import React from "react";
 import { useTranslation } from "react-i18next";
-const API_URL = import.meta.env.VITE_API_URL;
+import MainNav from "../components/MainNav.jsx";
 export default function Pricing() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white py-20 px-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
+      <div className="sticky top-0 z-20 bg-black/10 backdrop-blur border-b border-white/10">
+        <MainNav />
+      </div>
+
+      <div className="py-20 px-6">
       <h1 className="text-4xl font-bold text-center text-blue-300 mb-16">{t("pricing_title")}</h1>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -59,6 +64,7 @@ export default function Pricing() {
             {t("request_quote")}
           </button>
         </div>
+      </div>
       </div>
     </div>
   );

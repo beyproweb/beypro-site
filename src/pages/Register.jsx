@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Rocket } from "lucide-react";
+import MainNav from "../components/MainNav.jsx";
+import { getApiBase } from "../lib/apiBase.js";
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -26,24 +28,7 @@ export default function Register() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const RAW_BASE =
-    import.meta.env.VITE_API_URL ||
-    (import.meta.env.MODE === "development"
-      ? "http://localhost:5000/api"
-      : "https://api.beypro.com/api");
-
-  const API_BASE =
-    String(RAW_BASE)
-      .replace(/\/api\/?$/, "")
-      .replace(/\/+$/, "") + "/api";
-
-  if (import.meta.env.MODE === "development" && !import.meta.env.VITE_API_URL) {
-    console.warn(
-      "VITE_API_URL is not set. Check that your env file is named exactly `.env` (no trailing spaces), or set VITE_API_URL to your backend base URL."
-    );
-  }
-
-  console.log("🌐 Beypro site API base:", API_BASE);
+  const API_BASE = getApiBase();
 
 
   const handleChange = (e) => {
@@ -143,7 +128,12 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row bg-gray-50">
+    <div className="min-h-screen w-full bg-gray-50">
+      <div className="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-slate-200">
+        <MainNav tone="dark" />
+      </div>
+
+      <div className="w-full flex flex-col lg:flex-row">
       {/* ===== LEFT (Brand section — shows top on mobile) ===== */}
       <div className="hidden lg:flex flex-col items-center justify-center w-1/2 
   bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white 
@@ -371,6 +361,7 @@ export default function Register() {
             </Link>
           </p>
         </div>
+      </div>
       </div>
     </div>
   );
