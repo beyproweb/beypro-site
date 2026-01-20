@@ -136,37 +136,35 @@ export default function Register() {
       <div className="w-full flex flex-col lg:flex-row">
       {/* ===== LEFT (Brand section — shows top on mobile) ===== */}
       <div className="hidden lg:flex flex-col items-center justify-center w-1/2 
-  bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white 
+  bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white 
   p-10 relative overflow-hidden sticky top-0 h-screen">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,255,255,0.1),_transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/5 via-indigo-600/5 to-transparent"></div>
 
         <div className="relative z-10 text-center space-y-4 md:space-y-6 max-w-md mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-md">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Beypro
           </h1>
-          <p className="text-base md:text-lg font-light opacity-90">
-            Level up your business — start your 30-day trial now.
+          <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+            Restaurant management reimagined. Start your free 30-day trial today.
           </p>
-          <img
-            src="https://res.cloudinary.com/ds8xkm0ue/image/upload/v1727714974/beypro-gradient-illustration.png"
-            alt="Beypro illustration"
-            className="w-48 md:w-80 mx-auto mt-6 md:mt-10 opacity-95"
-          />
-          <footer className="mt-6 md:mt-12 text-sm opacity-80">
-            © {new Date().getFullYear()} Beypro — Level Up
+          <div className="mt-8 inline-block p-4 rounded-2xl bg-gradient-to-br from-sky-500/10 to-indigo-600/10 border border-sky-500/20">
+            <div className="text-5xl">🍽️</div>
+          </div>
+          <footer className="mt-12 text-sm text-slate-500">
+            © {new Date().getFullYear()} Beypro — Transform Your Restaurant
           </footer>
         </div>
       </div>
 
       {/* ===== RIGHT (Form section) ===== */}
       <div className="flex flex-col items-center justify-center w-full lg:w-1/2 bg-white px-4 sm:px-6 md:px-10 py-10 overflow-y-auto">
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 border border-slate-200">
           <div className="text-center mb-6 md:mb-8">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
-              Create Your Account 🚀
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              Get Started Free
             </h2>
-            <p className="text-gray-500 mt-1 text-sm md:text-base">
-              Start your free trial today
+            <p className="text-slate-600 mt-2 text-sm md:text-base leading-relaxed">
+              Create your account and unlock all features for 30 days—no card required.
             </p>
           </div>
 
@@ -176,7 +174,7 @@ export default function Register() {
               value={form.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               required
             />
             <input
@@ -185,7 +183,7 @@ export default function Register() {
               value={form.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               required
             />
             <input
@@ -194,7 +192,7 @@ export default function Register() {
               value={form.password}
               onChange={handleChange}
               placeholder="Password"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               required
             />
             <input
@@ -203,7 +201,7 @@ export default function Register() {
               value={form.confirmPassword}
               onChange={handleChange}
               placeholder="Confirm Password"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               required
             />
             <input
@@ -211,7 +209,7 @@ export default function Register() {
               value={form.businessName}
               onChange={handleChange}
               placeholder="Business Name"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               required
             />
             <input
@@ -219,20 +217,20 @@ export default function Register() {
               value={form.phone}
               onChange={handleChange}
               placeholder="Phone Number"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
             />
             <input
               name="posLocation"
               value={form.posLocation}
               onChange={handleChange}
               placeholder="POS Location / City"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
             />
             <select
               name="usageType"
               value={form.usageType}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
             >
               <option value="">Select POS Usage Type</option>
               <option value="restaurant">Restaurant</option>
@@ -247,9 +245,9 @@ export default function Register() {
                 name="efatura"
                 checked={form.efatura}
                 onChange={handleChange}
-                className="w-5 h-5 text-indigo-600 border-gray-300 rounded"
+                className="w-5 h-5 text-sky-600 border-slate-300 rounded"
               />
-              <span className="text-gray-700 text-sm md:text-base font-medium">
+              <span className="text-slate-700 text-sm md:text-base font-medium">
                 Enable e-Fatura / e-Arşiv
               </span>
             </label>
@@ -261,20 +259,20 @@ export default function Register() {
                   value={form.invoiceTitle}
                   onChange={handleChange}
                   placeholder="Invoice Title"
-                  className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                  className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
                 />
                 <input
                   name="taxOffice"
                   value={form.taxOffice}
                   onChange={handleChange}
                   placeholder="Tax Office"
-                  className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                  className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
                 />
                 <select
                   name="invoiceType"
                   value={form.invoiceType}
                   onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                  className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
                 >
                   <option value="">Select Invoice Type</option>
                   <option value="bireysel">Individual</option>
@@ -284,15 +282,15 @@ export default function Register() {
             )}
 
             {/* Credit Card */}
-            <h3 className="font-semibold text-gray-800 mt-6 text-base md:text-lg">
-              Payment Info
+            <h3 className="font-bold text-slate-900 mt-6 text-base md:text-lg">
+              Payment Information
             </h3>
             <input
               name="cardNumber"
               value={form.cardNumber}
               onChange={handleChange}
               placeholder="Card Number"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
             />
             <div className="flex flex-col sm:flex-row gap-4">
               <input
@@ -300,14 +298,14 @@ export default function Register() {
                 value={form.expiry}
                 onChange={handleChange}
                 placeholder="MM/YY"
-                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                className="w-full sm:w-1/2 p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               />
               <input
                 name="cvv"
                 value={form.cvv}
                 onChange={handleChange}
                 placeholder="CVV"
-                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                className="w-full sm:w-1/2 p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               />
             </div>
 
@@ -317,7 +315,7 @@ export default function Register() {
                 name="plan"
                 value={form.plan}
                 onChange={handleChange}
-                className="flex-1 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                className="flex-1 p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               >
                 <option value="trial">Trial — 30 Days Free</option>
                 <option value="basic">Basic — ₺600/mo</option>
@@ -328,7 +326,7 @@ export default function Register() {
                 name="billingCycle"
                 value={form.billingCycle}
                 onChange={handleChange}
-                className="flex-1 p-3 border border-gray-300 rounded-xl text-sm md:text-base"
+                className="flex-1 p-3 border border-slate-300 rounded-lg text-sm md:text-base focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
               >
                 <option value="monthly">Monthly Billing</option>
                 <option value="yearly">Yearly Billing</option>
@@ -336,7 +334,7 @@ export default function Register() {
             </div>
 
             {error && (
-              <p className="text-red-500 text-sm font-medium bg-red-50 px-3 py-2 rounded-lg">
+              <p className="text-red-600 text-sm font-medium bg-red-50 px-4 py-3 rounded-lg border border-red-200">
                 {error}
               </p>
             )}
@@ -344,20 +342,20 @@ export default function Register() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 mt-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold rounded-xl shadow hover:scale-[1.02] transition-all disabled:opacity-60"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 mt-3 bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all disabled:opacity-60"
             >
               <Rocket size={18} />
-              {loading ? "Creating Account..." : "Subscribe & Start Now"}
+              {loading ? "Creating Account..." : "Start Free Trial"}
             </button>
           </form>
 
-          <p className="text-center text-xs text-gray-400 mt-10">
+          <p className="text-center text-xs text-slate-600 mt-10">
             Already have an account?{" "}
             <Link
               to="/login"
-              className="text-indigo-600 hover:text-indigo-800 font-medium"
+              className="text-sky-600 hover:text-sky-700 font-semibold"
             >
-              Login
+              Sign In
             </Link>
           </p>
         </div>

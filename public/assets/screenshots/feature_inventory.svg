@@ -1,0 +1,117 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="400" y="60" font-size="48" font-weight="bold" text-anchor="middle" fill="#1e293b">
+    Inventory Control
+  </text>
+  
+  <!-- Shelves with items -->
+  <g id="shelf1">
+    <!-- Shelf background -->
+    <rect x="50" y="120" width="700" height="140" rx="12" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+    
+    <!-- Shelf label -->
+    <text x="70" y="155" font-size="18" font-weight="600" fill="#475569">Stock Level</text>
+    
+    <!-- Item boxes -->
+    <rect x="80" y="175" width="60" height="60" rx="4" fill="url(#cardGrad)"/>
+    <text x="110" y="215" font-size="28" font-weight="bold" text-anchor="middle" fill="white">85%</text>
+    
+    <rect x="180" y="175" width="60" height="60" rx="4" fill="#10b981"/>
+    <text x="210" y="215" font-size="28" font-weight="bold" text-anchor="middle" fill="white">72%</text>
+    
+    <rect x="280" y="175" width="60" height="60" rx="4" fill="#f59e0b"/>
+    <text x="310" y="215" font-size="28" font-weight="bold" text-anchor="middle" fill="white">45%</text>
+    
+    <rect x="380" y="175" width="60" height="60" rx="4" fill="#ef4444"/>
+    <text x="410" y="215" font-size="28" font-weight="bold" text-anchor="middle" fill="white">12%</text>
+    
+    <rect x="480" y="175" width="60" height="60" rx="4" fill="#06b6d4"/>
+    <text x="510" y="215" font-size="28" font-weight="bold" text-anchor="middle" fill="white">98%</text>
+    
+    <rect x="580" y="175" width="60" height="60" rx="4" fill="#8b5cf6"/>
+    <text x="610" y="215" font-size="28" font-weight="bold" text-anchor="middle" fill="white">55%</text>
+  </g>
+  
+  <!-- Real-time tracking section -->
+  <g id="tracking">
+    <rect x="50" y="290" width="700" height="180" rx="12" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+    
+    <text x="70" y="325" font-size="18" font-weight="600" fill="#475569">Real-time Tracking</text>
+    
+    <!-- Item 1 -->
+    <text x="70" y="360" font-size="14" fill="#64748b">Tomato Sauce</text>
+    <rect x="70" y="370" width="600" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="70" y="370" width="480" height="12" rx="6" fill="#10b981"/>
+    <text x="680" y="380" font-size="12" fill="#475569">80/100</text>
+    
+    <!-- Item 2 -->
+    <text x="70" y="420" font-size="14" fill="#64748b">Cheese Block</text>
+    <rect x="70" y="430" width="600" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="70" y="430" width="180" height="12" rx="6" fill="#f59e0b"/>
+    <text x="680" y="440" font-size="12" fill="#475569">30/100</text>
+    
+    <!-- Item 3 -->
+    <text x="70" y="480" font-size="14" fill="#64748b">Olive Oil</text>
+    <rect x="70" y="490" width="600" height="12" rx="6" fill="#e2e8f0"/>
+    <rect x="70" y="490" width="60" height="12" rx="6" fill="#ef4444"/>
+    <text x="680" y="500" font-size="12" fill="#475569">10/100</text>
+  </g>
+  
+  <!-- Alerts section -->
+  <g id="alerts">
+    <rect x="50" y="500" width="330" height="220" rx="12" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="70" y="535" font-size="16" font-weight="600" fill="#475569">⚠️ Low Stock Alert</text>
+    
+    <rect x="70" y="555" width="290" height="50" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+    <text x="85" y="575" font-size="12" font-weight="600" fill="#991b1b">Olive Oil</text>
+    <text x="85" y="595" font-size="11" fill="#7c2d12">Only 10 units remaining</text>
+    
+    <rect x="70" y="620" width="290" height="50" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+    <text x="85" y="640" font-size="12" font-weight="600" fill="#991b1b">Fresh Basil</text>
+    <text x="85" y="660" font-size="11" fill="#7c2d12">Reorder needed</text>
+  </g>
+  
+  <!-- Auto-reorder section -->
+  <g id="autoreorder">
+    <rect x="420" y="500" width="330" height="220" rx="12" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="440" y="535" font-size="16" font-weight="600" fill="#475569">🚀 Auto Reorder</text>
+    
+    <circle cx="455" cy="610" r="8" fill="#10b981"/>
+    <text x="475" y="615" font-size="12" fill="#1f2937">Mozzarella - Ordered</text>
+    
+    <circle cx="455" cy="645" r="8" fill="#10b981"/>
+    <text x="475" y="650" font-size="12" fill="#1f2937">Parmesan - Ordered</text>
+    
+    <circle cx="455" cy="680" r="8" fill="#0ea5e9"/>
+    <text x="475" y="685" font-size="12" fill="#1f2937">Pepperoni - Pending</text>
+  </g>
+  
+  <!-- Bottom stats -->
+  <g id="stats">
+    <rect x="50" y="750" width="220" height="50" rx="8" fill="url(#cardGrad)"/>
+    <text x="160" y="770" font-size="12" text-anchor="middle" fill="white" font-weight="600">Total Items</text>
+    <text x="160" y="790" font-size="24" text-anchor="middle" fill="white" font-weight="bold">156</text>
+    
+    <rect x="290" y="750" width="220" height="50" rx="8" fill="#10b981"/>
+    <text x="400" y="770" font-size="12" text-anchor="middle" fill="white" font-weight="600">In Stock</text>
+    <text x="400" y="790" font-size="24" text-anchor="middle" fill="white" font-weight="bold">128</text>
+    
+    <rect x="530" y="750" width="220" height="50" rx="8" fill="#f59e0b"/>
+    <text x="640" y="770" font-size="12" text-anchor="middle" fill="white" font-weight="600">Low Stock</text>
+    <text x="640" y="790" font-size="24" text-anchor="middle" fill="white" font-weight="bold">28</text>
+  </g>
+</svg>

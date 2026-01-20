@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="60" font-size="48" font-weight="bold" text-anchor="middle" fill="#1e293b">
+    POS Checkout
+  </text>
+
+  <!-- Terminal Screen -->
+  <rect x="100" y="110" width="600" height="680" rx="30" fill="white" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="115" y="125" width="570" height="650" rx="24" fill="#f8fafc"/>
+
+  <!-- Header with Order Info -->
+  <rect x="125" y="135" width="550" height="70" rx="12" fill="url(#headerGrad)"/>
+  <text x="400" y="168" font-size="22" font-weight="bold" text-anchor="middle" fill="white">Transaction #5847</text>
+  <text x="400" y="193" font-size="12" text-anchor="middle" fill="#e0f2fe">Table 12 • 3 Guests</text>
+
+  <!-- Item List -->
+  <text x="145" y="230" font-size="13" font-weight="600" fill="#475569">Order Summary:</text>
+
+  <!-- Item 1 -->
+  <rect x="145" y="250" width="510" height="50" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="160" y="270" font-size="12" font-weight="600" fill="#1f2937">Margherita Pizza (Medium)</text>
+  <text x="160" y="288" font-size="10" fill="#64748b">Extra Cheese +$2.00</text>
+  <text x="645" y="278" font-size="13" font-weight="bold" text-anchor="end" fill="#0284c7">$14.99</text>
+
+  <!-- Item 2 -->
+  <rect x="145" y="310" width="510" height="50" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="160" y="330" font-size="12" font-weight="600" fill="#1f2937">Caesar Salad with Grilled Chicken</text>
+  <text x="160" y="348" font-size="10" fill="#64748b">Dressing on the side</text>
+  <text x="645" y="338" font-size="13" font-weight="bold" text-anchor="end" fill="#0284c7">$12.99</text>
+
+  <!-- Item 3 -->
+  <rect x="145" y="370" width="510" height="50" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="160" y="390" font-size="12" font-weight="600" fill="#1f2937">Coca Cola (Large) × 2</text>
+  <text x="160" y="408" font-size="10" fill="#64748b">Cold with ice</text>
+  <text x="645" y="398" font-size="13" font-weight="bold" text-anchor="end" fill="#0284c7">$5.98</text>
+
+  <!-- Divider -->
+  <line x1="145" y1="430" x2="655" y2="430" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Totals Section -->
+  <rect x="145" y="450" width="510" height="100" rx="8" fill="#f0f9ff" stroke="#bfdbfe" stroke-width="1"/>
+
+  <text x="165" y="475" font-size="11" fill="#475569">Subtotal:</text>
+  <text x="635" y="475" font-size="11" text-anchor="end" fill="#1f2937" font-weight="600">$33.96</text>
+
+  <text x="165" y="500" font-size="11" fill="#475569">Tax (8%):</text>
+  <text x="635" y="500" font-size="11" text-anchor="end" fill="#1f2937" font-weight="600">$2.72</text>
+
+  <text x="165" y="525" font-size="11" fill="#475569">Service Charge (15%):</text>
+  <text x="635" y="525" font-size="11" text-anchor="end" fill="#1f2937" font-weight="600">$5.09</text>
+
+  <line x1="165" y1="535" x2="635" y2="535" stroke="#bfdbfe" stroke-width="1"/>
+
+  <text x="165" y="560" font-size="13" font-weight="bold" fill="#0284c7">Total Amount:</text>
+  <text x="635" y="560" font-size="16" font-weight="bold" text-anchor="end" fill="#0284c7">$41.77</text>
+
+  <!-- Payment Method Selection -->
+  <text x="145" y="600" font-size="12" font-weight="600" fill="#1f2937">Select Payment Method:</text>
+
+  <rect x="145" y="620" width="240" height="45" rx="8" fill="#0284c7" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="265" y="649" font-size="13" font-weight="bold" text-anchor="middle" fill="white">💳 Card Payment</text>
+
+  <rect x="415" y="620" width="240" height="45" rx="8" fill="#10b981"/>
+  <text x="535" y="649" font-size="13" font-weight="bold" text-anchor="middle" fill="white">💵 Cash</text>
+
+  <!-- Action Buttons -->
+  <rect x="145" y="680" width="160" height="40" rx="6" fill="#64748b"/>
+  <text x="225" y="706" font-size="11" font-weight="bold" text-anchor="middle" fill="white">← Cancel</text>
+
+  <rect x="315" y="680" width="160" height="40" rx="6" fill="#f59e0b"/>
+  <text x="395" y="706" font-size="11" font-weight="bold" text-anchor="middle" fill="white">🔄 Clear</text>
+
+  <rect x="485" y="680" width="170" height="40" rx="6" fill="url(#headerGrad)"/>
+  <text x="570" y="706" font-size="11" font-weight="bold" text-anchor="middle" fill="white">✓ Complete</text>
+</svg>

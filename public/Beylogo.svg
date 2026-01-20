@@ -32,9 +32,9 @@
       </feMerge>
     </filter>
   </defs>
-  <!-- "beypr" text, ending right before the "o" position -->
-<text x="24" y="82" font-family="Montserrat, sans-serif" font-size="84" font-weight="800" letter-spacing="2" fill="url(#beypro-gradient)">
-  beypr
+  <!-- "Beypr" text, ending right before the "o" position -->
+<text x="24" y="82" font-family="Montserrat, sans-serif" font-size="84" font-weight="800" letter-spacing="2" textLength="239" lengthAdjust="spacingAndGlyphs" fill="url(#beypro-gradient)">
+  Beypr
 </text>
 <!-- Pie chart "o" perfectly aligned and sized like the font -->
 <!-- Pie chart "o" perfectly aligned and sized like the font (now radius 26) -->
