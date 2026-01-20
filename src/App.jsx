@@ -205,7 +205,7 @@ export default function App() {
       <footer className="bg-slate-950 text-slate-400 text-sm py-12 px-6 border-t border-slate-800">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <span className="font-bold text-white">Beypro</span> <span className="text-slate-600">© {new Date().getFullYear()}</span>
+            <span className="font-bold text-white">Beypro</span> <span className="text-slate-600">{t("footer_copyright", { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-sm">
             <Link to="/features" className="hover:text-white transition duration-300">

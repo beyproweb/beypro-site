@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Menu, X, ChevronDown, ShoppingCart, Flame, Truck, BarChart3, Settings, Users, Zap, Lock } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher.jsx";
 
@@ -8,40 +9,41 @@ export default function MainNav({ className = "", tone = "light" }) {
   const [featuresDropdown, setFeaturesDropdown] = useState(false);
   const [pricingDropdown, setPricingDropdown] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const isLight = tone === "light";
 
   const items = useMemo(
     () => [
-      { to: "/", label: "Home" },
+      { to: "/", label: t("nav_home") },
       { 
-        label: "Features", 
+        label: t("nav_features"), 
         submenu: [
-          { to: "/features", label: "All Features", desc: "Explore everything Beypro offers", icon: ShoppingCart },
-          { to: "/features/pos", label: "POS System", desc: "Manage orders and payments", icon: ShoppingCart },
-          { to: "/features/kitchen", label: "Kitchen Display", desc: "Real-time order management", icon: Flame },
-          { to: "/features/delivery", label: "Delivery Management", desc: "Track and optimize deliveries", icon: Truck },
-          { to: "/features/reports", label: "Analytics & Reports", desc: "Data-driven insights", icon: BarChart3 },
-          { to: "/features/inventory", label: "Inventory Control", desc: "Stock management automation", icon: Settings },
-          { to: "/features/staff", label: "Staff Management", desc: "Schedule and track staff", icon: Users },
-          { to: "/features/automation", label: "AI Automation", desc: "Smart business automation", icon: Zap },
+          { to: "/features", label: t("nav_all_features"), desc: t("nav_all_features_desc"), icon: ShoppingCart },
+          { to: "/features/pos", label: t("nav_pos"), desc: t("nav_pos_desc"), icon: ShoppingCart },
+          { to: "/features/kitchen", label: t("nav_kitchen"), desc: t("nav_kitchen_desc"), icon: Flame },
+          { to: "/features/delivery", label: t("nav_delivery"), desc: t("nav_delivery_desc"), icon: Truck },
+          { to: "/features/reports", label: t("nav_reports"), desc: t("nav_reports_desc"), icon: BarChart3 },
+          { to: "/features/inventory", label: t("nav_inventory"), desc: t("nav_inventory_desc"), icon: Settings },
+          { to: "/features/staff", label: t("nav_staff"), desc: t("nav_staff_desc"), icon: Users },
+          { to: "/features/automation", label: t("nav_automation"), desc: t("nav_automation_desc"), icon: Zap },
         ]
       },
       { 
-        label: "Pricing",
+        label: t("nav_pricing"),
         submenu: [
-          { to: "/pricing", label: "All Plans", desc: "View all pricing options", icon: ShoppingCart },
-          { to: "/pricing/trial", label: "Trial Plan", desc: "Get started for free", icon: Zap },
-          { to: "/pricing/pro", label: "Pro Plan", desc: "For growing businesses", icon: Users },
-          { to: "/pricing/enterprise", label: "Enterprise", desc: "Custom solutions", icon: Lock },
+          { to: "/pricing", label: t("nav_all_plans"), desc: t("nav_all_plans_desc"), icon: ShoppingCart },
+          { to: "/pricing/trial", label: t("nav_trial"), desc: t("nav_trial_desc"), icon: Zap },
+          { to: "/pricing/pro", label: t("nav_pro"), desc: t("nav_pro_desc"), icon: Users },
+          { to: "/pricing/enterprise", label: t("nav_enterprise"), desc: t("nav_enterprise_desc"), icon: Lock },
         ]
       },
-      { to: "/driver-register", label: "Become a Driver" },
-      { to: "/restaurant-register", label: "Register Your Restaurant" },
-      { to: "/login", label: "Login" },
-      { to: "/register", label: "Register" },
+      { to: "/driver-register", label: t("nav_drivers") },
+      { to: "/restaurant-register", label: t("nav_restaurants") },
+      { to: "/login", label: t("nav_login") },
+      { to: "/register", label: t("nav_register") },
     ],
-    []
+    [t]
   );
 
   const isActive = (to) => (to === "/" ? location.pathname === "/" : location.pathname.startsWith(to));

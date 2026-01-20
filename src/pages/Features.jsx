@@ -51,176 +51,151 @@ export default function Features() {
     "Integrations: Yemeksepeti, Getir, Trendyol, Migros + WhatsApp + Iyzico",
   ];
 
-  const sections = [
+  const getSectionsData = () => [
     {
       id: "pos-orders",
-      title: "Core POS & Orders",
-      subtitle: "Fast ordering. Clear control. Reliable checkout.",
-      features: [
-        "Table Overview with operational tabs (Tables, Kitchen, History, Packet, Phone, Register)",
-        "Table workflow: open table → add items → discounts → payment → close",
-        "Packet/Delivery + Phone orders with customer address support",
-        "Transaction screen to review, update, and close orders",
-        "Printing utilities for receipts and kitchen outputs (via Beypro Bridge)",
-        "Customer database with saved profiles and multiple addresses",
+      titleKey: "pos_orders_title",
+      subtitleKey: "pos_orders_subtitle",
+      featureKeys: [
+        "pos_orders_f1",
+        "pos_orders_f2",
+        "pos_orders_f3",
+        "pos_orders_f4",
+        "pos_orders_f5",
+        "pos_orders_f6",
       ],
     },
     {
       id: "kitchen",
-      title: "Kitchen Operations",
-      subtitle: "Keep the kitchen synchronized with the front.",
-      features: [
-        "Kitchen order view with status updates (preparing / ready / delivered)",
-        "Kitchen configuration patterns for category/product routing",
-        "Timer and scheduler-job support for kitchen timing logic (backend-driven)",
-      ],
+      titleKey: "kitchen_title",
+      subtitleKey: "kitchen_subtitle",
+      featureKeys: ["kitchen_f1", "kitchen_f2", "kitchen_f3"],
     },
     {
       id: "register",
-      title: "Register & Cash Management",
-      subtitle: "Daily cash control, built into the workflow.",
-      features: [
-        "Open/close register state with opening cash",
-        "End-of-day workflows + register checks",
-        "Cash register history and logs",
-        "Expenses tracking",
-        "Cash drawer support (via printer/drawer settings)",
-        "Subscription & billing-cycle support (backend capabilities)",
+      titleKey: "register_title",
+      subtitleKey: "register_subtitle",
+      featureKeys: [
+        "register_f1",
+        "register_f2",
+        "register_f3",
+        "register_f4",
+        "register_f5",
+        "register_f6",
       ],
     },
     {
       id: "stock-suppliers",
-      title: "Products, Stock & Suppliers",
-      subtitle: "Prevent shortages and control costs—without spreadsheets.",
-      features: [
-        "Product + category management",
-        "Stock management with low-stock alerting",
-        "Ingredient price tracking",
-        "Suppliers module: supplier list & profiles, balances and transactions, purchasing receipts and price history",
-        "Category images (used in POS & QR menu)",
+      titleKey: "stock_suppliers_title",
+      subtitleKey: "stock_suppliers_subtitle",
+      featureKeys: [
+        "stock_suppliers_f1",
+        "stock_suppliers_f2",
+        "stock_suppliers_f3",
+        "stock_suppliers_f4",
+        "stock_suppliers_f5",
       ],
     },
     {
       id: "supplier-automation",
-      title: "Smart Supplier Cart Automation",
-      subtitle: "Automate reordering based on low stock.",
-      features: [
-        "Scheduled supplier carts (date/time + weekly/biweekly/monthly repeat)",
-        "Auto-send option + pending scheduled orders list + cancel",
-        "Auto-add low stock items to supplier cart (supported by backend routes)",
-        "Supplier cart email ordering flow",
+      titleKey: "supplier_automation_title",
+      subtitleKey: "supplier_automation_subtitle",
+      featureKeys: [
+        "supplier_automation_f1",
+        "supplier_automation_f2",
+        "supplier_automation_f3",
+        "supplier_automation_f4",
       ],
     },
     {
       id: "staff",
-      title: "Staff Management",
-      subtitle: "Scheduling, attendance, and payroll—permission controlled.",
-      features: [
-        "QR-based staff check-in/out (optional geo restrictions)",
-        "Staff scheduling tools",
-        "Payroll and staff payment tracking",
-        "Role/permission gating per feature (check-in, schedule, payroll, payments, staff management)",
-      ],
+      titleKey: "staff_title",
+      subtitleKey: "staff_subtitle",
+      featureKeys: ["staff_f1", "staff_f2", "staff_f3", "staff_f4"],
     },
     {
       id: "reports",
-      title: "Reports & Analytics",
-      subtitle: "Know what's working—then export it cleanly.",
-      features: [
-        "Modular reports page with export options",
-        "Customer insights page",
-      ],
+      titleKey: "reports_title",
+      subtitleKey: "reports_subtitle",
+      featureKeys: ["reports_f1", "reports_f2"],
     },
     {
       id: "tasks",
-      title: "Tasks & Maintenance",
-      subtitle: "Operational follow-through for teams.",
-      features: [
-        "Task tracking page",
-        "Maintenance tracker page",
-      ],
+      titleKey: "tasks_title",
+      subtitleKey: "tasks_subtitle",
+      featureKeys: ["tasks_f1", "tasks_f2"],
     },
     {
       id: "marketing",
-      title: "Marketing & Messaging",
-      subtitle: "Built-in campaign workflows where needed.",
-      features: [
-        "Marketing campaigns page (WhatsApp workflows supported in codebase)",
-        "WhatsApp webhook integration endpoint (backend)",
-      ],
+      titleKey: "marketing_title",
+      subtitleKey: "marketing_subtitle",
+      featureKeys: ["marketing_f1", "marketing_f2"],
     },
     {
       id: "integrations",
-      title: "Integrations",
-      subtitle: "Connect the platforms your restaurant relies on.",
-      features: [
-        "Integrations settings page",
-        "Supported platforms: Yemeksepeti, Getir, Trendyol, Migros",
-        "Enable/disable per platform",
-        "Credentials/identifiers per platform",
-        "Menu sync toggle (where supported)",
-        "Auto-confirm orders toggle",
-        "Yemeksepeti mapping tools: unmatched items list, mapping management",
-        "WhatsApp auto order message toggle",
-        "Iyzico payment gateway routes (mounted when configured)",
+      titleKey: "integrations_title",
+      subtitleKey: "integrations_subtitle",
+      featureKeys: [
+        "integrations_f1",
+        "integrations_f2",
+        "integrations_f3",
+        "integrations_f4",
+        "integrations_f5",
+        "integrations_f6",
+        "integrations_f7",
+        "integrations_f8",
+        "integrations_f9",
       ],
     },
     {
       id: "qr-menu",
-      title: "QR Menu & Instant Restaurant Website",
-      subtitle: "Your restaurant online in minutes—not weeks.",
-      features: [
-        "Public routes like /:slug, /qr, /menu let customers browse the menu and place orders",
-        "Restaurant branding/theme customization",
-        "Products, categories, extras groups",
-        "Category images",
-        '"Popular this week" products',
-        "Story, gallery, and social links",
-        "Delivery/pickup toggles",
-        "Optional table geo restriction options",
-        "Loyalty points system (QR loyalty backend)",
-        "Admin-facing QR settings page included",
+      titleKey: "qr_menu_title",
+      subtitleKey: "qr_menu_subtitle",
+      featureKeys: [
+        "qr_menu_f1",
+        "qr_menu_f2",
+        "qr_menu_f3",
+        "qr_menu_f4",
+        "qr_menu_f5",
+        "qr_menu_f6",
+        "qr_menu_f7",
+        "qr_menu_f8",
+        "qr_menu_f9",
+        "qr_menu_f10",
       ],
     },
     {
       id: "hardware",
-      title: "Printers & Cameras",
-      subtitle: "Hardware workflows that actually fit restaurant reality.",
-      features: [
-        "Printer management: default printers, test prints, LAN scan, bridge printing",
-        "Cameras page (live view and configuration patterns)",
-      ],
+      titleKey: "hardware_title",
+      subtitleKey: "hardware_subtitle",
+      featureKeys: ["hardware_f1", "hardware_f2"],
     },
     {
       id: "settings",
-      title: "Settings That Scale With You",
-      subtitle: "Control operations from one place.",
-      features: [
-        "Shop hours",
-        "Localization (language/currency patterns)",
-        "Notifications (toast + sound events)",
-        "Subscription",
-        "Payment methods",
-        "Register settings",
-        "Users / user management",
-        "Integrations",
-        "Inventory/logs",
-        "Appearance (theme)",
-        "Printers",
-        "Cameras",
-        "Tables settings",
-        "Transaction behavior settings",
+      titleKey: "settings_title",
+      subtitleKey: "settings_subtitle",
+      featureKeys: [
+        "settings_f1",
+        "settings_f2",
+        "settings_f3",
+        "settings_f4",
+        "settings_f5",
+        "settings_f6",
+        "settings_f7",
+        "settings_f8",
+        "settings_f9",
+        "settings_f10",
+        "settings_f11",
+        "settings_f12",
+        "settings_f13",
+        "settings_f14",
       ],
     },
     {
       id: "security",
-      title: "Security & Access Control",
-      subtitle: "Built for multi-role restaurant teams.",
-      features: [
-        "Role-based permissions across pages and settings tabs",
-        "Module gating by plan configuration",
-        "Protected vs public endpoint separation (/api/* vs /api/public/*)",
-      ],
+      titleKey: "security_title",
+      subtitleKey: "security_subtitle",
+      featureKeys: ["security_f1", "security_f2", "security_f3"],
     },
   ];
 
@@ -243,9 +218,9 @@ export default function Features() {
       <section className="relative py-16 px-6 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-2">
-            Features
+            {t("features_hero_title")}
           </h1>
-          <p className="text-lg text-slate-300">Explore everything Beypro can do for your restaurant</p>
+          <p className="text-lg text-slate-300">{t("features_hero_desc")}</p>
         </div>
       </section>
 
@@ -254,7 +229,7 @@ export default function Features() {
         <div className="max-w-7xl mx-auto">
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {sections.map((section) => (
+            {getSectionsData().map((section) => (
               <a
                 key={section.id}
                 href={`#${section.id}`}
@@ -266,9 +241,9 @@ export default function Features() {
                   <div className="p-4 rounded-xl bg-gradient-to-r from-sky-100 to-indigo-100 text-sky-600 group-hover:text-indigo-600 flex items-center justify-center mb-4 w-16 h-16 flex-shrink-0">
                     <div className="w-8 h-8">{sectionIcons[section.id]}</div>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 text-center leading-tight">{section.title}</h3>
-                  {section.subtitle && (
-                    <p className="text-sm text-slate-600 mt-2 text-center leading-snug">{section.subtitle}</p>
+                  <h3 className="text-lg font-bold text-slate-900 text-center leading-tight">{t(section.titleKey)}</h3>
+                  {section.subtitleKey && (
+                    <p className="text-sm text-slate-600 mt-2 text-center leading-snug">{t(section.subtitleKey)}</p>
                   )}
                 </div>
               </a>
@@ -281,10 +256,10 @@ export default function Features() {
       <section className="py-20 px-6 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center">
-            Everything you need to operate
+            {t("features_intro_title")}
           </h2>
           <p className="text-center text-slate-300 mb-14 text-lg leading-relaxed">
-            From POS and kitchen operations to inventory management and staff coordination—Beypro gives you all the tools modern restaurants need.
+            {t("features_intro_desc")}
           </p>
 
           {/* Highlights Grid */}
@@ -302,29 +277,29 @@ export default function Features() {
       {/* --- FEATURE DETAILS --- */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          {sections.map((section, idx) => (
+          {getSectionsData().map((section, idx) => (
             <div key={section.id} id={section.id} className="scroll-mt-24">
               <div className="mb-8 flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white shadow-lg flex items-center justify-center flex-shrink-0">
                   {sectionIcons[section.id]}
                 </div>
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-1 text-slate-900">{section.title}</h2>
-                  <p className="text-base text-slate-600">{section.subtitle}</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-1 text-slate-900">{t(section.titleKey)}</h2>
+                  <p className="text-base text-slate-600">{t(section.subtitleKey)}</p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                {section.features.map((feature, fidx) => (
+                {section.featureKeys.map((featureKey, fidx) => (
                   <div
                     key={fidx}
                     className="flex items-start gap-3 p-5 rounded-xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition duration-300"
                   >
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 flex-shrink-0 mt-2" />
-                    <p className="text-slate-800 text-base leading-relaxed">{feature}</p>
+                    <p className="text-slate-800 text-base leading-relaxed">{t(featureKey)}</p>
                   </div>
                 ))}
               </div>
-              {idx < sections.length - 1 && (
+              {idx < getSectionsData().length - 1 && (
                 <div className="mt-12 mb-12 border-t border-slate-300" />
               )}
             </div>
@@ -336,20 +311,20 @@ export default function Features() {
       <section className="py-20 px-6 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 text-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Ready to Transform Your Restaurant?
+            {t("features_cta_title")}
           </h2>
           <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-            Start with the core modules today and scale as you grow. All plans include a 30-day free trial.
+            {t("features_cta_desc")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/register"
               className="px-8 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:shadow-lg transition inline-flex items-center justify-center gap-2"
             >
-              Start Free Trial <ArrowRight className="w-4 h-4" />
+              {t("features_cta_trial")} <ArrowRight className="w-4 h-4" />
             </Link>
             <button className="px-8 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10 transition">
-              Book a Demo
+              {t("features_cta_demo")}
             </button>
           </div>
         </div>
@@ -359,15 +334,15 @@ export default function Features() {
       <footer className="bg-slate-950 text-slate-400 text-sm py-12 px-6 border-t border-slate-800">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <span className="font-bold text-white">Beypro</span> <span className="text-slate-600">© {new Date().getFullYear()}</span>
+            <span className="font-bold text-white">Beypro</span> <span className="text-slate-600">{t("footer_copyright", { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-sm">
-            <Link to="/features" className="hover:text-white transition duration-300">Features</Link>
-            <Link to="/pricing" className="hover:text-white transition duration-300">Pricing</Link>
-            <Link to="/driver-register" className="hover:text-white transition duration-300">Drivers</Link>
-            <Link to="/restaurant-register" className="hover:text-white transition duration-300">For Restaurants</Link>
-            <Link to="/login" className="hover:text-white transition duration-300">Login</Link>
-            <Link to="/register" className="hover:text-white transition duration-300">Register</Link>
+            <Link to="/features" className="hover:text-white transition duration-300">{t("footer_link_features")}</Link>
+            <Link to="/pricing" className="hover:text-white transition duration-300">{t("footer_link_pricing")}</Link>
+            <Link to="/driver-register" className="hover:text-white transition duration-300">{t("footer_link_drivers")}</Link>
+            <Link to="/restaurant-register" className="hover:text-white transition duration-300">{t("footer_link_restaurants")}</Link>
+            <Link to="/login" className="hover:text-white transition duration-300">{t("footer_link_login")}</Link>
+            <Link to="/register" className="hover:text-white transition duration-300">{t("footer_register")}</Link>
           </div>
         </div>
       </footer>
