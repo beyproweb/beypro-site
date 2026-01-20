@@ -34,30 +34,30 @@ export default function App() {
         
         <div className="relative z-10 max-w-4xl">
           <h1 className="text-5xl sm:text-7xl font-bold mb-8 leading-tight tracking-tight">
-            Restaurant Management
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 mt-2">Reimagined</span>
+            {t("home_hero_title")}
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 mt-2">{t("home_hero_highlight")}</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto">
-            All-in-one POS, kitchen control, stock management, and AI-powered automation in one clean, powerful dashboard.
+            {t("home_hero_desc")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/register"
               className="px-8 py-4 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-600 font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition duration-300"
             >
-              Get Started Free
+              {t("home_get_started")}
             </Link>
             <Link
               to="/login"
               className="px-8 py-4 rounded-lg border-2 border-slate-600 text-white font-semibold hover:bg-slate-800 transition duration-300"
             >
-              Watch Demo
+              {t("home_watch_demo")}
             </Link>
           </div>
         </div>
 
         <div className="absolute bottom-8 text-slate-500 text-sm animate-pulse">
-          ↓ Scroll to explore
+          {t("home_scroll_hint")}
         </div>
       </section>
 
@@ -65,10 +65,10 @@ export default function App() {
       <section className="py-32 px-6 bg-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-slate-900">
-            Complete Restaurant Operating System
+            {t("home_os_title")}
           </h2>
           <p className="max-w-2xl mx-auto text-slate-600 mb-12 text-lg leading-relaxed">
-            From order management to kitchen coordination, inventory tracking to staff scheduling — everything you need to run a modern restaurant.
+            {t("home_os_desc")}
           </p>
           <Link
             to="/features"
@@ -83,15 +83,15 @@ export default function App() {
       <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center text-slate-900">
-            Powerful Features, Beautiful Design
+            {t("home_showcase_title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
               <img src="/assets/screenshots/home1.png" alt="Modern POS System" loading="lazy" className="w-full aspect-square object-cover group-hover:scale-110 transition duration-300" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                 <div className="text-white">
-                  <h3 className="text-xl font-bold">Modern POS</h3>
-                  <p className="text-sm text-slate-300">Fast & intuitive</p>
+                  <h3 className="text-xl font-bold">{t("home_pos_title")}</h3>
+                  <p className="text-sm text-slate-300">{t("home_pos_sub")}</p>
                 </div>
               </div>
             </div>
@@ -100,8 +100,8 @@ export default function App() {
               <img src="/assets/screenshots/home2.png" alt="Kitchen Management" loading="lazy" className="w-full aspect-square object-cover group-hover:scale-110 transition duration-300" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                 <div className="text-white">
-                  <h3 className="text-xl font-bold">Kitchen Control</h3>
-                  <p className="text-sm text-slate-300">Real-time coordination</p>
+                  <h3 className="text-xl font-bold">{t("home_kitchen_title")}</h3>
+                  <p className="text-sm text-slate-300">{t("home_kitchen_sub")}</p>
                 </div>
               </div>
             </div>
@@ -110,8 +110,8 @@ export default function App() {
               <img src="/assets/screenshots/Restaurant%20analytics%20in%20focus.png" alt="Analytics Dashboard" loading="lazy" className="w-full aspect-square object-cover group-hover:scale-110 transition duration-300" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                 <div className="text-white">
-                  <h3 className="text-xl font-bold">Smart Analytics</h3>
-                  <p className="text-sm text-slate-300">Data-driven insights</p>
+                  <h3 className="text-xl font-bold">{t("home_analytics_title")}</h3>
+                  <p className="text-sm text-slate-300">{t("home_analytics_sub")}</p>
                 </div>
               </div>
             </div>
@@ -123,23 +123,23 @@ export default function App() {
       <section id="pricing" className="py-32 px-6 bg-slate-950">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-white">
-            Simple, Transparent Pricing
+            {t("pricing_simple_title")}
           </h2>
           <p className="text-center text-slate-400 mb-16 text-lg max-w-2xl mx-auto">
-            Choose the plan that fits your business. All plans include core POS and kitchen features.
+            {t("pricing_simple_desc")}
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Trial */}
             <div className="rounded-xl bg-slate-800 border border-slate-700 p-8 text-center flex flex-col hover:border-slate-600 transition duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-white">Trial</h3>
+              <h3 className="text-2xl font-bold mb-3 text-white">{t("trial_title")}</h3>
               <p className="text-slate-400 mb-6 text-sm leading-relaxed">
-                Perfect for testing. 30 days free access to core features.
+                {t("trial_desc")}
               </p>
-              <div className="text-5xl font-bold mb-2 text-white">Free</div>
-              <p className="text-slate-500 mb-8 text-sm">30 days / no card required</p>
+              <div className="text-5xl font-bold mb-2 text-white">{t("trial_price")}</div>
+              <p className="text-slate-500 mb-8 text-sm">{t("trial_sub")}</p>
               <button className="w-full py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-semibold transition duration-300 mt-auto">
-                Start Free Trial
+                {t("trial_button")}
               </button>
             </div>
 
@@ -148,27 +148,27 @@ export default function App() {
               <div className="absolute top-4 right-4 bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-xs px-4 py-1 rounded-full font-bold">
                 Most Popular
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white mt-4">Pro</h3>
+              <h3 className="text-2xl font-bold mb-3 text-white mt-4">{t("pro_title_card")}</h3>
               <p className="text-slate-300 mb-6 text-sm leading-relaxed">
-                For growing restaurants. Full-featured POS + kitchen + stock.
+                {t("pro_desc_card")}
               </p>
-              <div className="text-5xl font-bold mb-2 text-white">₺1.2K</div>
+              <div className="text-5xl font-bold mb-2 text-white">{t("pro_price")}</div>
               <p className="text-slate-400 mb-8 text-sm">per month, billed monthly</p>
               <button className="w-full py-3 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-600 hover:shadow-lg text-white font-semibold transition duration-300 mt-auto">
-                Get Started
+                {t("pro_button")}
               </button>
             </div>
 
             {/* Enterprise */}
             <div className="rounded-xl bg-slate-800 border border-slate-700 p-8 text-center flex flex-col hover:border-slate-600 transition duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-white">Enterprise</h3>
+              <h3 className="text-2xl font-bold mb-3 text-white">{t("enterprise_title_card")}</h3>
               <p className="text-slate-400 mb-6 text-sm leading-relaxed">
-                Multi-location chains. Custom features & dedicated support.
+                {t("enterprise_desc_card")}
               </p>
-              <div className="text-5xl font-bold mb-2 text-white">Custom</div>
-              <p className="text-slate-500 mb-8 text-sm">tailored to your needs</p>
+              <div className="text-5xl font-bold mb-2 text-white">{t("enterprise_price")}</div>
+              <p className="text-slate-500 mb-8 text-sm">{t("enterprise_sub")}</p>
               <button className="w-full py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-semibold transition duration-300 mt-auto">
-                Contact Sales
+                {t("enterprise_button")}
               </button>
             </div>
           </div>
@@ -179,17 +179,17 @@ export default function App() {
       <section className="py-32 px-6 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Restaurant?
+            {t("cta_ready_title")}
           </h2>
           <p className="text-slate-300 mb-12 text-lg leading-relaxed">
-            Join hundreds of restaurants already running smarter with Beypro.
+            {t("cta_ready_desc")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:contact@beypro.com"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white text-slate-900 font-semibold hover:shadow-lg transition duration-300"
             >
-              Schedule a Demo <ChevronRight className="w-5 h-5" />
+              {t("cta_schedule_demo")} <ChevronRight className="w-5 h-5" />
             </a>
             <Link
               to="/register"
@@ -209,19 +209,19 @@ export default function App() {
           </div>
           <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-sm">
             <Link to="/features" className="hover:text-white transition duration-300">
-              Features
+              {t("footer_link_features")}
             </Link>
             <a href="#pricing" className="hover:text-white transition duration-300">
-              Pricing
+              {t("footer_link_pricing")}
             </a>
             <Link to="/driver-register" className="hover:text-white transition duration-300">
-              Drivers
+              {t("footer_link_drivers")}
             </Link>
             <Link to="/restaurant-register" className="hover:text-white transition duration-300">
-              For Restaurants
+              {t("footer_link_restaurants")}
             </Link>
             <Link to="/login" className="hover:text-white transition duration-300">
-              Login
+              {t("footer_link_login")}
             </Link>
           </div>
         </div>

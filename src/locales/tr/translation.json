@@ -76,4 +76,110 @@
   "meta_title": "Beypro – Gerçek Bir Restoranda Geliştirildi",
   "meta_desc": "Beypro, yeni nesil bir restoran POS ve işletme platformudur. İzmir’deki Hurrybey restoranında geliştirilmiş, sahada test edilmiştir."
 
+  "features_page_hero_subtitle": "Beypro'nun restoranınız için neler yapabileceğini keşfedin",
+
+  "pos_orders_title": "Temel POS & Siparişler",
+  "pos_orders_subtitle": "Hızlı sipariş. Net kontrol. Güvenilir ödeme.",
+
+  "kitchen_title": "Mutfak Operasyonları",
+  "kitchen_subtitle": "Mutfak ile ön yüzü senkronize tutun.",
+
+  "register_title": "Kasa & Nakit Yönetimi",
+  "register_subtitle": "Günlük nakit kontrolü, iş akışına entegre.",
+
+  "stock_suppliers_title": "Ürünler, Stok & Tedarikçiler",
+  "stock_suppliers_subtitle": "Eksikleri önleyin ve maliyetleri kontrol edin — elektronik tablolar olmadan.",
+
+  "supplier_automation_title": "Akıllı Tedarikçi Sepeti Otomasyonu",
+  "supplier_automation_subtitle": "Düşük stoklara göre yeniden siparişleri otomatikleştirin.",
+
+  "staff_title": "Personel Yönetimi",
+  "staff_subtitle": "Planlama, devam takibi ve bordro — izin kontrollü.",
+
+  "reports_title": "Raporlar & Analiz",
+  "reports_subtitle": "Ne işe yaradığını görün — sonra temizce dışa aktarın.",
+
+  "tasks_title": "Görevler & Bakım",
+  "tasks_subtitle": "Ekipler için operasyonel takip.",
+
+  "marketing_title": "Pazarlama & Mesajlaşma",
+  "marketing_subtitle": "Gerekli yerlerde dahili kampanya iş akışları.",
+
+  "integrations_title": "Entegrasyonlar",
+  "integrations_subtitle": "Restoranınızın dayandığı platformları bağlayın.",
+
+  "qr_menu_title": "QR Menü & Anında Restoran Sitesi",
+  "qr_menu_subtitle": "Restoranınız dakikalar içinde çevrimiçi — haftalar değil.",
+
+  "hardware_title": "Yazıcılar & Kameralar",
+  "hardware_subtitle": "Restoran gerçekliğine uygun donanım iş akışları.",
+
+  "settings_title": "Sizinle Büyüyen Ayarlar",
+  "settings_subtitle": "İşlemleri tek bir yerden yönetin.",
+
+  "security_title": "Güvenlik & Erişim Kontrolü",
+  "security_subtitle": "Çok rollü ekipler için tasarlandı.",
+
+  "highlight_1": "Yazdırma ve donanım iş akışları için Web Dashboard + Desktop Bridge",
+  "highlight_2": "Tam POS: masalar, paket, telefon siparişleri, teslimat akışları",
+  "highlight_3": "Hazırlık durumları ve zamanlayıcılarla mutfak ekranı",
+  "highlight_4": "Stok + malzeme fiyatlandırma + tedarikçi otomasyonu",
+  "highlight_5": "Personel planlama, giriş/çıkış, bordro takibi",
+  "highlight_6": "Raporlar, dışa aktarma ve müşteri içgörüleri",
+  "highlight_7": "QR Menü + yerinde ve evde siparişler için anında restoran sitesi",
+  "highlight_8": "Entegrasyonlar: Yemeksepeti, Getir, Trendyol, Migros + WhatsApp + Iyzico",
+
+  "cta_title": "Restoranınızı Dönüştürmeye Hazır mısınız?",
+  "cta_desc": "Bugün çekirdek modüllerle başlayın ve büyüdükçe ölçekleyin. Tüm planlar 30 günlük ücretsiz deneme içerir.",
+  "cta_start_trial": "Ücretsiz Denemeyi Başlat",
+  "cta_book_demo": "Demo Talep Et"
+
+  ,"home_hero_title": "Restaurant Management",
+  "home_hero_highlight": "Yeniden Tasarlandı",
+  "home_hero_desc": "Tek bir temiz, güçlü gösterge panelinde POS, mutfak kontrolü, stok yönetimi ve yapay zekâ destekli otomasyon.",
+  "home_get_started": "Ücretsiz Başlayın",
+  "home_watch_demo": "Demoyu İzle",
+  "home_scroll_hint": "↓ Keşfetmek için kaydırın",
+
+  "home_os_title": "Eksiksiz Restoran İşletme Sistemi",
+  "home_os_desc": "Sipariş yönetiminden mutfak koordinasyonuna, stok takibinden personel planlamaya kadar modern bir restoranı işletmek için gereken her şey.",
+  "home_explore_features": "Tüm Özellikleri Keşfet",
+
+  "home_showcase_title": "Güçlü Özellikler, Güzel Tasarım",
+  "home_pos_title": "Modern POS",
+  "home_pos_sub": "Hızlı & sezgisel",
+  "home_kitchen_title": "Mutfak Kontrolü",
+  "home_kitchen_sub": "Gerçek zamanlı koordinasyon",
+  "home_analytics_title": "Akıllı Analizler",
+  "home_analytics_sub": "Veri odaklı içgörüler",
+
+  "pricing_simple_title": "Basit, Şeffaf Fiyatlandırma",
+  "pricing_simple_desc": "İşinize uygun planı seçin. Tüm planlar temel POS ve mutfak özelliklerini içerir.",
+
+  "trial_title": "Deneme",
+  "trial_desc": "Test etmek için ideal. Temel özelliklere 30 gün ücretsiz erişim.",
+  "trial_price": "Ücretsiz",
+  "trial_sub": "30 gün / kart gerekli değil",
+  "trial_button": "Ücretsiz Denemeyi Başlat",
+
+  "pro_title_card": "Pro",
+  "pro_desc_card": "Büyüyen restoranlar için. Tam özellikli POS + mutfak + stok.",
+  "pro_price": "₺1.2K",
+  "pro_button": "Başlayın",
+
+  "enterprise_title_card": "Kurumsal",
+  "enterprise_desc_card": "Çok şubeli zincirler. Özel özellikler & ayrılmış destek.",
+  "enterprise_price": "Özel",
+  "enterprise_sub": "ihtiyaçlarınıza göre uyarlanmış",
+  "enterprise_button": "Satış ile İletişime Geç",
+
+  "cta_ready_title": "Restoranınızı Dönüştürmeye Hazır mısınız?",
+  "cta_ready_desc": "Beypro ile halihazırda daha akıllı çalışan yüzlerce restorana katılın.",
+  "cta_schedule_demo": "Demo Planla",
+  "footer_link_features": "Özellikler",
+  "footer_link_pricing": "Fiyatlar",
+  "footer_link_drivers": "Sürücüler",
+  "footer_link_restaurants": "Restoranlar için",
+  "footer_link_login": "Giriş"
+
 }

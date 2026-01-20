@@ -74,4 +74,110 @@
   "form_submit": "Nachricht Senden",
    "meta_title": "Beypro – Intelligentes POS direkt aus der Gastronomie",
   "meta_desc": "Beypro ist ein modernes Kassensystem für Restaurants. Entwickelt im echten Betrieb bei Hurrybey in Izmir – täglich im Einsatz getestet."
+
+  "features_page_hero_subtitle": "Entdecken Sie alles, was Beypro für Ihr Restaurant tun kann",
+
+  "pos_orders_title": "Core POS & Bestellungen",
+  "pos_orders_subtitle": "Schnelles Bestellen. Klare Kontrolle. Zuverlässige Abrechnung.",
+
+  "kitchen_title": "Küchenbetrieb",
+  "kitchen_subtitle": "Halten Sie die Küche mit dem Frontend synchron.",
+
+  "register_title": "Kasse & Bargeldverwaltung",
+  "register_subtitle": "Tägliche Bargeldkontrolle, in den Workflow integriert.",
+
+  "stock_suppliers_title": "Produkte, Lager & Lieferanten",
+  "stock_suppliers_subtitle": "Verhindern Sie Engpässe und kontrollieren Sie Kosten – ohne Tabellenkalkulationen.",
+
+  "supplier_automation_title": "Intelligente Lieferanten-Warenkorb-Automation",
+  "supplier_automation_subtitle": "Automatisieren Sie Nachbestellungen bei niedrigem Lagerbestand.",
+
+  "staff_title": "Mitarbeiterverwaltung",
+  "staff_subtitle": "Dienstplanung, Anwesenheit und Lohnabrechnung – berechtigungsbasiert.",
+
+  "reports_title": "Berichte & Analysen",
+  "reports_subtitle": "Erfahren Sie, was funktioniert – und exportieren Sie es sauber.",
+
+  "tasks_title": "Aufgaben & Wartung",
+  "tasks_subtitle": "Operative Nachverfolgung für Teams.",
+
+  "marketing_title": "Marketing & Messaging",
+  "marketing_subtitle": "Eingebaute Kampagnen-Workflows, wo nötig.",
+
+  "integrations_title": "Integrationen",
+  "integrations_subtitle": "Verbinden Sie die Plattformen, auf die Ihr Restaurant angewiesen ist.",
+
+  "qr_menu_title": "QR-Menü & Sofortige Restaurant-Website",
+  "qr_menu_subtitle": "Ihr Restaurant online in Minuten – nicht in Wochen.",
+
+  "hardware_title": "Drucker & Kameras",
+  "hardware_subtitle": "Hardware-Workflows, die wirklich zur Restaurantpraxis passen.",
+
+  "settings_title": "Einstellungen, die mitwachsen",
+  "settings_subtitle": "Steuern Sie den Betrieb von einem Ort aus.",
+
+  "security_title": "Sicherheit & Zugriffskontrolle",
+  "security_subtitle": "Für Teams mit mehreren Rollen entwickelt.",
+
+  "highlight_1": "Web-Dashboard + Desktop-Bridge für Druck- & Hardware-Workflows",
+  "highlight_2": "Vollständiges POS: Tische, To-Go, Telefonbestellungen, Lieferung/Packet-Flows",
+  "highlight_3": "Küchenbildschirm mit Zubereitungsstatus und Timern",
+  "highlight_4": "Bestandsführung + Zutatenpreise + Lieferantenautomatik",
+  "highlight_5": "Mitarbeiterplanung, Ein-/Ausstempelung, Lohnverfolgung",
+  "highlight_6": "Berichte, Exporte und Kundenanalysen",
+  "highlight_7": "QR-Menü + sofortige Restaurant-Website für Vor-Ort- und Zuhause-Bestellungen",
+  "highlight_8": "Integrationen: Yemeksepeti, Getir, Trendyol, Migros + WhatsApp + Iyzico",
+
+  "cta_title": "Bereit, Ihr Restaurant zu transformieren?",
+  "cta_desc": "Beginnen Sie noch heute mit den Kernmodulen und skalieren Sie mit Ihrem Wachstum. Alle Pläne enthalten eine 30-tägige Testphase.",
+  "cta_start_trial": "Kostenlose Testversion starten",
+  "cta_book_demo": "Demo Buchen"
+
+  ,"home_hero_title": "Restaurant Management",
+  "home_hero_highlight": "Neu gedacht",
+  "home_hero_desc": "Alles-in-einem: POS, Küchensteuerung, Lagerverwaltung und KI-Automation in einem klaren, leistungsstarken Dashboard.",
+  "home_get_started": "Kostenlos Starten",
+  "home_watch_demo": "Demo Ansehen",
+  "home_scroll_hint": "↓ Scrollen zum Entdecken",
+
+  "home_os_title": "Komplettes Restaurant-Betriebssystem",
+  "home_os_desc": "Von Bestellmanagement bis Küchenkoordination, Bestandsverfolgung bis Dienstplanung — alles, was Sie für ein modernes Restaurant brauchen.",
+  "home_explore_features": "Alle Funktionen Entdecken",
+
+  "home_showcase_title": "Leistungsstarke Funktionen, Schönes Design",
+  "home_pos_title": "Modernes POS",
+  "home_pos_sub": "Schnell & intuitiv",
+  "home_kitchen_title": "Küchensteuerung",
+  "home_kitchen_sub": "Echtzeit-Koordination",
+  "home_analytics_title": "Intelligente Analysen",
+  "home_analytics_sub": "Datengetriebene Erkenntnisse",
+
+  "pricing_simple_title": "Einfache, transparente Preise",
+  "pricing_simple_desc": "Wählen Sie den Plan, der zu Ihrem Unternehmen passt. Alle Pläne enthalten Kern-POS- und Küchenfunktionen.",
+
+  "trial_title": "Testversion",
+  "trial_desc": "Ideal zum Testen. 30 Tage kostenloser Zugriff auf Kernfunktionen.",
+  "trial_price": "Kostenlos",
+  "trial_sub": "30 Tage / keine Karte erforderlich",
+  "trial_button": "Kostenlose Testversion Starten",
+
+  "pro_title_card": "Pro",
+  "pro_desc_card": "Für wachsende Restaurants. Voll ausgestattetes POS + Küche + Lager.",
+  "pro_price": "₺1.2K",
+  "pro_button": "Loslegen",
+
+  "enterprise_title_card": "Enterprise",
+  "enterprise_desc_card": "Filialketten. Angepasste Funktionen & dedizierter Support.",
+  "enterprise_price": "Individuell",
+  "enterprise_sub": "auf Ihre Bedürfnisse zugeschnitten",
+  "enterprise_button": "Vertrieb Kontaktieren",
+
+  "cta_ready_title": "Bereit, Ihr Restaurant zu transformieren?",
+  "cta_ready_desc": "Schließen Sie sich Hunderten von Restaurants an, die bereits smarter mit Beypro arbeiten.",
+  "cta_schedule_demo": "Demo Planen",
+  "footer_link_features": "Funktionen",
+  "footer_link_pricing": "Preise",
+  "footer_link_drivers": "Fahrer",
+  "footer_link_restaurants": "Für Restaurants",
+  "footer_link_login": "Login"
 }
