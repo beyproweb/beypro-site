@@ -62,7 +62,7 @@ export default function App() {
       </section>
 
       {/* --- FEATURES LINK --- */}
-      <section className="py-32 px-6 bg-white text-center">
+      <section className="py-24 px-6 bg-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-slate-900">
             {t("home_os_title")}
@@ -74,53 +74,72 @@ export default function App() {
             to="/features"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition duration-300"
           >
-            Explore All Features <ChevronRight className="w-5 h-5" />
+            {t("home_explore_features")} <ChevronRight className="w-5 h-5" />
           </Link>
+        </div>
+      </section>
+
+      {/* --- INTEGRATION --- */}
+      <section className="py-0 px-6 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center text-slate-900">
+            {t("home_integration_title")}
+          </h2>
+          <div className="flex justify-center">
+            <img src="/assets/screenshots/integration.png" alt="Integration Platforms" loading="lazy" className="w-full max-w-4xl rounded-2xl shadow-lg" />
+          </div>
         </div>
       </section>
 
       {/* --- HOME IMAGES SHOWCASE --- */}
       <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-16 text-center text-slate-900">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-slate-900">
             {t("home_showcase_title")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-              <img src="/assets/screenshots/home1.png" alt="Modern POS System" loading="lazy" className="w-full aspect-square object-cover group-hover:scale-110 transition duration-300" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
-                <div className="text-white">
-                  <h3 className="text-xl font-bold">{t("home_pos_title")}</h3>
-                  <p className="text-sm text-slate-300">{t("home_pos_sub")}</p>
-                </div>
-              </div>
+          
+          <div className="flex justify-center mb-16">
+            <img src="/assets/screenshots/Powerful-Features.png" alt="Powerful Features" loading="lazy" className="w-full max-w-4xl rounded-2xl shadow-lg" />
+          </div>
+          
+          {/* First Item - Image Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-12">
+            <div className="flex flex-col justify-center text-center md:text-left">
+              <h3 className="text-3xl font-bold text-slate-900 mb-4">{t("home_pos_title")}</h3>
+              <p className="text-lg text-slate-700 leading-relaxed whitespace-pre-line">"{t("home_pos_sub")}"</p>
             </div>
-
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-              <img src="/assets/screenshots/home2.png" alt="Kitchen Management" loading="lazy" className="w-full aspect-square object-cover group-hover:scale-110 transition duration-300" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
-                <div className="text-white">
-                  <h3 className="text-xl font-bold">{t("home_kitchen_title")}</h3>
-                  <p className="text-sm text-slate-300">{t("home_kitchen_sub")}</p>
-                </div>
-              </div>
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/assets/screenshots/home1.png" alt="Modern POS System" loading="lazy" className="w-full aspect-square object-cover" />
             </div>
+          </div>
 
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-              <img src="/assets/screenshots/Restaurant%20analytics%20in%20focus.png" alt="Analytics Dashboard" loading="lazy" className="w-full aspect-square object-cover group-hover:scale-110 transition duration-300" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
-                <div className="text-white">
-                  <h3 className="text-xl font-bold">{t("home_analytics_title")}</h3>
-                  <p className="text-sm text-slate-300">{t("home_analytics_sub")}</p>
-                </div>
-              </div>
+          {/* Second Item - Image Left, Text Right on Desktop / Text Above on Mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-12">
+            <div className="flex flex-col justify-center text-center md:text-left md:order-2">
+              <h3 className="text-3xl font-bold text-slate-900 mb-4">{t("home_kitchen_title")}</h3>
+              <p className="text-lg text-slate-700 leading-relaxed whitespace-pre-line">"{t("home_kitchen_sub")}"</p>
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-lg md:order-1">
+              <img src="/assets/screenshots/home2.png" alt="Kitchen Management" loading="lazy" className="w-full aspect-square object-cover" />
+            </div>
+          </div>
+
+          {/* Third Item - Image Right */}
+          {/* Third Item - Image Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col justify-center text-center md:text-left">
+              <h3 className="text-3xl font-bold text-slate-900 mb-4">{t("home_analytics_title")}</h3>
+              <p className="text-lg text-slate-700 leading-relaxed whitespace-pre-line">"{t("home_analytics_sub")}"</p>
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/assets/screenshots/Restaurant%20analytics%20in%20focus.png" alt="Analytics Dashboard" loading="lazy" className="w-full aspect-square object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* --- PRICING --- */}
-      <section id="pricing" className="py-32 px-6 bg-slate-950">
+      <section id="pricing" className="py-24 px-6 bg-slate-950">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-white">
             {t("pricing_simple_title")}
@@ -176,7 +195,7 @@ export default function App() {
       </section>
 
       {/* --- CTA --- */}
-      <section className="py-32 px-6 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950">
+      <section className="py-24 px-6 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
             {t("cta_ready_title")}
