@@ -10,6 +10,8 @@ import './i18n'
 import Login from './pages/Login.jsx';
 import DriverRegister from './pages/DriverRegister.jsx';
 import RestaurantRegister from './pages/RestaurantRegister.jsx';
+import StandaloneRegister from './pages/StandaloneRegister.jsx';
+import StandaloneRedirect from './pages/StandaloneRedirect.jsx';
 // Feature pages
 import POS from './pages/features/POS.jsx';
 import Kitchen from './pages/features/Kitchen.jsx';
@@ -44,6 +46,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/login" element={<Login />} />
         <Route path="/driver-register" element={<DriverRegister />} />
         <Route path="/restaurant-register" element={<RestaurantRegister />} />
+        <Route path="/standalone-register" element={<StandaloneRegister />} />
+        <Route path="/standalone/app" element={<StandaloneRedirect />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

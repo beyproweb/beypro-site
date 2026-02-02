@@ -148,7 +148,22 @@ export default function App() {
             {t("pricing_simple_desc")}
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* QR Menu + Kitchen */}
+            <div className="rounded-xl bg-slate-800 border border-slate-700 p-8 text-center flex flex-col hover:border-slate-600 transition duration-300">
+              <h3 className="text-2xl font-bold mb-3 text-white">{t("qrk_title")}</h3>
+              <p className="text-slate-400 mb-6 text-sm leading-relaxed">
+                {t("qrk_desc")}
+              </p>
+              <div className="text-5xl font-bold mb-2 text-white">₺99</div>
+              <p className="text-slate-500 mb-8 text-sm">{t("qrk_sub")}</p>
+              <Link
+                to="/standalone-register"
+                className="w-full py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-semibold transition duration-300 mt-auto"
+              >
+                {t("qrk_button")}
+              </Link>
+            </div>
             {/* Trial */}
             <div className="rounded-xl bg-slate-800 border border-slate-700 p-8 text-center flex flex-col hover:border-slate-600 transition duration-300">
               <h3 className="text-2xl font-bold mb-3 text-white">{t("trial_title")}</h3>

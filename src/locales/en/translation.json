@@ -161,6 +161,13 @@
   "trial_price": "Free",
   "trial_sub": "30 days / no card required",
   "trial_button": "Start Free Trial",
+  "qrk_title": "QR Menu + Kitchen",
+  "qrk_desc": "Standalone module for QR ordering and kitchen display.",
+  "qrk_sub": "15 days free, then ₺99/month",
+  "qrk_button": "Start 15-Day Trial",
+  "qrk_f1": "QR Menu settings + branding",
+  "qrk_f2": "Kitchen screen for live orders",
+  "qrk_f3": "Standalone access (no full POS)",
 
   "pro_title_card": "Pro",
   "pro_desc_card": "For growing restaurants. Full-featured POS + kitchen + stock.",
@@ -209,6 +216,8 @@
 
   "nav_all_plans": "All Plans",
   "nav_all_plans_desc": "View all pricing options",
+  "nav_qr_kitchen": "QR Menu + Kitchen",
+  "nav_qr_kitchen_desc": "Standalone module — 15-day trial",
   "nav_trial": "Trial Plan",
   "nav_trial_desc": "Get started for free",
   "nav_pro": "Pro Plan",

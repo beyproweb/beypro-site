@@ -2,6 +2,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronRight, Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import MainNav from "../components/MainNav.jsx";
 
 export default function Pricing() {
@@ -28,7 +29,26 @@ export default function Pricing() {
       {/* Pricing Cards */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* QR Menu + Kitchen */}
+            <div className="rounded-xl bg-slate-50 border-2 border-slate-200 p-8 flex flex-col hover:shadow-lg transition duration-300 hover:border-slate-300">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">{t("qrk_title")}</h3>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">{t("qrk_desc")}</p>
+              <div className="text-4xl font-bold text-slate-900 mb-2">₺99<span className="text-sm text-slate-600 font-normal">/mo</span></div>
+              <p className="text-slate-500 text-sm mb-8">{t("qrk_sub")}</p>
+              <Link
+                to="/standalone-register"
+                className="w-full py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold transition duration-300 mb-8 text-center"
+              >
+                {t("qrk_button")}
+              </Link>
+              <ul className="space-y-3 text-sm text-slate-700 mt-auto">
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("qrk_f1")}</li>
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("qrk_f2")}</li>
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("qrk_f3")}</li>
+              </ul>
+            </div>
+
             {/* Starter */}
             <div className="rounded-xl bg-slate-50 border-2 border-slate-200 p-8 flex flex-col hover:shadow-lg transition duration-300 hover:border-slate-300">
               <h3 className="text-2xl font-bold text-slate-900 mb-3">{t("starter_title")}</h3>

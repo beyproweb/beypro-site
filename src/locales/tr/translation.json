@@ -162,6 +162,13 @@
   "trial_price": "Ücretsiz",
   "trial_sub": "30 gün / kart gerekli değil",
   "trial_button": "Ücretsiz Denemeyi Başlat",
+  "qrk_title": "QR Menü + Mutfak",
+  "qrk_desc": "QR sipariş ve mutfak ekranı için bağımsız modül.",
+  "qrk_sub": "15 gün ücretsiz, sonra ₺99/ay",
+  "qrk_button": "15 Günlük Denemeyi Başlat",
+  "qrk_f1": "QR menü ayarları + marka görünümü",
+  "qrk_f2": "Canlı siparişler için mutfak ekranı",
+  "qrk_f3": "Bağımsız erişim (tam POS yok)",
 
   "pro_title_card": "Pro",
   "pro_desc_card": "Büyüyen restoranlar için. Tam özellikli POS + mutfak + stok.",
@@ -210,6 +217,8 @@
 
   "nav_all_plans": "Tüm Planlar",
   "nav_all_plans_desc": "Tüm fiyatlandırma seçeneklerini gör",
+  "nav_qr_kitchen": "QR Menü + Mutfak",
+  "nav_qr_kitchen_desc": "Bağımsız modül — 15 günlük deneme",
   "nav_trial": "Deneme Planı",
   "nav_trial_desc": "Ücretsiz başla",
   "nav_pro": "Pro Planı",

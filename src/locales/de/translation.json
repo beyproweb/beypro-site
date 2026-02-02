@@ -161,6 +161,13 @@
   "trial_price": "Kostenlos",
   "trial_sub": "30 Tage / keine Karte erforderlich",
   "trial_button": "Kostenlose Testversion Starten",
+  "qrk_title": "QR-Menü + Küche",
+  "qrk_desc": "Standalone-Modul für QR-Bestellungen und Küchenanzeige.",
+  "qrk_sub": "15 Tage gratis, danach ₺99/Monat",
+  "qrk_button": "15‑Tage-Test starten",
+  "qrk_f1": "QR-Menü-Einstellungen + Branding",
+  "qrk_f2": "Küchenansicht für Live-Bestellungen",
+  "qrk_f3": "Standalone-Zugang (ohne komplettes POS)",
 
   "pro_title_card": "Pro",
   "pro_desc_card": "Für wachsende Restaurants. Voll ausgestattetes POS + Küche + Lager.",
@@ -209,6 +216,8 @@
 
   "nav_all_plans": "Alle Pläne",
   "nav_all_plans_desc": "Sehe alle Preisoptionen an",
+  "nav_qr_kitchen": "QR-Menü + Küche",
+  "nav_qr_kitchen_desc": "Standalone-Modul — 15 Tage Test",
   "nav_trial": "Testplan",
   "nav_trial_desc": "Kostenlos starten",
   "nav_pro": "Pro-Plan",
