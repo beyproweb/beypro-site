@@ -1,5 +1,28 @@
 {
   "rewrites": [
+    { "source": "/site-assets/:path*", "destination": "/site-assets/:path*" },
+    { "source": "/assets/:path*", "destination": "https://pos.beypro.com/assets/:path*" },
+    { "source": "/api/public/:path*", "destination": "https://pos.beypro.com/api/public/:path*" },
+    { "source": "/uploads/:path*", "destination": "https://pos.beypro.com/uploads/:path*" },
+    { "source": "/manifest.json", "destination": "https://pos.beypro.com/manifest.json" },
+    { "source": "/favicon.ico", "destination": "https://pos.beypro.com/favicon.ico" },
+    { "source": "/icon-192.png", "destination": "https://pos.beypro.com/icon-192.png" },
+    { "source": "/icon-512.png", "destination": "https://pos.beypro.com/icon-512.png" },
+    { "source": "/apple-touch-icon.png", "destination": "https://pos.beypro.com/apple-touch-icon.png" },
+    { "source": "/qr", "destination": "https://pos.beypro.com/qr" },
+    { "source": "/menu", "destination": "https://pos.beypro.com/menu" },
+    { "source": "/qr-menu/:path*", "destination": "https://pos.beypro.com/qr-menu/:path*" },
+    { "source": "/features", "destination": "/index.html" },
+    { "source": "/features/:path*", "destination": "/index.html" },
+    { "source": "/pricing", "destination": "/index.html" },
+    { "source": "/pricing/:path*", "destination": "/index.html" },
+    { "source": "/register", "destination": "/index.html" },
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/driver-register", "destination": "/index.html" },
+    { "source": "/restaurant-register", "destination": "/index.html" },
+    { "source": "/standalone-register", "destination": "/index.html" },
+    { "source": "/standalone/:path*", "destination": "/index.html" },
+    { "source": "/:restaurantSlug", "destination": "https://pos.beypro.com/:restaurantSlug" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

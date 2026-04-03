@@ -26,7 +26,6 @@ import Automation from './pages/features/Automation.jsx';
 import Trial from './pages/pricing/Trial.jsx';
 import Pro from './pages/pricing/Pro.jsx';
 import Enterprise from './pages/pricing/Enterprise.jsx';
-import RestaurantSlugRedirect from './pages/RestaurantSlugRedirect.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -53,7 +52,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/standalone/app" element={<StandaloneRedirect />} />
         <Route path="/standalone/staff/register" element={<StandaloneStaffRegister />} />
         <Route path="/standalone/staff/login" element={<StandaloneStaffLogin />} />
-        <Route path="/:restaurantSlug" element={<RestaurantSlugRedirect />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
