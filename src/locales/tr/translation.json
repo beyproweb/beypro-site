@@ -352,6 +352,39 @@
   "security_subtitle": "Çok rol restoran takımları için inşa edilmiştir.",
   "security_f1": "Sayfalar ve ayar sekmelerinde rol tabanlı izinler",
   "security_f2": "Plan konfigürasyonuna göre modül kapısı",
-  "security_f3": "Korumalı vs. herkese açık uç nokta ayrılması (/api/* vs. /api/public/*)"
+  "security_f3": "Korumalı vs. herkese açık uç nokta ayrılması (/api/* vs. /api/public/*)",
+
+  "nav_staff_standalone": "Personel Yönetimi",
+  "nav_staff_standalone_desc": "Bağımsız modül — 15 günlük deneme",
+
+  "pricing_per_month_unit": "/ ay",
+
+  "staff_standalone_title": "Personel Yönetimi",
+  "staff_standalone_short_desc": "Personel • Roller • PIN • Vardiya",
+  "staff_standalone_pricing_sub": "Bağımsız personel portalı",
+  "staff_standalone_hero_desc": "Personel • Roller • PIN • Vardiya. 15 gün ücretsiz, ardından ₺99 / ay.",
+  "staff_standalone_f1": "Personel ekle / düzenle",
+  "staff_standalone_f2": "Rol & izinler",
+  "staff_standalone_f3": "PIN ile giriş",
+  "staff_standalone_f4": "Vardiya / çalışma saatleri",
+
+  "staff_standalone_register_title": "Bağımsız Hesap Oluştur",
+  "staff_standalone_register_sub": "Sadece personel modu (POS çekirdek erişimi yok)",
+  "staff_standalone_login_title": "Personel Yönetimi Giriş",
+  "staff_standalone_login_sub": "Bağımsız personel portalı",
+
+  "company_name": "Şirket adı",
+  "full_name": "Ad soyad",
+  "phone": "Telefon",
+  "email": "Email",
+  "password": "Şifre",
+
+  "creating": "Oluşturuluyor...",
+  "signing_in": "Giriş yapılıyor...",
+  "sign_in": "Giriş yap",
+  "register": "Kaydol",
+  "start_15_day_trial": "15 günlük denemeyi başlat",
+  "already_have_account": "Zaten hesabın var mı?",
+  "dont_have_account": "Hesabın yok mu?"
 
 }

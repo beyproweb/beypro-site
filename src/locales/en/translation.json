@@ -351,5 +351,38 @@
   "security_subtitle": "Built for multi-role restaurant teams.",
   "security_f1": "Role-based permissions across pages and settings tabs",
   "security_f2": "Module gating by plan configuration",
-  "security_f3": "Protected vs public endpoint separation (/api/* vs /api/public/*)"
+  "security_f3": "Protected vs public endpoint separation (/api/* vs /api/public/*)",
+
+  "nav_staff_standalone": "Staff Management",
+  "nav_staff_standalone_desc": "Standalone module — 15-day trial",
+
+  "pricing_per_month_unit": "/ mo",
+
+  "staff_standalone_title": "Staff Management",
+  "staff_standalone_short_desc": "Staff • Roles • PIN • Shifts",
+  "staff_standalone_pricing_sub": "Standalone staff portal",
+  "staff_standalone_hero_desc": "Staff • Roles • PIN • Shifts. 15 days free, then ₺99 / month.",
+  "staff_standalone_f1": "Add / edit staff",
+  "staff_standalone_f2": "Roles & permissions",
+  "staff_standalone_f3": "PIN login",
+  "staff_standalone_f4": "Shifts / working hours",
+
+  "staff_standalone_register_title": "Create Standalone Account",
+  "staff_standalone_register_sub": "Staff-only mode (no POS core access)",
+  "staff_standalone_login_title": "Staff Management Login",
+  "staff_standalone_login_sub": "Standalone staff portal",
+
+  "company_name": "Company name",
+  "full_name": "Full name",
+  "phone": "Phone",
+  "email": "Email",
+  "password": "Password",
+
+  "creating": "Creating...",
+  "signing_in": "Signing in...",
+  "sign_in": "Sign in",
+  "register": "Register",
+  "start_15_day_trial": "Start 15-day trial",
+  "already_have_account": "Already have an account?",
+  "dont_have_account": "Don't have an account?"
 }

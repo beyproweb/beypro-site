@@ -351,5 +351,38 @@
   "security_subtitle": "Entwickelt für Multi-Rollen-Restaurantteams.",
   "security_f1": "Rollenbasierte Berechtigungen auf Seiten und Einstellungsreitern",
   "security_f2": "Modulvergabe nach Plan-Konfiguration",
-  "security_f3": "Geschützte vs. öffentliche Endpunkttrennung (/api/* vs. /api/public/*)"
+  "security_f3": "Geschützte vs. öffentliche Endpunkttrennung (/api/* vs. /api/public/*)",
+
+  "nav_staff_standalone": "Mitarbeiterverwaltung",
+  "nav_staff_standalone_desc": "Standalone-Modul — 15 Tage Test",
+
+  "pricing_per_month_unit": "/ Monat",
+
+  "staff_standalone_title": "Mitarbeiterverwaltung",
+  "staff_standalone_short_desc": "Mitarbeiter • Rollen • PIN • Schichten",
+  "staff_standalone_pricing_sub": "Standalone-Mitarbeiterportal",
+  "staff_standalone_hero_desc": "Mitarbeiter • Rollen • PIN • Schichten. 15 Tage kostenlos, danach ₺99 / Monat.",
+  "staff_standalone_f1": "Mitarbeiter hinzufügen / bearbeiten",
+  "staff_standalone_f2": "Rollen & Berechtigungen",
+  "staff_standalone_f3": "PIN-Anmeldung",
+  "staff_standalone_f4": "Schichten / Arbeitszeiten",
+
+  "staff_standalone_register_title": "Standalone-Konto erstellen",
+  "staff_standalone_register_sub": "Nur Mitarbeiter-Modus (kein POS-Core-Zugriff)",
+  "staff_standalone_login_title": "Mitarbeiterverwaltung Login",
+  "staff_standalone_login_sub": "Standalone-Mitarbeiterportal",
+
+  "company_name": "Firmenname",
+  "full_name": "Vollständiger Name",
+  "phone": "Telefon",
+  "email": "E-Mail",
+  "password": "Passwort",
+
+  "creating": "Wird erstellt...",
+  "signing_in": "Anmeldung...",
+  "sign_in": "Anmelden",
+  "register": "Registrieren",
+  "start_15_day_trial": "15-Tage-Test starten",
+  "already_have_account": "Hast du schon ein Konto?",
+  "dont_have_account": "Noch kein Konto?"
 }

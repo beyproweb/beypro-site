@@ -49,6 +49,26 @@ export default function Pricing() {
               </ul>
             </div>
 
+            {/* Staff Management (Standalone) */}
+            <div className="rounded-xl bg-slate-50 border-2 border-slate-200 p-8 flex flex-col hover:shadow-lg transition duration-300 hover:border-slate-300">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">{t("staff_standalone_title")}</h3>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">{t("staff_standalone_short_desc")}</p>
+              <div className="text-4xl font-bold text-slate-900 mb-2">₺99<span className="text-sm text-slate-600 font-normal">{t("pricing_per_month_unit")}</span></div>
+              <p className="text-slate-500 text-sm mb-8">{t("staff_standalone_pricing_sub")}</p>
+              <Link
+                to="/standalone/staff/register"
+                className="w-full py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold transition duration-300 mb-8 text-center"
+              >
+                {t("start_15_day_trial")}
+              </Link>
+              <ul className="space-y-3 text-sm text-slate-700 mt-auto">
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("staff_standalone_f1")}</li>
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("staff_standalone_f2")}</li>
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("staff_standalone_f3")}</li>
+                <li className="flex items-center gap-3"><Check className="w-4 h-4 text-sky-500 flex-shrink-0" /> {t("staff_standalone_f4")}</li>
+              </ul>
+            </div>
+
             {/* Starter */}
             <div className="rounded-xl bg-slate-50 border-2 border-slate-200 p-8 flex flex-col hover:shadow-lg transition duration-300 hover:border-slate-300">
               <h3 className="text-2xl font-bold text-slate-900 mb-3">{t("starter_title")}</h3>

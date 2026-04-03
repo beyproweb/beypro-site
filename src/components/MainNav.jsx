@@ -34,6 +34,7 @@ export default function MainNav({ className = "", tone = "light" }) {
         submenu: [
           { to: "/pricing", label: t("nav_all_plans"), desc: t("nav_all_plans_desc"), icon: ShoppingCart },
           { to: "/standalone-register", label: t("nav_qr_kitchen"), desc: t("nav_qr_kitchen_desc"), icon: UtensilsCrossed },
+          { to: "/standalone/staff/login", label: t("nav_staff_standalone"), desc: t("nav_staff_standalone_desc"), icon: Users },
           { to: "/pricing/trial", label: t("nav_trial"), desc: t("nav_trial_desc"), icon: Zap },
           { to: "/pricing/pro", label: t("nav_pro"), desc: t("nav_pro_desc"), icon: Users },
           { to: "/pricing/enterprise", label: t("nav_enterprise"), desc: t("nav_enterprise_desc"), icon: Lock },
