@@ -22,6 +22,9 @@
     { "source": "/restaurant-register", "destination": "/index.html" },
     { "source": "/standalone-register", "destination": "/index.html" },
     { "source": "/standalone/:path*", "destination": "/index.html" },
+    { "source": "/privacy", "destination": "/index.html" },
+    { "source": "/terms", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
     { "source": "/:restaurantSlug", "destination": "https://pos.beypro.com/:restaurantSlug" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
