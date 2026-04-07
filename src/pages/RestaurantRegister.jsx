@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import MainNav from "../components/MainNav.jsx";
 import { getApiBase } from "../lib/apiBase.js";
 
@@ -39,6 +40,7 @@ export default function RestaurantRegister() {
 
     billingCycle: "weekly",
     acceptsRestaurantContract: false,
+    acceptsSellerAgreement: false,
     acceptsEntrancePickupPolicy: false,
     acceptsCancellationNoShowRules: false,
     kvkkConsent: false,
@@ -118,6 +120,7 @@ Any dispute shall be subject to İzmir Courts and Enforcement Offices.
 
     if (!contractScrolled) return "Please scroll the contract to the bottom to continue.";
     if (!form.acceptsRestaurantContract) return "You must accept the Beypro Restaurant Delivery Contract.";
+    if (!form.acceptsSellerAgreement) return "You must accept the seller agreement.";
     if (!form.acceptsEntrancePickupPolicy) return "You must accept the entrance-pickup policy.";
     if (!form.acceptsCancellationNoShowRules) return "You must accept cancellation & no-show rules.";
     if (!form.kvkkConsent) return "KVKK consent is required.";
@@ -165,6 +168,7 @@ Any dispute shall be subject to İzmir Courts and Enforcement Offices.
 
           contract_scrolled: contractScrolled,
           contract_accepted: !!form.acceptsRestaurantContract,
+          seller_agreement_accepted: !!form.acceptsSellerAgreement,
           entrance_pickup_policy_accepted: !!form.acceptsEntrancePickupPolicy,
           cancellation_no_show_rules_accepted: !!form.acceptsCancellationNoShowRules,
           kvkk_consent: !!form.kvkkConsent,
@@ -426,6 +430,27 @@ Any dispute shall be subject to İzmir Courts and Enforcement Offices.
                     required
                   />
                   <span className="text-slate-700">I accept Beypro Restaurant Delivery Contract {!contractScrolled ? "(scroll required)" : ""}</span>
+                </label>
+                <label className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    name="acceptsSellerAgreement"
+                    checked={form.acceptsSellerAgreement}
+                    onChange={handleCheckbox}
+                    className="mt-1"
+                    required
+                  />
+                  <span className="text-xs text-gray-400">
+                    <Link
+                      to="/seller-agreement"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline hover:text-gray-500 transition"
+                    >
+                      İşletme sözleşmesini
+                    </Link>{" "}
+                    okudum ve kabul ediyorum
+                  </span>
                 </label>
                 <label className="flex items-start gap-3">
                   <input

@@ -299,15 +299,18 @@ export default function Privacy() {
             <span className="font-bold text-white">Beypro</span>{" "}
             <span className="text-slate-600">© {new Date().getFullYear()}</span>
           </div>
-          <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-sm">
+          <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-xs">
             <Link to="/privacy" className="hover:text-white transition duration-300">
               {t("legal_privacy")}
             </Link>
             <Link to="/terms" className="hover:text-white transition duration-300">
               {t("legal_terms")}
             </Link>
-            <Link to="/contact" className="hover:text-white transition duration-300">
-              {t("legal_contact")}
+            <Link to="/cookies" className="hover:text-white transition duration-300">
+              {t("legal_cookies")}
+            </Link>
+            <Link to="/seller-agreement" className="hover:text-white transition duration-300">
+              {t("legal_seller_agreement")}
             </Link>
           </div>
         </div>

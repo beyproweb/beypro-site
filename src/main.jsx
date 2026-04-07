@@ -29,6 +29,9 @@ import Enterprise from './pages/pricing/Enterprise.jsx';
 import Privacy from './pages/Privacy.jsx';
 import Terms from './pages/Terms.jsx';
 import Contact from './pages/Contact.jsx';
+import Cookies from './pages/Cookies.jsx';
+import SellerAgreement from './pages/SellerAgreement.jsx';
+import CookieConsentManager from './components/CookieConsentManager.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -58,7 +61,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cookies" element={<Cookies />} />
+        <Route path="/seller-agreement" element={<SellerAgreement />} />
       </Routes>
+      <CookieConsentManager />
     </BrowserRouter>
   </React.StrictMode>
 )

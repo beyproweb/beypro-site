@@ -25,6 +25,8 @@
     { "source": "/privacy", "destination": "/index.html" },
     { "source": "/terms", "destination": "/index.html" },
     { "source": "/contact", "destination": "/index.html" },
+    { "source": "/cookies", "destination": "/index.html" },
+    { "source": "/seller-agreement", "destination": "/index.html" },
     { "source": "/:restaurantSlug", "destination": "https://pos.beypro.com/:restaurantSlug" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
