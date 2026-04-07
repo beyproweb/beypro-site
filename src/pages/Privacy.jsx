@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import MainNav from "../components/MainNav.jsx";
 
 const POLICY_SECTIONS = [
@@ -231,14 +232,26 @@ function Section({ section }) {
 }
 
 export default function Privacy() {
+  const { t, i18n } = useTranslation();
+  const dateLocale = useMemo(() => {
+    const lang = String(i18n.resolvedLanguage || i18n.language || "tr").toLowerCase();
+    if (lang.startsWith("de")) return "de-DE";
+    if (lang.startsWith("en")) return "en-US";
+    return "tr-TR";
+  }, [i18n.language, i18n.resolvedLanguage]);
+
   const today = useMemo(
     () =>
-      new Intl.DateTimeFormat("tr-TR", {
+      new Intl.DateTimeFormat(dateLocale, {
         day: "2-digit",
         month: "long",
         year: "numeric",
       }).format(new Date()),
-    []
+    [dateLocale]
+  );
+  const policySections = useMemo(
+    () => t("privacy_sections", { returnObjects: true, defaultValue: POLICY_SECTIONS }),
+    [t, i18n.language]
   );
 
   return (
@@ -248,14 +261,20 @@ export default function Privacy() {
       <main className="max-w-4xl mx-auto py-16 px-6">
         <header className="mb-10">
           <p className="text-xs uppercase tracking-[0.2em] text-sky-400 font-semibold">Beypro</p>
-          <h1 className="text-3xl sm:text-4xl font-semibold text-white mt-3">Gizlilik Politikası</h1>
-          <p className="text-gray-300 text-sm leading-relaxed mt-3">Son güncelleme: {today}</p>
-          <p className="text-gray-300 text-sm leading-relaxed mt-1">Yürürlük tarihi: {today}</p>
+          <h1 className="text-3xl sm:text-4xl font-semibold text-white mt-3">
+            {t("privacy_title")}
+          </h1>
+          <p className="text-gray-300 text-sm leading-relaxed mt-3">
+            {t("privacy_last_updated", { date: today })}
+          </p>
+          <p className="text-gray-300 text-sm leading-relaxed mt-1">
+            {t("privacy_effective_date", { date: today })}
+          </p>
         </header>
 
-        <nav aria-label="Gizlilik Politikası Bölümleri" className="mb-10">
+        <nav aria-label={t("privacy_nav_label")} className="mb-10">
           <div className="flex flex-wrap gap-2">
-            {POLICY_SECTIONS.map((section) => (
+            {policySections.map((section) => (
               <a
                 key={section.id}
                 href={`#${section.id}`}
@@ -268,7 +287,7 @@ export default function Privacy() {
         </nav>
 
         <article className="space-y-6">
-          {POLICY_SECTIONS.map((section) => (
+          {policySections.map((section) => (
             <Section key={section.id} section={section} />
           ))}
         </article>
@@ -282,13 +301,13 @@ export default function Privacy() {
           </div>
           <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-sm">
             <Link to="/privacy" className="hover:text-white transition duration-300">
-              Gizlilik Politikası
+              {t("legal_privacy")}
             </Link>
             <Link to="/terms" className="hover:text-white transition duration-300">
-              Kullanım Şartları
+              {t("legal_terms")}
             </Link>
             <Link to="/contact" className="hover:text-white transition duration-300">
-              İletişim
+              {t("legal_contact")}
             </Link>
           </div>
         </div>

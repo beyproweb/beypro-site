@@ -23,6 +23,7 @@ export default function Register() {
     cvv: "",
     billingCycle: "monthly",
     plan: "trial",
+    privacyAccepted: false,
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -50,6 +51,12 @@ export default function Register() {
 
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match");
+      setLoading(false);
+      return;
+    }
+
+    if (!form.privacyAccepted) {
+      setError("Devam etmek için gizlilik politikasını kabul etmelisiniz.");
       setLoading(false);
       return;
     }
@@ -332,6 +339,28 @@ export default function Register() {
                 <option value="yearly">Yearly Billing</option>
               </select>
             </div>
+
+            <label className="flex items-start gap-2 mt-2 text-xs text-gray-400 leading-relaxed">
+              <input
+                type="checkbox"
+                name="privacyAccepted"
+                checked={form.privacyAccepted}
+                onChange={handleChange}
+                required
+                className="mt-0.5 h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500"
+              />
+              <span>
+                <a
+                  href="/privacy"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-white transition-colors"
+                >
+                  Gizlilik politikası
+                </a>
+                nı okudum ve kabul ediyorum
+              </span>
+            </label>
 
             {error && (
               <p className="text-red-600 text-sm font-medium bg-red-50 px-4 py-3 rounded-lg border border-red-200">

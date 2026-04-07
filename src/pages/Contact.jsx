@@ -1,25 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import MainNav from "../components/MainNav.jsx";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <MainNav tone="light" className="bg-slate-950/90 backdrop-blur supports-[backdrop-filter]:bg-slate-950/70 sticky top-0 z-40 border-b border-slate-800" />
 
       <main className="max-w-4xl mx-auto py-16 px-6">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-white">İletişim</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold text-white">{t("contact_page_title")}</h1>
         <p className="text-gray-300 text-sm leading-relaxed mt-4">
-          Sorularınız ve destek talepleriniz için bize ulaşabilirsiniz.
+          {t("contact_page_desc")}
         </p>
         <p className="text-gray-300 text-sm leading-relaxed mt-3">
-          E-posta:{" "}
+          {t("contact_email_label")}:{" "}
           <a className="text-sky-400 hover:text-sky-300 transition" href="mailto:support@beypro.com">
             support@beypro.com
           </a>
         </p>
         <p className="text-gray-300 text-sm leading-relaxed mt-1">
-          Web:{" "}
+          {t("contact_web_label")}:{" "}
           <a
             className="text-sky-400 hover:text-sky-300 transition"
             href="https://www.beypro.com"
@@ -39,13 +42,13 @@ export default function Contact() {
           </div>
           <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-sm">
             <Link to="/privacy" className="hover:text-white transition duration-300">
-              Gizlilik Politikası
+              {t("legal_privacy")}
             </Link>
             <Link to="/terms" className="hover:text-white transition duration-300">
-              Kullanım Şartları
+              {t("legal_terms")}
             </Link>
             <Link to="/contact" className="hover:text-white transition duration-300">
-              İletişim
+              {t("legal_contact")}
             </Link>
           </div>
         </div>

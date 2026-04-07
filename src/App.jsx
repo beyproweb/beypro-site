@@ -258,13 +258,13 @@ export default function App() {
               {t("footer_link_login")}
             </Link>
             <Link to="/privacy" className="hover:text-white transition duration-300">
-              Gizlilik Politikası
+              {t("legal_privacy")}
             </Link>
             <Link to="/terms" className="hover:text-white transition duration-300">
-              Kullanım Şartları
+              {t("legal_terms")}
             </Link>
             <Link to="/contact" className="hover:text-white transition duration-300">
-              İletişim
+              {t("legal_contact")}
             </Link>
           </div>
         </div>
