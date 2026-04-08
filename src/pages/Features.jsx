@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import MainNav from "../components/MainNav.jsx";
+import BrandLogo from "../components/BrandLogo.jsx";
 import {
   ChevronRight,
   ClipboardList,
@@ -331,22 +332,22 @@ export default function Features() {
       </section>
 
       {/* --- FOOTER --- */}
-      <footer className="bg-slate-950 text-slate-400 text-sm py-12 px-6 border-t border-slate-800">
+      <footer className="bg-white text-slate-600 text-sm py-12 px-6 border-t border-slate-200">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <span className="font-bold text-white">Beypro</span> <span className="text-slate-600">{t("footer_copyright", { year: new Date().getFullYear() })}</span>
+            <BrandLogo variant="footer" />
           </div>
-          <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-xs">
-            <Link to="/features" className="hover:text-white transition duration-300">{t("footer_link_features")}</Link>
-            <Link to="/pricing" className="hover:text-white transition duration-300">{t("footer_link_pricing")}</Link>
-            <Link to="/driver-register" className="hover:text-white transition duration-300">{t("footer_link_drivers")}</Link>
-            <Link to="/restaurant-register" className="hover:text-white transition duration-300">{t("footer_link_restaurants")}</Link>
-            <Link to="/login" className="hover:text-white transition duration-300">{t("footer_link_login")}</Link>
-            <Link to="/register" className="hover:text-white transition duration-300">{t("footer_register")}</Link>
-            <Link to="/privacy" className="hover:text-white transition duration-300">{t("legal_privacy")}</Link>
-            <Link to="/terms" className="hover:text-white transition duration-300">{t("legal_terms")}</Link>
-            <Link to="/cookies" className="hover:text-white transition duration-300">{t("legal_cookies")}</Link>
-            <Link to="/seller-agreement" className="hover:text-white transition duration-300">{t("legal_seller_agreement")}</Link>
+          <div className="flex items-center flex-wrap justify-center gap-6 text-slate-600 text-xs">
+            <Link to="/features" className="hover:text-slate-900 transition duration-300">{t("footer_link_features")}</Link>
+            <Link to="/pricing" className="hover:text-slate-900 transition duration-300">{t("footer_link_pricing")}</Link>
+            <Link to="/driver-register" className="hover:text-slate-900 transition duration-300">{t("footer_link_drivers")}</Link>
+            <Link to="/restaurant-register" className="hover:text-slate-900 transition duration-300">{t("footer_link_restaurants")}</Link>
+            <Link to="/login" className="hover:text-slate-900 transition duration-300">{t("footer_link_login")}</Link>
+            <Link to="/register" className="hover:text-slate-900 transition duration-300">{t("footer_register")}</Link>
+            <Link to="/privacy" className="hover:text-slate-900 transition duration-300">{t("legal_privacy")}</Link>
+            <Link to="/terms" className="hover:text-slate-900 transition duration-300">{t("legal_terms")}</Link>
+            <Link to="/cookies" className="hover:text-slate-900 transition duration-300">{t("legal_cookies")}</Link>
+            <Link to="/seller-agreement" className="hover:text-slate-900 transition duration-300">{t("legal_seller_agreement")}</Link>
           </div>
         </div>
       </footer>

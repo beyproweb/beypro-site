@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu, X, ChevronDown, ShoppingCart, Flame, Truck, BarChart3, Settings, Users, Zap, Lock, UtensilsCrossed } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher.jsx";
+import BrandLogo from "./BrandLogo.jsx";
 
 export default function MainNav({ className = "", tone = "light" }) {
   const [open, setOpen] = useState(false);
@@ -57,7 +58,7 @@ export default function MainNav({ className = "", tone = "light" }) {
           to="/"
           className={`flex items-center gap-3 font-extrabold ${isLight ? "text-white" : "text-slate-900"}`}
         >
-          <img src="/Beylogo.svg" alt="Beypro" className="h-9 w-auto" />
+          <BrandLogo />
         </Link>
 
         <div className="flex items-center gap-3">

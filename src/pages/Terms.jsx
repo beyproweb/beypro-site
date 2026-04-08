@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MainNav from "../components/MainNav.jsx";
+import BrandLogo from "../components/BrandLogo.jsx";
 
 const TERMS_SECTIONS = [
   {
@@ -193,23 +194,22 @@ export default function Terms() {
         </article>
       </main>
 
-      <footer className="bg-slate-950 text-slate-400 text-sm py-12 px-6 border-t border-slate-800">
+      <footer className="bg-white text-slate-600 text-sm py-12 px-6 border-t border-slate-200">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <span className="font-bold text-white">Beypro</span>{" "}
-            <span className="text-slate-600">© {new Date().getFullYear()}</span>
+            <BrandLogo variant="footer" />
           </div>
-          <div className="flex items-center flex-wrap justify-center gap-6 text-slate-400 text-xs">
-            <Link to="/privacy" className="hover:text-white transition duration-300">
+          <div className="flex items-center flex-wrap justify-center gap-6 text-slate-600 text-xs">
+            <Link to="/privacy" className="hover:text-slate-900 transition duration-300">
               {t("legal_privacy")}
             </Link>
-            <Link to="/terms" className="hover:text-white transition duration-300">
+            <Link to="/terms" className="hover:text-slate-900 transition duration-300">
               {t("legal_terms")}
             </Link>
-            <Link to="/cookies" className="hover:text-white transition duration-300">
+            <Link to="/cookies" className="hover:text-slate-900 transition duration-300">
               {t("legal_cookies")}
             </Link>
-            <Link to="/seller-agreement" className="hover:text-white transition duration-300">
+            <Link to="/seller-agreement" className="hover:text-slate-900 transition duration-300">
               {t("legal_seller_agreement")}
             </Link>
           </div>

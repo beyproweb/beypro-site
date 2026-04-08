@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Rocket } from "lucide-react";
 import MainNav from "../components/MainNav.jsx";
+import BrandLogo from "../components/BrandLogo.jsx";
 import { getApiBase } from "../lib/apiBase.js";
 
 export default function Register() {
@@ -158,7 +159,7 @@ export default function Register() {
             <div className="text-5xl">🍽️</div>
           </div>
           <footer className="mt-12 text-sm text-slate-500">
-            © {new Date().getFullYear()} Beypro — Transform Your Restaurant
+            <BrandLogo variant="footer" className="mx-auto" />
           </footer>
         </div>
       </div>

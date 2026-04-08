@@ -13,7 +13,7 @@
   "feature_3_title": "📊 Akıllı Analizler",
   "feature_3_desc": "Tüm KPI'lar, kâr raporları ve satış trendleri tek bir modern panelde.",
   "about_title": "🧠 Beypro Hakkında",
-  "about_desc": "Beypro bir POS’tan fazlası — eksiksiz bir iş zekâsı platformudur. Gerçek bir restoranda geliştirildiği için günlük hizmetin kaosunu bilir. Bu yüzden Beypro mutfaktan kasaya her şeyi tek sistemde birleştirir.",
+  "about_desc": "Beypro, gerçek restoran deneyimlerinden doğdu. Restoran sahipleri tarafından geliştirildi. Teknolojiyi sahadaki ihtiyaçlarla birleştiriyoruz. Güvenilir, test edilmiş ve büyümeye hazır.",
   "pricing_title": "💎 Fiyatlandırma Planları",
   "starter_title": "Başlangıç",
   "starter_desc": "Yeni restoranlar için ideal",
@@ -36,13 +36,9 @@
   "enterprise_4": "Özel Entegrasyonlar",
   "contact_price": "İletişime Geçin",
   "request_quote": "Teklif Alın",
-  "contact_title": "📩 Bize Ulaşın",
-  "contact_desc": "Restoranınızı geleceğe taşımak için bizimle iletişime geçin.",
-  "email_us": "E-Posta Gönder",
-   "about_title": "🧠 Beypro Hakkında",
-  "about_desc": "Beypro, gerçek restoran deneyimlerinden doğdu. Restoran sahipleri tarafından geliştirildi. Teknolojiyi sahadaki ihtiyaçlarla birleştiriyoruz. Güvenilir, test edilmiş ve büyümeye hazır.",
   "contact_title": "📩 İletişim",
   "contact_desc": "Sorunuz mu var veya iş birliği yapmak mı istiyorsunuz? Bizimle iletişime geçin.",
+  "email_us": "E-Posta Gönder",
   "email_label": "E-Posta",
   "founder_label": "Kurucu",
   "phone_label": "Telefon",
@@ -62,64 +58,47 @@
   "realworld_title": "🍽️ Gerçek Bir Restoranda Test Edildi",
   "realworld_desc": "Beypro, başka POS sistemlerine benzemez. İzmir’deki kendi restoranımız Hurrybey’in içinde doğdu — mutfak sıcağında, yoğun saatlerin kaosunda şekillendi.",
   "realworld_subtext": "Mutfaktan kasaya kadar her şey çalışmak zorundaydı. Ve çalışıyor.",
-   "form_name": "Adınız",
-    "footer_rights": "Tüm hakları saklıdır.",
+  "form_name": "Adınız",
+  "footer_rights": "Tüm hakları saklıdır.",
   "newsletter_title": "📬 Güncellemelerden Haberdar Ol",
   "newsletter_desc": "Yeni özellikler ve duyurular için e-posta listemize katılın.",
   "newsletter_placeholder": "E-posta adresinizi girin",
   "newsletter_button": "Abone Ol",
   "newsletter_success": "✅ Başarıyla abone oldunuz!",
-
   "form_email": "E-posta Adresiniz",
   "form_message": "Mesajınız",
   "form_submit": "Mesaj Gönder",
   "meta_title": "Beypro – Gerçek Bir Restoranda Geliştirildi",
   "meta_desc": "Beypro, yeni nesil bir restoran POS ve işletme platformudur. İzmir'deki Hurrybey restoranında geliştirilmiş, sahada test edilmiştir.",
-
   "features_page_hero_subtitle": "Beypro'nun restoranınız için neler yapabileceğini keşfedin",
-
   "pos_orders_title": "Temel POS & Siparişler",
-  "pos_orders_subtitle": "Hızlı sipariş. Net kontrol. Güvenilir ödeme.",
-
-  "kitchen_title": "Mutfak Operasyonları",
-  "kitchen_subtitle": "Mutfak ile ön yüzü senkronize tutun.",
-
-  "register_title": "Kasa & Nakit Yönetimi",
-  "register_subtitle": "Günlük nakit kontrolü, iş akışına entegre.",
-
+  "pos_orders_subtitle": "Hızlı sipariş verme. Açık kontrol. Güvenilir ödeme.",
+  "kitchen_title": "Mutfak İşlemleri",
+  "kitchen_subtitle": "Mutfağı ön tarafla senkronize tutun.",
+  "register_title": "Kasa & Kasa Yönetimi",
+  "register_subtitle": "Günlük kasa kontrolü, iş akışına yerleştirilir.",
   "stock_suppliers_title": "Ürünler, Stok & Tedarikçiler",
-  "stock_suppliers_subtitle": "Eksikleri önleyin ve maliyetleri kontrol edin — elektronik tablolar olmadan.",
-
+  "stock_suppliers_subtitle": "Kıtlığı önleyin ve maliyetleri kontrol edin – elektronik tablolar olmadan.",
   "supplier_automation_title": "Akıllı Tedarikçi Sepeti Otomasyonu",
-  "supplier_automation_subtitle": "Düşük stoklara göre yeniden siparişleri otomatikleştirin.",
-
+  "supplier_automation_subtitle": "Düşük stok temelinde sipariş vermeyi otomatikleştirin.",
   "staff_title": "Personel Yönetimi",
-  "staff_subtitle": "Planlama, devam takibi ve bordro — izin kontrollü.",
-
-  "reports_title": "Raporlar & Analiz",
-  "reports_subtitle": "Ne işe yaradığını görün — sonra temizce dışa aktarın.",
-
+  "staff_subtitle": "Planlama, katılım ve bordro – izin kontrollü.",
+  "reports_title": "Raporlar & Analizler",
+  "reports_subtitle": "Ne çalıştığını bilin – sonra temiz bir şekilde dışa aktarın.",
   "tasks_title": "Görevler & Bakım",
-  "tasks_subtitle": "Ekipler için operasyonel takip.",
-
+  "tasks_subtitle": "Takımlar için operasyonel takip.",
   "marketing_title": "Pazarlama & Mesajlaşma",
-  "marketing_subtitle": "Gerekli yerlerde dahili kampanya iş akışları.",
-
+  "marketing_subtitle": "Gerekli olan yerlerde yerleşik kampanya iş akışları.",
   "integrations_title": "Entegrasyonlar",
-  "integrations_subtitle": "Restoranınızın dayandığı platformları bağlayın.",
-
-  "qr_menu_title": "QR Menü & Anında Restoran Sitesi",
-  "qr_menu_subtitle": "Restoranınız dakikalar içinde çevrimiçi — haftalar değil.",
-
+  "integrations_subtitle": "Restoranınızın güvendiği platformları bağlayın.",
+  "qr_menu_title": "QR Menü & Instant Restoran Web Sitesi",
+  "qr_menu_subtitle": "Restoranınız dakikalar içinde çevrimiçi – haftalar değil.",
   "hardware_title": "Yazıcılar & Kameralar",
-  "hardware_subtitle": "Restoran gerçekliğine uygun donanım iş akışları.",
-
+  "hardware_subtitle": "Restoran gerçekliğine uygun hardware iş akışları.",
   "settings_title": "Sizinle Büyüyen Ayarlar",
-  "settings_subtitle": "İşlemleri tek bir yerden yönetin.",
-
+  "settings_subtitle": "İşlemleri bir yerden kontrol edin.",
   "security_title": "Güvenlik & Erişim Kontrolü",
-  "security_subtitle": "Çok rollü ekipler için tasarlandı.",
-
+  "security_subtitle": "Çok rol restoran takımları için inşa edilmiştir.",
   "highlight_1": "Yazdırma ve donanım iş akışları için Web Dashboard + Desktop Bridge",
   "highlight_2": "Tam POS: masalar, paket, telefon siparişleri, teslimat akışları",
   "highlight_3": "Hazırlık durumları ve zamanlayıcılarla mutfak ekranı",
@@ -128,24 +107,20 @@
   "highlight_6": "Raporlar, dışa aktarma ve müşteri içgörüleri",
   "highlight_7": "QR Menü + yerinde ve evde siparişler için anında restoran sitesi",
   "highlight_8": "Entegrasyonlar: Yemeksepeti, Getir, Trendyol, Migros + WhatsApp + Iyzico",
-
   "cta_title": "Restoranınızı Dönüştürmeye Hazır mısınız?",
   "cta_desc": "Bugün çekirdek modüllerle başlayın ve büyüdükçe ölçekleyin. Tüm planlar 30 günlük ücretsiz deneme içerir.",
   "cta_start_trial": "Ücretsiz Denemeyi Başlat",
   "cta_book_demo": "Demo Talep Et",
-
   "home_hero_title": "Restaurant Management",
   "home_hero_highlight": "Yeniden Tasarlandı",
   "home_hero_desc": "Tek bir temiz, güçlü gösterge panelinde POS, mutfak kontrolü, stok yönetimi ve yapay zekâ destekli otomasyon.",
   "home_get_started": "Ücretsiz Başlayın",
   "home_watch_demo": "Demoyu İzle",
   "home_scroll_hint": "↓ Keşfetmek için kaydırın",
-
   "home_os_title": "Eksiksiz Restoran İşletme Sistemi",
   "home_os_desc": "Sipariş yönetiminden mutfak koordinasyonuna, stok takibinden personel planlamaya kadar modern bir restoranı işletmek için gereken her şey.",
   "home_explore_features": "Tüm Özellikleri Keşfet",
   "home_integration_title": "Önde Gelen Teslimat Platformları ile Tamamen Entegre",
-
   "home_showcase_title": "Restoran sahipleri tarafından geliştirildi, gerçek mutfak deneyimiyle şekillendirildi",
   "home_pos_title": "Modern POS",
   "home_pos_sub": "Daha Hızlı Hizmet için Modern POS\nSipariş verin, masaları yönetin ve ödemeleri saniyeler içinde işleyin. Hız, doğruluk ve sorunsuz restoran işlemleri için tasarlanmıştır—böylece ekibiniz daha hızlı hizmet verir ve müşterileriniz daha mutlu ayrılır.",
@@ -153,10 +128,8 @@
   "home_kitchen_sub": "Mutfak Kontrolü\nMutfağınızı mükemmel şekilde senkronize tutun. Siparişleri gerçek zamanlı olarak alın, hazırlama durumunu takip edin ve tek bir net mutfak görünümünden hazırlık zamanlarını yönetin.",
   "home_analytics_title": "Gelişmiş Raporlar & Analizler",
   "home_analytics_sub": "Gelişmiş Raporlar & Analizler\nVerileri kararlara dönüştürün. Satışları, ödemeleri, en çok satılan ürünleri ve performansı restoran sahipleri için tasarlanmış açık, gerçek zamanlı raporlarla analiz edin.",
-
   "pricing_simple_title": "Basit, Şeffaf Fiyatlandırma",
   "pricing_simple_desc": "İşinize uygun planı seçin. Tüm planlar temel POS ve mutfak özelliklerini içerir.",
-
   "trial_title": "Deneme",
   "trial_desc": "Test etmek için ideal. Temel özelliklere 30 gün ücretsiz erişim.",
   "trial_price": "Ücretsiz",
@@ -169,18 +142,15 @@
   "qrk_f1": "QR menü ayarları + marka görünümü",
   "qrk_f2": "Canlı siparişler için mutfak ekranı",
   "qrk_f3": "Bağımsız erişim (tam POS yok)",
-
   "pro_title_card": "Pro",
   "pro_desc_card": "Büyüyen restoranlar için. Tam özellikli POS + mutfak + stok.",
   "pro_price": "₺1.2K",
   "pro_button": "Başlayın",
-
   "enterprise_title_card": "Kurumsal",
   "enterprise_desc_card": "Çok şubeli zincirler. Özel özellikler & ayrılmış destek.",
   "enterprise_price": "Özel",
   "enterprise_sub": "ihtiyaçlarınıza göre uyarlanmış",
   "enterprise_button": "Satış ile İletişime Geç",
-
   "cta_ready_title": "Restoranınızı Dönüştürmeye Hazır mısınız?",
   "cta_ready_desc": "Beypro ile halihazırda daha akıllı çalışan yüzlerce restorana katılın.",
   "cta_schedule_demo": "Demo Planla",
@@ -207,7 +177,6 @@
   "contact_page_desc": "Sorularınız ve destek talepleriniz için bize ulaşabilirsiniz.",
   "contact_email_label": "E-posta",
   "contact_web_label": "Web",
-
   "nav_home": "Anasayfa",
   "nav_features": "Özellikler",
   "nav_pricing": "Fiyatlandırma",
@@ -215,7 +184,6 @@
   "nav_restaurants": "Restoranınızı Kaydedin",
   "nav_login": "Giriş",
   "nav_register": "Kayıt",
-
   "nav_all_features": "Tüm Özellikler",
   "nav_all_features_desc": "Beypro'nun sunduğu her şeyi keşfet",
   "nav_pos": "POS Sistemi",
@@ -232,7 +200,6 @@
   "nav_staff_desc": "Personeli planlayın ve takip edin",
   "nav_automation": "Yapay Zekâ Otomasyonu",
   "nav_automation_desc": "Akıllı iş otomasyonu",
-
   "nav_all_plans": "Tüm Planlar",
   "nav_all_plans_desc": "Tüm fiyatlandırma seçeneklerini gör",
   "nav_qr_kitchen": "QR Menü + Mutfak",
@@ -243,84 +210,49 @@
   "nav_pro_desc": "Büyüyen işletmeler için",
   "nav_enterprise": "Kurumsal",
   "nav_enterprise_desc": "Özel çözümler",
-
   "features_hero_title": "Özellikler",
   "features_hero_desc": "Beypro'nun restoranınız için neler yapabileceğini keşfedin",
-  
   "features_intro_title": "İşletmek için gereken her şey",
   "features_intro_desc": "POS ve mutfak operasyonlarından stok yönetimine ve personel koordinasyonuna kadar — Beypro modern restoranların ihtiyaç duyduğu tüm araçları sağlar.",
-  
   "features_cta_title": "Restoranınızı Dönüştürmeye Hazır mısınız?",
   "features_cta_desc": "Bugün çekirdek modüllerle başlayın ve büyüdükçe ölçekleyin. Tüm planlar 30 günlük ücretsiz deneme içerir.",
   "features_cta_trial": "Ücretsiz Denemeyi Başlat",
   "features_cta_demo": "Demo Talep Et",
-  
-  "footer_copyright": "© {year}",
   "footer_register": "Kayıt Ol",
-
-  "pos_orders_title": "Temel POS & Siparişler",
-  "pos_orders_subtitle": "Hızlı sipariş verme. Açık kontrol. Güvenilir ödeme.",
   "pos_orders_f1": "İşletme sekmelerine (Masalar, Mutfak, Geçmiş, Paket, Telefon, Kasa) sahip masa genel bakışı",
   "pos_orders_f2": "Masa iş akışı: masa aç → ürünleri ekle → indirimler → ödeme → kapat",
   "pos_orders_f3": "Paket/Teslimat + müşteri adresi desteğine sahip telefon siparişleri",
   "pos_orders_f4": "Siparişleri incelemek, güncellemek ve kapatmak için işlem ekranı",
   "pos_orders_f5": "Makbuzlar ve mutfak çıktıları için yazdırma yardımcıları (Beypro Bridge aracılığıyla)",
   "pos_orders_f6": "Kaydedilmiş profiller ve birden çok adres içeren müşteri veritabanı",
-
-  "kitchen_title": "Mutfak İşlemleri",
-  "kitchen_subtitle": "Mutfağı ön tarafla senkronize tutun.",
   "kitchen_f1": "Durum güncellemeleri ile mutfak sipariş görünümü (hazırlama / hazır / teslim edildi)",
   "kitchen_f2": "Kategori/ürün yönlendirmesi için mutfak yapılandırma desenleri",
   "kitchen_f3": "Mutfak zamanlaması mantığı için zamanlayıcı ve scheduler-job desteği (backend tarafından yönetilir)",
-
-  "register_title": "Kasa & Kasa Yönetimi",
-  "register_subtitle": "Günlük kasa kontrolü, iş akışına yerleştirilir.",
   "register_f1": "Açılış nakiti ile kasa açma/kapatma durumu",
   "register_f2": "Günün sonu iş akışları + kasa kontrolleri",
   "register_f3": "Kasa geçmişi ve günlükleri",
   "register_f4": "Gider takibi",
   "register_f5": "Kasa çekmecesi desteği (yazıcı/çekmece ayarları aracılığıyla)",
   "register_f6": "Abonelik & faturalandırma döngüsü desteği (backend yetenekleri)",
-
-  "stock_suppliers_title": "Ürünler, Stok & Tedarikçiler",
-  "stock_suppliers_subtitle": "Kıtlığı önleyin ve maliyetleri kontrol edin – elektronik tablolar olmadan.",
   "stock_suppliers_f1": "Ürün + kategori yönetimi",
   "stock_suppliers_f2": "Düşük stok uyarısı olan stok yönetimi",
   "stock_suppliers_f3": "Hammadde fiyat takibi",
   "stock_suppliers_f4": "Tedarikçi modülü: tedarikçi listesi & profilleri, bakiyeler ve işlemler, satın alma makbuzları ve fiyat geçmişi",
   "stock_suppliers_f5": "Kategori görüntüleri (POS'ta ve QR menüde kullanılır)",
-
-  "supplier_automation_title": "Akıllı Tedarikçi Sepeti Otomasyonu",
-  "supplier_automation_subtitle": "Düşük stok temelinde sipariş vermeyi otomatikleştirin.",
   "supplier_automation_f1": "Planlanmış tedarikçi sepetleri (tarih/saat + haftalık/iki haftalık/aylık tekrarlama)",
   "supplier_automation_f2": "Otomatik gönderme seçeneği + beklemede olan planlanmış siparişler listesi + iptal et",
   "supplier_automation_f3": "Düşük stok öğelerini tedarikçi sepetine otomatik ekle (backend rotaları tarafından desteklenir)",
   "supplier_automation_f4": "Tedarikçi sepeti e-posta sipariş akışı",
-
-  "staff_title": "Personel Yönetimi",
-  "staff_subtitle": "Planlama, katılım ve bordro – izin kontrollü.",
   "staff_f1": "QR tabanlı personel giriş/çıkışı (isteğe bağlı coğrafi kısıtlamalar)",
   "staff_f2": "Personel planlama araçları",
   "staff_f3": "Bordro ve personel ödeme takibi",
   "staff_f4": "Özellik başına rol/izin kapısı (giriş/çıkış, planlama, bordro, ödemeler, personel yönetimi)",
-
-  "reports_title": "Raporlar & Analizler",
-  "reports_subtitle": "Ne çalıştığını bilin – sonra temiz bir şekilde dışa aktarın.",
   "reports_f1": "Dışa aktarma seçenekleri ile modüler rapor sayfası",
   "reports_f2": "Müşteri içgörüleri sayfası",
-
-  "tasks_title": "Görevler & Bakım",
-  "tasks_subtitle": "Takımlar için operasyonel takip.",
   "tasks_f1": "Görev takip sayfası",
   "tasks_f2": "Bakım takip sayfası",
-
-  "marketing_title": "Pazarlama & Mesajlaşma",
-  "marketing_subtitle": "Gerekli olan yerlerde yerleşik kampanya iş akışları.",
   "marketing_f1": "Pazarlama kampanyaları sayfası (WhatsApp iş akışları kod tabanında desteklenir)",
   "marketing_f2": "WhatsApp webhook entegrasyonu uç noktası (backend)",
-
-  "integrations_title": "Entegrasyonlar",
-  "integrations_subtitle": "Restoranınızın güvendiği platformları bağlayın.",
   "integrations_f1": "Entegrasyonlar ayarları sayfası",
   "integrations_f2": "Desteklenen platformlar: Yemeksepeti, Getir, Trendyol, Migros",
   "integrations_f3": "Platform başına etkinleştir/devre dışı bırak",
@@ -330,9 +262,6 @@
   "integrations_f7": "Yemeksepeti eşleme araçları: eşleşmeyen öğeler listesi, eşleme yönetimi",
   "integrations_f8": "WhatsApp otomatik sipariş mesajı değiştirmesi",
   "integrations_f9": "Iyzico ödeme ağ geçidi rotaları (yapılandırıldığında bağlanır)",
-
-  "qr_menu_title": "QR Menü & Instant Restoran Web Sitesi",
-  "qr_menu_subtitle": "Restoranınız dakikalar içinde çevrimiçi – haftalar değil.",
   "qr_menu_f1": "/:slug, /qr, /menu gibi genel rotalar müşterilerin menüye göz atmasına ve sipariş vermesine izin verir",
   "qr_menu_f2": "Restoran markası/tema özelleştirmesi",
   "qr_menu_f3": "Ürünler, kategoriler, ek gruplar",
@@ -343,14 +272,8 @@
   "qr_menu_f8": "İsteğe bağlı tablo coğrafi kısıtlama seçenekleri",
   "qr_menu_f9": "Sadakat puanları sistemi (QR sadakat backend)",
   "qr_menu_f10": "İçerilen yönetici tarafı QR ayarları sayfası",
-
-  "hardware_title": "Yazıcılar & Kameralar",
-  "hardware_subtitle": "Restoran gerçekliğine uygun hardware iş akışları.",
   "hardware_f1": "Yazıcı yönetimi: varsayılan yazıcılar, test baskıları, LAN taraması, köprü baskısı",
   "hardware_f2": "Kameralar sayfası (canlı görünüm ve yapılandırma desenleri)",
-
-  "settings_title": "Sizinle Büyüyen Ayarlar",
-  "settings_subtitle": "İşlemleri bir yerden kontrol edin.",
   "settings_f1": "Açılış saatleri",
   "settings_f2": "Yerelleştirme (dil/para birimi desenleri)",
   "settings_f3": "Bildirimler (toast + ses olayları)",
@@ -365,18 +288,12 @@
   "settings_f12": "Kameralar",
   "settings_f13": "Tablo ayarları",
   "settings_f14": "İşlem davranışı ayarları",
-
-  "security_title": "Güvenlik & Erişim Kontrolü",
-  "security_subtitle": "Çok rol restoran takımları için inşa edilmiştir.",
   "security_f1": "Sayfalar ve ayar sekmelerinde rol tabanlı izinler",
   "security_f2": "Plan konfigürasyonuna göre modül kapısı",
   "security_f3": "Korumalı vs. herkese açık uç nokta ayrılması (/api/* vs. /api/public/*)",
-
   "nav_staff_standalone": "Personel Yönetimi",
   "nav_staff_standalone_desc": "Bağımsız modül — 15 günlük deneme",
-
   "pricing_per_month_unit": "/ ay",
-
   "staff_standalone_title": "Personel Yönetimi",
   "staff_standalone_short_desc": "Personel • Roller • PIN • Vardiya",
   "staff_standalone_pricing_sub": "Bağımsız personel portalı",
@@ -385,18 +302,15 @@
   "staff_standalone_f2": "Rol & izinler",
   "staff_standalone_f3": "PIN ile giriş",
   "staff_standalone_f4": "Vardiya / çalışma saatleri",
-
   "staff_standalone_register_title": "Bağımsız Hesap Oluştur",
   "staff_standalone_register_sub": "Sadece personel modu (POS çekirdek erişimi yok)",
   "staff_standalone_login_title": "Personel Yönetimi Giriş",
   "staff_standalone_login_sub": "Bağımsız personel portalı",
-
   "company_name": "Şirket adı",
   "full_name": "Ad soyad",
   "phone": "Telefon",
   "email": "Email",
   "password": "Şifre",
-
   "creating": "Oluşturuluyor...",
   "signing_in": "Giriş yapılıyor...",
   "sign_in": "Giriş yap",
@@ -404,5 +318,4 @@
   "start_15_day_trial": "15 günlük denemeyi başlat",
   "already_have_account": "Zaten hesabın var mı?",
   "dont_have_account": "Hesabın yok mu?"
-
 }

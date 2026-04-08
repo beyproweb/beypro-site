@@ -13,7 +13,7 @@
   "feature_3_title": "📊 Smart Analytics",
   "feature_3_desc": "Visual KPIs, profit reports, and sales trends in one futuristic dashboard.",
   "about_title": "🧠 About Beypro",
-  "about_desc": "Beypro is more than a POS — it's a complete business intelligence platform. Developed inside a real restaurant, we know the chaos of daily service. That’s why Beypro unifies everything from the kitchen to checkout into one seamless system. The future is now.",
+  "about_desc": "Beypro was born from real restaurant challenges. Built by restaurateurs for restaurateurs, we blend tech with hands-on experience. Trusted, tested, and ready to scale.",
   "pricing_title": "💎 Pricing Plans",
   "starter_title": "Starter",
   "starter_desc": "Perfect for new restaurants",
@@ -37,17 +37,13 @@
   "contact_price": "Contact",
   "request_quote": "Request Quote",
   "contact_title": "📩 Contact Us",
-  "contact_desc": "Let’s launch your restaurant into the future. Reach out to our team below.",
-  "email_us": "Email Us",
-   "about_title": "🧠 About Beypro",
-  "about_desc": "Beypro was born from real restaurant challenges. Built by restaurateurs for restaurateurs, we blend tech with hands-on experience. Trusted, tested, and ready to scale.",
-  "contact_title": "📩 Contact Us",
   "contact_desc": "Have a question or want to partner with us? We’d love to hear from you.",
+  "email_us": "Email Us",
   "email_label": "Email",
   "founder_label": "Founder",
   "phone_label": "Phone",
   "location_label": "Location",
-   "feature_orders_title": "🧾 Smart Order Handling",
+  "feature_orders_title": "🧾 Smart Order Handling",
   "feature_orders_desc": "From dine-in to delivery, orders flow live to kitchen and drivers with zero friction.",
   "feature_stock_title": "📦 Live Stock & Supplier AI",
   "feature_stock_desc": "Track every item. Reorder automatically. Connect suppliers, avoid shortages, and reduce waste.",
@@ -59,66 +55,50 @@
   "feature_reports_desc": "Track profit/loss, category sales, ingredient costs, and even low-stock alerts live on your dashboard.",
   "feature_integrations_title": "🔌 Integrations & API",
   "feature_integrations_desc": "From WhatsApp to Getir and Papara — connect Beypro to your ecosystem and sync effortlessly.",
-    "realworld_title": "🍽️ Built, Tested & Perfected in a Real Restaurant",
+  "realworld_title": "🍽️ Built, Tested & Perfected in a Real Restaurant",
   "realworld_desc": "Beypro isn’t just another POS. It was born inside our own restaurant, Hurrybey, in İzmir, Turkey — shaped daily by the heat of the kitchen and the chaos of peak hours.",
   "realworld_subtext": "From the grill to the cashier — it had to work. And it does.",
-   "form_name": "Your Name",
+  "form_name": "Your Name",
   "form_email": "Your Email",
-    "footer_rights": "All rights reserved.",
-"newsletter_title": "📬 Stay in the Loop",
+  "footer_rights": "All rights reserved.",
+  "newsletter_title": "📬 Stay in the Loop",
   "newsletter_desc": "Join the list and be the first to hear about updates, features, and release announcements.",
   "newsletter_placeholder": "Enter your email",
   "newsletter_button": "Subscribe",
   "newsletter_success": "✅ You've been subscribed!",
   "form_message": "Your Message",
   "form_submit": "Send Message",
-   "meta_title": "Beypro – Smart POS Built in a Real Restaurant",
+  "meta_title": "Beypro – Smart POS Built in a Real Restaurant",
   "meta_desc": "Beypro is a next-gen POS and business OS for restaurants. Born inside Hurrybey in İzmir, it's tested daily in real service chaos.",
-
   "features_page_hero_subtitle": "Explore everything Beypro can do for your restaurant",
-
   "pos_orders_title": "Core POS & Orders",
   "pos_orders_subtitle": "Fast ordering. Clear control. Reliable checkout.",
-
   "kitchen_title": "Kitchen Operations",
   "kitchen_subtitle": "Keep the kitchen synchronized with the front.",
-
   "register_title": "Register & Cash Management",
   "register_subtitle": "Daily cash control, built into the workflow.",
-
   "stock_suppliers_title": "Products, Stock & Suppliers",
   "stock_suppliers_subtitle": "Prevent shortages and control costs—without spreadsheets.",
-
   "supplier_automation_title": "Smart Supplier Cart Automation",
   "supplier_automation_subtitle": "Automate reordering based on low stock.",
-
   "staff_title": "Staff Management",
   "staff_subtitle": "Scheduling, attendance, and payroll—permission controlled.",
-
   "reports_title": "Reports & Analytics",
   "reports_subtitle": "Know what's working—then export it cleanly.",
-
   "tasks_title": "Tasks & Maintenance",
   "tasks_subtitle": "Operational follow-through for teams.",
-
   "marketing_title": "Marketing & Messaging",
   "marketing_subtitle": "Built-in campaign workflows where needed.",
-
   "integrations_title": "Integrations",
   "integrations_subtitle": "Connect the platforms your restaurant relies on.",
-
   "qr_menu_title": "QR Menu & Instant Restaurant Website",
   "qr_menu_subtitle": "Your restaurant online in minutes—not weeks.",
-
   "hardware_title": "Printers & Cameras",
   "hardware_subtitle": "Hardware workflows that actually fit restaurant reality.",
-
   "settings_title": "Settings That Scale With You",
   "settings_subtitle": "Control operations from one place.",
-
   "security_title": "Security & Access Control",
   "security_subtitle": "Built for multi-role restaurant teams.",
-
   "highlight_1": "Web Dashboard + Desktop Bridge for printing & hardware workflows",
   "highlight_2": "Full POS: tables, takeaway, phone orders, delivery/packet flows",
   "highlight_3": "Kitchen screen with preparation statuses and timers",
@@ -127,24 +107,20 @@
   "highlight_6": "Reports, exports, and customer insights",
   "highlight_7": "QR Menu + instant restaurant website for dine-in and at-home ordering",
   "highlight_8": "Integrations: Yemeksepeti, Getir, Trendyol, Migros + WhatsApp + Iyzico",
-
   "cta_title": "Ready to Transform Your Restaurant?",
   "cta_desc": "Start with the core modules today and scale as you grow. All plans include a 30-day free trial.",
   "cta_start_trial": "Start Free Trial",
   "cta_book_demo": "Book a Demo",
-
   "home_hero_title": "Restaurant Management",
   "home_hero_highlight": "Reimagined",
   "home_hero_desc": "All-in-one POS, kitchen control, stock management, and AI-powered automation in one clean, powerful dashboard.",
   "home_get_started": "Get Started Free",
   "home_watch_demo": "Watch Demo",
   "home_scroll_hint": "↓ Scroll to explore",
-
   "home_os_title": "Complete Restaurant Operating System",
   "home_os_desc": "From order management to kitchen coordination, inventory tracking to staff scheduling — everything you need to run a modern restaurant.",
   "home_explore_features": "Explore All Features",
   "home_integration_title": "Fully Integrated With Leading Delivery Platforms",
-
   "home_showcase_title": "Built by restaurant owners, shaped by real kitchen experience",
   "home_pos_title": "Modern POS",
   "home_pos_sub": "Modern POS for Faster Service\nTake orders, manage tables, and process payments in seconds. Built for speed, accuracy, and smooth restaurant operations—so your team serves faster and your customers leave happier.",
@@ -152,10 +128,8 @@
   "home_kitchen_sub": "Kitchen Control\nKeep your kitchen perfectly in sync. Receive orders in real time, track preparation status, and manage prep timers from a single, clear kitchen view.",
   "home_analytics_title": "Advanced Reports & Analytics",
   "home_analytics_sub": "Advanced Reports & Analytics\nTurn data into decisions. Analyze sales, payments, top products, and performance with clear, real-time reports designed for restaurant owners.",
-
   "pricing_simple_title": "Simple, Transparent Pricing",
   "pricing_simple_desc": "Choose the plan that fits your business. All plans include core POS and kitchen features.",
-
   "trial_title": "Trial",
   "trial_desc": "Perfect for testing. 30 days free access to core features.",
   "trial_price": "Free",
@@ -168,18 +142,15 @@
   "qrk_f1": "QR Menu settings + branding",
   "qrk_f2": "Kitchen screen for live orders",
   "qrk_f3": "Standalone access (no full POS)",
-
   "pro_title_card": "Pro",
   "pro_desc_card": "For growing restaurants. Full-featured POS + kitchen + stock.",
   "pro_price": "₺1.2K",
   "pro_button": "Get Started",
-
   "enterprise_title_card": "Enterprise",
   "enterprise_desc_card": "Multi-location chains. Custom features & dedicated support.",
   "enterprise_price": "Custom",
   "enterprise_sub": "tailored to your needs",
   "enterprise_button": "Contact Sales",
-
   "cta_ready_title": "Ready to Transform Your Restaurant?",
   "cta_ready_desc": "Join hundreds of restaurants already running smarter with Beypro.",
   "cta_schedule_demo": "Schedule a Demo",
@@ -206,7 +177,6 @@
   "contact_page_desc": "You can reach us for questions and support requests.",
   "contact_email_label": "Email",
   "contact_web_label": "Web",
-
   "nav_home": "Home",
   "nav_features": "Features",
   "nav_pricing": "Pricing",
@@ -214,7 +184,6 @@
   "nav_restaurants": "Register Your Restaurant",
   "nav_login": "Login",
   "nav_register": "Register",
-
   "nav_all_features": "All Features",
   "nav_all_features_desc": "Explore everything Beypro offers",
   "nav_pos": "POS System",
@@ -231,7 +200,6 @@
   "nav_staff_desc": "Schedule and track staff",
   "nav_automation": "AI Automation",
   "nav_automation_desc": "Smart business automation",
-
   "nav_all_plans": "All Plans",
   "nav_all_plans_desc": "View all pricing options",
   "nav_qr_kitchen": "QR Menu + Kitchen",
@@ -242,84 +210,49 @@
   "nav_pro_desc": "For growing businesses",
   "nav_enterprise": "Enterprise",
   "nav_enterprise_desc": "Custom solutions",
-
   "features_hero_title": "Features",
   "features_hero_desc": "Explore everything Beypro can do for your restaurant",
-  
   "features_intro_title": "Everything you need to operate",
   "features_intro_desc": "From POS and kitchen operations to inventory management and staff coordination—Beypro gives you all the tools modern restaurants need.",
-  
   "features_cta_title": "Ready to Transform Your Restaurant?",
   "features_cta_desc": "Start with the core modules today and scale as you grow. All plans include a 30-day free trial.",
   "features_cta_trial": "Start Free Trial",
   "features_cta_demo": "Book a Demo",
-  
-  "footer_copyright": "© {year}",
   "footer_register": "Register",
-
-  "pos_orders_title": "Core POS & Orders",
-  "pos_orders_subtitle": "Fast ordering. Clear control. Reliable checkout.",
   "pos_orders_f1": "Table Overview with operational tabs (Tables, Kitchen, History, Packet, Phone, Register)",
   "pos_orders_f2": "Table workflow: open table → add items → discounts → payment → close",
   "pos_orders_f3": "Packet/Delivery + Phone orders with customer address support",
   "pos_orders_f4": "Transaction screen to review, update, and close orders",
   "pos_orders_f5": "Printing utilities for receipts and kitchen outputs (via Beypro Bridge)",
   "pos_orders_f6": "Customer database with saved profiles and multiple addresses",
-
-  "kitchen_title": "Kitchen Operations",
-  "kitchen_subtitle": "Keep the kitchen synchronized with the front.",
   "kitchen_f1": "Kitchen order view with status updates (preparing / ready / delivered)",
   "kitchen_f2": "Kitchen configuration patterns for category/product routing",
   "kitchen_f3": "Timer and scheduler-job support for kitchen timing logic (backend-driven)",
-
-  "register_title": "Register & Cash Management",
-  "register_subtitle": "Daily cash control, built into the workflow.",
   "register_f1": "Open/close register state with opening cash",
   "register_f2": "End-of-day workflows + register checks",
   "register_f3": "Cash register history and logs",
   "register_f4": "Expenses tracking",
   "register_f5": "Cash drawer support (via printer/drawer settings)",
   "register_f6": "Subscription & billing-cycle support (backend capabilities)",
-
-  "stock_suppliers_title": "Products, Stock & Suppliers",
-  "stock_suppliers_subtitle": "Prevent shortages and control costs—without spreadsheets.",
   "stock_suppliers_f1": "Product + category management",
   "stock_suppliers_f2": "Stock management with low-stock alerting",
   "stock_suppliers_f3": "Ingredient price tracking",
   "stock_suppliers_f4": "Suppliers module: supplier list & profiles, balances and transactions, purchasing receipts and price history",
   "stock_suppliers_f5": "Category images (used in POS & QR menu)",
-
-  "supplier_automation_title": "Smart Supplier Cart Automation",
-  "supplier_automation_subtitle": "Automate reordering based on low stock.",
   "supplier_automation_f1": "Scheduled supplier carts (date/time + weekly/biweekly/monthly repeat)",
   "supplier_automation_f2": "Auto-send option + pending scheduled orders list + cancel",
   "supplier_automation_f3": "Auto-add low stock items to supplier cart (supported by backend routes)",
   "supplier_automation_f4": "Supplier cart email ordering flow",
-
-  "staff_title": "Staff Management",
-  "staff_subtitle": "Scheduling, attendance, and payroll—permission controlled.",
   "staff_f1": "QR-based staff check-in/out (optional geo restrictions)",
   "staff_f2": "Staff scheduling tools",
   "staff_f3": "Payroll and staff payment tracking",
   "staff_f4": "Role/permission gating per feature (check-in, schedule, payroll, payments, staff management)",
-
-  "reports_title": "Reports & Analytics",
-  "reports_subtitle": "Know what's working—then export it cleanly.",
   "reports_f1": "Modular reports page with export options",
   "reports_f2": "Customer insights page",
-
-  "tasks_title": "Tasks & Maintenance",
-  "tasks_subtitle": "Operational follow-through for teams.",
   "tasks_f1": "Task tracking page",
   "tasks_f2": "Maintenance tracker page",
-
-  "marketing_title": "Marketing & Messaging",
-  "marketing_subtitle": "Built-in campaign workflows where needed.",
   "marketing_f1": "Marketing campaigns page (WhatsApp workflows supported in codebase)",
   "marketing_f2": "WhatsApp webhook integration endpoint (backend)",
-
-  "integrations_title": "Integrations",
-  "integrations_subtitle": "Connect the platforms your restaurant relies on.",
   "integrations_f1": "Integrations settings page",
   "integrations_f2": "Supported platforms: Yemeksepeti, Getir, Trendyol, Migros",
   "integrations_f3": "Enable/disable per platform",
@@ -329,9 +262,6 @@
   "integrations_f7": "Yemeksepeti mapping tools: unmatched items list, mapping management",
   "integrations_f8": "WhatsApp auto order message toggle",
   "integrations_f9": "Iyzico payment gateway routes (mounted when configured)",
-
-  "qr_menu_title": "QR Menu & Instant Restaurant Website",
-  "qr_menu_subtitle": "Your restaurant online in minutes—not weeks.",
   "qr_menu_f1": "Public routes like /:slug, /qr, /menu let customers browse the menu and place orders",
   "qr_menu_f2": "Restaurant branding/theme customization",
   "qr_menu_f3": "Products, categories, extras groups",
@@ -342,14 +272,8 @@
   "qr_menu_f8": "Optional table geo restriction options",
   "qr_menu_f9": "Loyalty points system (QR loyalty backend)",
   "qr_menu_f10": "Admin-facing QR settings page included",
-
-  "hardware_title": "Printers & Cameras",
-  "hardware_subtitle": "Hardware workflows that actually fit restaurant reality.",
   "hardware_f1": "Printer management: default printers, test prints, LAN scan, bridge printing",
   "hardware_f2": "Cameras page (live view and configuration patterns)",
-
-  "settings_title": "Settings That Scale With You",
-  "settings_subtitle": "Control operations from one place.",
   "settings_f1": "Shop hours",
   "settings_f2": "Localization (language/currency patterns)",
   "settings_f3": "Notifications (toast + sound events)",
@@ -364,18 +288,12 @@
   "settings_f12": "Cameras",
   "settings_f13": "Tables settings",
   "settings_f14": "Transaction behavior settings",
-
-  "security_title": "Security & Access Control",
-  "security_subtitle": "Built for multi-role restaurant teams.",
   "security_f1": "Role-based permissions across pages and settings tabs",
   "security_f2": "Module gating by plan configuration",
   "security_f3": "Protected vs public endpoint separation (/api/* vs /api/public/*)",
-
   "nav_staff_standalone": "Staff Management",
   "nav_staff_standalone_desc": "Standalone module — 15-day trial",
-
   "pricing_per_month_unit": "/ mo",
-
   "staff_standalone_title": "Staff Management",
   "staff_standalone_short_desc": "Staff • Roles • PIN • Shifts",
   "staff_standalone_pricing_sub": "Standalone staff portal",
@@ -384,18 +302,15 @@
   "staff_standalone_f2": "Roles & permissions",
   "staff_standalone_f3": "PIN login",
   "staff_standalone_f4": "Shifts / working hours",
-
   "staff_standalone_register_title": "Create Standalone Account",
   "staff_standalone_register_sub": "Staff-only mode (no POS core access)",
   "staff_standalone_login_title": "Staff Management Login",
   "staff_standalone_login_sub": "Standalone staff portal",
-
   "company_name": "Company name",
   "full_name": "Full name",
   "phone": "Phone",
   "email": "Email",
   "password": "Password",
-
   "creating": "Creating...",
   "signing_in": "Signing in...",
   "sign_in": "Sign in",
